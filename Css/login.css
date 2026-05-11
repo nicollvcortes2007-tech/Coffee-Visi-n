@@ -1,0 +1,176 @@
+.login-page {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('/Imagenes/cosecha.webp'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.login-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 25px; 
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+.login-header {
+    margin-bottom: 25px;
+}
+
+.login-logo {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.login-header h1 {
+    font-size: 1.7rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.login-header p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.login-form {
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    color: #4e2a15; 
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 15px;
+    color: #8b6e4b; 
+}
+
+.input-wrapper input, 
+.input-wrapper select {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #e8e1d9;
+    border-radius: 12px;
+    background-color: #fdf6ed; 
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.input-wrapper input:focus, 
+.input-wrapper select:focus {
+    outline: none;
+    border-color: #769f1a; 
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(118, 159, 26, 0.1);
+}
+
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.remember-me input {
+    accent-color: #769f1a;
+}
+
+.forgot-pass {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+
+.btn-login-submit {
+    width: 100%;
+    background-color: #f2f2f2; 
+    color: #333;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-login-submit:hover {
+    background-color: #769f1a;
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+.login-card-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.login-card-footer a {
+    color: #4e2a15;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.back-link:hover {
+    color: #769f1a;
+}
