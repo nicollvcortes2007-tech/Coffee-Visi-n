@@ -68,10 +68,10 @@
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirm-password').value;
 
-            // Alerta si las contraseñas no coinciden
+          
             if (password !== confirmPassword) {
                 alert("¡Ups! Las contraseñas no coinciden. Por favor, verifícalas.");
-                event.preventDefault(); // Evita que se recargue o envíe la página
+                event.preventDefault(); 
                 return;
             }
 
