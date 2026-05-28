@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Caficultor | Coffee+vision</title>
+    <link rel="stylesheet" href="Css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <a href="index.html" class="brand">
+            <img src="Imagenes/logo2.png" alt="Coffee+vision Logo">
+            <span>Coffee+vision</span>
+        </a>
+
+        <nav class="sidebar-nav" aria-label="Menu caficultor">
+            <a href="#" class="active"><i class="fa-solid fa-house"></i> Mi finca</a>
+            <a href="#"><i class="fa-solid fa-seedling"></i> Cultivos</a>
+            <a href="#"><i class="fa-solid fa-bug"></i> Plagas</a>
+            <a href="#"><i class="fa-solid fa-droplet"></i> Fertilizacion</a>
+            <a href="#"><i class="fa-solid fa-mug-hot"></i> Cosechas</a>
+            <a href="#"><i class="fa-solid fa-chart-simple"></i> Mis reportes</a>
+        </nav>
+
+        <a class="logout-link" href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesion</a>
+    </aside>
+
+    <main class="dashboard-shell">
+        <header class="topbar">
+            <section>
+                <p class="eyebrow">Panel caficultor</p>
+                <h1>Finca El Paraiso</h1>
+            </section>
+            <section class="topbar-actions">
+                <button type="button" aria-label="Notificaciones"><i class="fa-regular fa-bell"></i></button>
+                <article class="profile-chip">
+                    <span>CF</span>
+                    <div>
+                        <strong>Caficultor</strong>
+                        <small>Mi produccion</small>
+                    </div>
+                </article>
+            </section>
+        </header>
+
+        <section class="metric-grid" aria-label="Indicadores de mi finca">
+            <article class="metric-card">
+                <span><i class="fa-solid fa-seedling"></i></span>
+                <p>Lotes activos</p>
+                <strong>6</strong>
+                <small>2 en floracion</small>
+            </article>
+            <article class="metric-card">
+                <span><i class="fa-solid fa-bug"></i></span>
+                <p>Alertas de plagas</p>
+                <strong>2</strong>
+                <small>Requieren seguimiento</small>
+            </article>
+            <article class="metric-card">
+                <span><i class="fa-solid fa-droplet"></i></span>
+                <p>Fertilizaciones</p>
+                <strong>4</strong>
+                <small>Programadas este mes</small>
+            </article>
+            <article class="metric-card">
+                <span><i class="fa-solid fa-sack-dollar"></i></span>
+                <p>Cosecha estimada</p>
+                <strong>840 kg</strong>
+                <small>Proximo corte</small>
+            </article>
+        </section>
+
+        <section class="dashboard-grid">
+            <article class="panel wide-panel">
+                <header class="panel-header">
+                    <div>
+                        <p class="eyebrow">Mis labores</p>
+                        <h2>Agenda de la finca</h2>
+                    </div>
+                    <button type="button" class="text-button">Agregar labor</button>
+                </header>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Actividad</th>
+                            <th>Lote</th>
+                            <th>Fecha</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Revision de broca</td>
+                            <td>Lote 2</td>
+                            <td>Hoy</td>
+                            <td><span class="status warning">Pendiente</span></td>
+                        </tr>
+                        <tr>
+                            <td>Aplicacion de fertilizante</td>
+                            <td>Lote 4</td>
+                            <td>30 mayo</td>
+                            <td><span class="status ok">Programada</span></td>
+                        </tr>
+                        <tr>
+                            <td>Registro de cosecha</td>
+                            <td>Lote 1</td>
+                            <td>2 junio</td>
+                            <td><span class="status ok">Lista</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="panel">
+                <header class="panel-header">
+                    <div>
+                        <p class="eyebrow">Estado</p>
+                        <h2>Salud del cultivo</h2>
+                    </div>
+                </header>
+                <section class="health-score">
+                    <strong>82%</strong>
+                    <p>Condicion general estable. Revisa el lote 2 por posible aumento de broca.</p>
+                </section>
+            </article>
+
+            <article class="panel">
+                <header class="panel-header">
+                    <div>
+                        <p class="eyebrow">Registro</p>
+                        <h2>Acciones rapidas</h2>
+                    </div>
+                </header>
+                <section class="quick-actions">
+                    <button type="button"><i class="fa-solid fa-camera"></i> Reportar plaga</button>
+                    <button type="button"><i class="fa-solid fa-plus"></i> Nueva cosecha</button>
+                    <button type="button"><i class="fa-solid fa-calendar-check"></i> Agendar labor</button>
+                </section>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
