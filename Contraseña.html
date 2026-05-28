@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña | Coffee+visión</title>
+    <link rel="stylesheet" href="Css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="login-page">
+
+    <main class="login-wrapper">
+        <article class="login-card">
+            
+            <header class="login-header">
+                <a href="login.html" class="back-link">
+                    <i class="fa-solid fa-arrow-left"></i> Volver
+                     <a href="index.html" class="back-link"></a>
+                </a>    
+                <img src="Imagenes/logo2.png" alt="Coffee+visión Logo" class="login-logo">
+                <h1 id="recuperar-titulo">¿Olvidaste tu contraseña?</h1>
+                <p id="recuperar-subtitulo">No te preocupes, dinos tu correo y te ayudaremos a restaurarla.</p>
+            </header>
+
+            <form action="#" class="login-form" id="formRecuperar">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" autocomplete="off" required>
+
+                <button type="submit" class="btn-login-submit">Enviar instrucciones</button>
+
+                <footer class="login-card-footer">
+                    <p>¿Recordaste tu contraseña? <a href="login.html">Inicia Sesión</a></p>
+                </footer>
+            </form>
+
+        </article>
+    </main>
+    
+    <script>
+        document.getElementById('formRecuperar').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const email = document.getElementById('email').value;
+            const form = document.getElementById('formRecuperar');
+            const titulo = document.getElementById('recuperar-titulo');
+            const subtitulo = document.getElementById('recuperar-subtitulo');
+
+            titulo.textContent = "¡Correo Enviado!";
+            subtitulo.textContent = `Hemos enviado un enlace de recuperación a ${email}. Revisa tu bandeja de entrada o spam.`;
+
+            form.remove(); 
+        });
+    </script>
+
+</body>
+</html>

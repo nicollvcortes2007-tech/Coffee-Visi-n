@@ -25,23 +25,28 @@
     padding: 40px;
     border-radius: 25px; 
     width: 100%;
-    max-width: 480px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-    text-align: center;
+    max-width: 500px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
-.login-header {
-    margin-bottom: 25px;
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #333;
+    text-decoration: none;
 }
 
-.login-logo {
-    height: 60px;
-    margin-bottom: 15px;
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative; 
 }
 
 .login-header h1 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     color: #1a1a1a;
     margin-bottom: 8px;
     font-weight: 700;
@@ -52,61 +57,57 @@
     font-size: 0.9rem;
 }
 
+.login-logo {
+    height: 50px;
+    margin-top: 15px; 
+    margin-bottom: 15px;
+}
+
 .login-form {
-    text-align: left;
+    display: flex;
+    flex-direction: column; 
 }
 
-.input-group {
-    margin-bottom: 18px;
-}
-
-.input-group label {
+.login-form > label {
     display: block;
     font-weight: 600;
     font-size: 0.85rem;
     margin-bottom: 6px;
+    margin-top: 14px; 
     color: #4e2a15; 
 }
 
-.input-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.input-wrapper i {
-    position: absolute;
-    left: 15px;
-    color: #8b6e4b; 
-}
-
-.input-wrapper input, 
-.input-wrapper select {
+.login-form > input[type="email"],
+.login-form > input[type="password"] {
     width: 100%;
-    padding: 12px 15px 12px 45px;
-    border: 1px solid #e8e1d9;
+    padding: 12px 15px; 
+    border: 1px solid #e8e1d9; 
     border-radius: 12px;
     background-color: #fdf6ed; 
     font-size: 0.95rem;
+    color: #333;
+    box-sizing: border-box; 
     transition: all 0.3s ease;
 }
 
-.input-wrapper input:focus, 
-.input-wrapper select:focus {
+.login-form > input::placeholder {
+    color: #a59e95;
+}
+
+.login-form > input:focus {
     outline: none;
     border-color: #769f1a; 
     background-color: #fff;
     box-shadow: 0 0 0 3px rgba(118, 159, 26, 0.1);
 }
 
-
 .form-options {
+    border: none;
+    padding: 0;
+    margin: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 0;
-    font-size: 0.85rem;
-    font-weight: 600;
 }
 
 .remember-me {
@@ -114,6 +115,8 @@
     align-items: center;
     gap: 8px;
     cursor: pointer;
+    font-size: 0.85rem;
+    color: #333;
 }
 
 .remember-me input {
@@ -121,15 +124,20 @@
 }
 
 .forgot-pass {
-    color: #1a1a1a;
+    color: #4e2a15;
+    font-size: 0.85rem;
     text-decoration: none;
+    font-weight: 600;
 }
 
+.forgot-pass:hover {
+    text-decoration: underline;
+}
 
 .btn-login-submit {
     width: 100%;
     background-color: #f2f2f2; 
-    color: #333;
+    color: #1a1a1a;
     padding: 15px;
     border: none;
     border-radius: 12px;
@@ -141,15 +149,13 @@
 }
 
 .btn-login-submit:hover {
-    background-color: #769f1a;
+    background-color: #769f1a; 
     color: white;
-    transform: translateY(-2px);
 }
-
 
 .login-card-footer {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 20px;
     font-size: 0.85rem;
     color: #666;
 }
@@ -158,6 +164,11 @@
     color: #4e2a15;
     font-weight: 700;
     text-decoration: none;
+    margin-left: 5px;
+}
+
+.login-card-footer a:hover {
+    text-decoration: underline;
 }
 
 .back-link {
@@ -165,12 +176,16 @@
     color: #333;
     font-weight: 700;
     font-size: 0.85rem;
-    display: flex;
+    display: flex; 
     align-items: center;
     gap: 5px;
-    margin-bottom: 10px;
+    position: absolute; 
+    top: 20px; 
+    left: 40px;    
+    transition: 0.3s;
 }
 
 .back-link:hover {
     color: #769f1a;
+    transform: translateX(-3px);
 }
