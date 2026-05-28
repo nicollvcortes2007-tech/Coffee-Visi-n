@@ -17,30 +17,37 @@
         <nav class="sidebar-nav" aria-label="Menu caficultor">
             <a href="#" class="active"><i class="fa-solid fa-house"></i> Mi finca</a>
             <a href="#"><i class="fa-solid fa-seedling"></i> Cultivos</a>
-            <a href="#"><i class="fa-solid fa-bug"></i> Plagas</a>
-            <a href="#"><i class="fa-solid fa-droplet"></i> Fertilizacion</a>
-            <a href="#"><i class="fa-solid fa-mug-hot"></i> Cosechas</a>
-            <a href="#"><i class="fa-solid fa-chart-simple"></i> Mis reportes</a>
+            <a href="#"><i class="fa-solid fa-robot"></i> Asistente IA</a>
+            <a href="#"><i class="fa-solid fa-camera"></i> Deteccion</a>
+            <a href="#"><i class="fa-solid fa-chart-simple"></i> Estadisticas</a>
+            <a href="#"><i class="fa-solid fa-book-open"></i> Guias</a>
         </nav>
+
+        <section class="sidebar-card">
+            <i class="fa-solid fa-leaf"></i>
+            <p>Proxima revision</p>
+            <strong>Lote 2 - Broca</strong>
+        </section>
 
         <a class="logout-link" href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesion</a>
     </aside>
 
     <main class="dashboard-shell">
-        <header class="topbar">
-            <section>
+        <header class="hero-dashboard">
+            <section class="hero-copy">
                 <p class="eyebrow">Panel caficultor</p>
                 <h1>Finca El Paraiso</h1>
+                <p>Gestiona tus cultivos, revisa recomendaciones y consulta el asistente inteligente para tomar mejores decisiones en tu produccion cafetera.</p>
+                <div class="hero-actions">
+                    <button type="button"><i class="fa-solid fa-camera"></i> Analizar foto</button>
+                    <button type="button" class="secondary-action"><i class="fa-solid fa-plus"></i> Registrar labor</button>
+                </div>
             </section>
-            <section class="topbar-actions">
-                <button type="button" aria-label="Notificaciones"><i class="fa-regular fa-bell"></i></button>
-                <article class="profile-chip">
-                    <span>CF</span>
-                    <div>
-                        <strong>Caficultor</strong>
-                        <small>Mi produccion</small>
-                    </div>
-                </article>
+
+            <section class="hero-status">
+                <span>Salud del cultivo</span>
+                <strong>82%</strong>
+                <small>Estado estable con seguimiento recomendado en el lote 2.</small>
             </section>
         </header>
 
@@ -55,19 +62,77 @@
                 <span><i class="fa-solid fa-bug"></i></span>
                 <p>Alertas de plagas</p>
                 <strong>2</strong>
-                <small>Requieren seguimiento</small>
+                <small>Broca y roya en revision</small>
             </article>
             <article class="metric-card">
-                <span><i class="fa-solid fa-droplet"></i></span>
-                <p>Fertilizaciones</p>
-                <strong>4</strong>
-                <small>Programadas este mes</small>
-            </article>
-            <article class="metric-card">
-                <span><i class="fa-solid fa-sack-dollar"></i></span>
+                <span><i class="fa-solid fa-mug-hot"></i></span>
                 <p>Cosecha estimada</p>
                 <strong>840 kg</strong>
                 <small>Proximo corte</small>
+            </article>
+            <article class="metric-card">
+                <span><i class="fa-solid fa-calendar-check"></i></span>
+                <p>Labores pendientes</p>
+                <strong>5</strong>
+                <small>Esta semana</small>
+            </article>
+        </section>
+
+        <section class="ai-layout">
+            <article class="panel chatbot-panel">
+                <header class="panel-header">
+                    <div>
+                        <p class="eyebrow">Asistente inteligente</p>
+                        <h2>Chatbot agricola Coffee+vision</h2>
+                    </div>
+                    <span class="status ok">Prototipo</span>
+                </header>
+
+                <section class="chat-window" aria-label="Conversacion con asistente IA">
+                    <div class="message bot">
+                        <strong>Asistente IA</strong>
+                        <p>Hola. Puedes preguntarme sobre plagas, enfermedades, fertilizacion, cosecha o buenas practicas del cafe.</p>
+                    </div>
+                    <div class="message user">
+                        <strong>Caficultor</strong>
+                        <p>Mis hojas tienen manchas amarillas. Que debo revisar?</p>
+                    </div>
+                    <div class="message bot">
+                        <strong>Asistente IA</strong>
+                        <p>Podria estar relacionado con roya o deficiencias nutricionales. Sube una foto clara de la hoja para apoyar el analisis.</p>
+                    </div>
+                </section>
+
+                <form class="chat-form">
+                    <input type="text" placeholder="Escribe tu consulta sobre el cultivo...">
+                    <label class="icon-upload" title="Subir foto">
+                        <i class="fa-solid fa-paperclip"></i>
+                        <input type="file" accept="image/*">
+                    </label>
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+                </form>
+            </article>
+
+            <article class="panel detection-panel">
+                <header class="panel-header">
+                    <div>
+                        <p class="eyebrow">Vision artificial</p>
+                        <h2>Deteccion de plagas por foto</h2>
+                    </div>
+                </header>
+
+                <label class="upload-zone">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <strong>Sube una imagen del cultivo</strong>
+                    <span>Hojas, frutos, tallos o ramas en JPG, PNG o WEBP</span>
+                    <input type="file" accept="image/*">
+                </label>
+
+                <section class="result-preview">
+                    <p class="eyebrow">Resultado simulado</p>
+                    <h3>Posible broca del cafe</h3>
+                    <p>Nivel de riesgo: medio. Se recomienda revisar frutos afectados y registrar el lote para seguimiento.</p>
+                </section>
             </article>
         </section>
 
@@ -75,8 +140,105 @@
             <article class="panel wide-panel">
                 <header class="panel-header">
                     <div>
-                        <p class="eyebrow">Mis labores</p>
-                        <h2>Agenda de la finca</h2>
+                        <p class="eyebrow">Estadisticas</p>
+                        <h2>Resumen semanal y mensual</h2>
+                    </div>
+                    <div class="tabs">
+                        <button type="button" class="active">Semanal</button>
+                        <button type="button">Mensual</button>
+                    </div>
+                </header>
+
+                <section class="stats-strip">
+                    <article>
+                        <span>Produccion</span>
+                        <strong>210 kg</strong>
+                        <small>+14% vs semana anterior</small>
+                    </article>
+                    <article>
+                        <span>Alertas</span>
+                        <strong>3</strong>
+                        <small>2 atendidas</small>
+                    </article>
+                    <article>
+                        <span>Labores</span>
+                        <strong>12</strong>
+                        <small>Riego, poda y control</small>
+                    </article>
+                </section>
+
+                <div class="chart-bars" aria-label="Grafica de produccion semanal">
+                    <span style="height: 44%"></span>
+                    <span style="height: 62%"></span>
+                    <span style="height: 51%"></span>
+                    <span style="height: 78%"></span>
+                    <span style="height: 68%"></span>
+                    <span style="height: 86%"></span>
+                    <span style="height: 72%"></span>
+                </div>
+            </article>
+
+            <article class="panel recommendations-panel">
+                <header class="panel-header">
+                    <div>
+                        <p class="eyebrow">Recomendaciones</p>
+                        <h2>Acciones sugeridas</h2>
+                    </div>
+                </header>
+                <ul class="alert-list">
+                    <li>
+                        <i class="fa-solid fa-bug"></i>
+                        <span><strong>Revisar frutos perforados</strong><small>Prioridad alta en lote 2.</small></span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-droplet"></i>
+                        <span><strong>Fertilizacion balanceada</strong><small>Programada para final de mes.</small></span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-cloud-sun"></i>
+                        <span><strong>Monitorear humedad</strong><small>Riesgo por lluvias frecuentes.</small></span>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="panel guides-panel">
+                <header class="panel-header">
+                    <div>
+                        <p class="eyebrow">Aprendizaje</p>
+                        <h2>Guias de buenas practicas</h2>
+                    </div>
+                </header>
+
+                <section class="guide-list">
+                    <article>
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <div>
+                            <h3>Manejo integrado de plagas</h3>
+                            <p>Prevencion, monitoreo y control responsable.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-seedling"></i>
+                        <div>
+                            <h3>Nutricion del cultivo</h3>
+                            <p>Buenas practicas para cada etapa del cafe.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-mug-saucer"></i>
+                        <div>
+                            <h3>Cosecha y postcosecha</h3>
+                            <p>Mejora la calidad del grano y reduce perdidas.</p>
+                        </div>
+                    </article>
+                </section>
+            </article>
+
+            <article class="panel wide-panel">
+                <header class="panel-header">
+                    <div>
+                        <p class="eyebrow">Agenda</p>
+                        <h2>Labores proximas de la finca</h2>
                     </div>
                     <button type="button" class="text-button">Agregar labor</button>
                 </header>
@@ -111,33 +273,6 @@
                         </tr>
                     </tbody>
                 </table>
-            </article>
-
-            <article class="panel">
-                <header class="panel-header">
-                    <div>
-                        <p class="eyebrow">Estado</p>
-                        <h2>Salud del cultivo</h2>
-                    </div>
-                </header>
-                <section class="health-score">
-                    <strong>82%</strong>
-                    <p>Condicion general estable. Revisa el lote 2 por posible aumento de broca.</p>
-                </section>
-            </article>
-
-            <article class="panel">
-                <header class="panel-header">
-                    <div>
-                        <p class="eyebrow">Registro</p>
-                        <h2>Acciones rapidas</h2>
-                    </div>
-                </header>
-                <section class="quick-actions">
-                    <button type="button"><i class="fa-solid fa-camera"></i> Reportar plaga</button>
-                    <button type="button"><i class="fa-solid fa-plus"></i> Nueva cosecha</button>
-                    <button type="button"><i class="fa-solid fa-calendar-check"></i> Agendar labor</button>
-                </section>
             </article>
         </section>
     </main>
