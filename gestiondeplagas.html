@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración IA - Coffee+Vision</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <main class="admin-container">
+        <header class="main-header">
+            <h1>⚙️ Panel de Entrenamiento IA</h1>
+            <p>Gestión técnica de patógenos y plagas del café</p>
+        </header>
+
+        <section class="dashboard-grid">
+            
+            <article class="card-admin upload-section">
+                <header>
+                    <h2>Actualizar Base de Datos</h2>
+                </header>
+                
+                <form id="ia-form" onsubmit="event.preventDefault(); guardarDatos();">
+                    <p class="input-group">
+                        <label for="nombre-tecnico">Nombre Técnico / Científico:</label>
+                        <input type="text" id="nombre-tecnico" placeholder="Ej: Hemileia vastatrix (Roya)" required>
+                    </p>
+
+                    <p class="input-group">
+                        <label for="categoria">Categoría de Riesgo:</label>
+                        <select id="categoria">
+                            <option value="plaga">Plaga (Insectos/Artrópodos)</option>
+                            <option value="enfermedad">Enfermedad (Hongos/Bacterias)</option>
+                            <option value="deficiencia">Deficiencia Nutricional</option>
+                        </select>
+                    </p>
+
+                    <p class="input-group">
+                        <label for="descripcion-tecnica">Descripción Detallada para IA:</label>
+                        <textarea id="descripcion-tecnica" placeholder="Describa patrones visuales, coloración y síntomas clave para el modelo..." required></textarea>
+                    </p>
+
+                    <aside class="image-upload-zone">
+                        <label for="imagen-plaga">Muestras Visuales (Dataset):</label>
+                        <input type="file" id="imagen-plaga" accept="image/*" onchange="previewImage(event)">
+                        <figure id="preview-container">
+                            <img id="img-preview" src="" alt="Vista previa de la muestra" style="display: none;">
+                            <figcaption>Previsualización de la muestra técnica</figcaption>
+                        </figure>
+                    </aside>
+
+                    <footer class="form-actions">
+                        <button type="submit" class="btn-primary">Actualizar Modelo de IA</button>
+                    </footer>
+                </form>
+            </article>
+
+            <section class="card-admin log-section">
+                <header>
+                    <h2>Registros Recientes</h2>
+                </header>
+                <figure class="table-scroll">
+                    <table id="tabla-registros">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Patógeno</th>
+                                <th>Tipo</th>
+                                <th>Estado IA</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lista-registros">
+                        </tbody>
+                    </table>
+                </figure>
+            </section>
+
+        </section>
+    </main>
+
+    <script>
+        function previewImage(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const output = document.getElementById('img-preview');
+                output.src = reader.result;
+                output.style.display = 'block';
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        function guardarDatos() {
+            const nombre = document.getElementById('nombre-tecnico').value;
+            const cat = document.getElementById('categoria').value;
+            const tabla = document.getElementById('lista-registros');
+            const fecha = new Date().toLocaleDateString();
+
+            const nuevaFila = `<tr>
+                <td>${fecha}</td>
+                <td class="bold">${nombre}</td>
+                <td>${cat.toUpperCase()}</td>
+                <td><span class="status-tag">Entrenando...</span></td>
+            </tr>`;
+
+            tabla.innerHTML = nuevaFila + tabla.innerHTML;
+            alert("Datos técnicos enviados al servidor de IA con éxito.");
+            document.getElementById('ia-form').reset();
+            document.getElementById('img-preview').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
