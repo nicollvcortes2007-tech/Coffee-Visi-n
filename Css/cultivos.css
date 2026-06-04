@@ -1,0 +1,77 @@
+body{
+    margin:0;
+    font-family:Calibri;
+    background:#f3efe8;
+}
+
+header{
+    background:#2c2c2c;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px;
+}
+
+button{
+    background:none;
+    border:none;
+    color:white;
+    font-size:25px;
+}
+
+h1{
+    font-family:"Berlin Sans FB Demi";
+    font-size:32px;
+}
+
+nav{
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+}
+
+ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+li{
+    color:#40180A;
+    font-size:16px;
+}
+
+main{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+    padding:30px;
+}
+
+section img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+article{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+
+h2{
+    color:#5c8c14;
+    font-family:"Lucida Bright";
+}
+
+p{
+    color:#40180A;
+    font-size:16px;
+}
