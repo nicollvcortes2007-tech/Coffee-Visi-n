@@ -1,0 +1,142 @@
+/* Estilos sin DIVs para el Sistema Cafetero */
+
+body {
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    background-color: #f7f9f2;
+    color: #40180A;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #5c8c14; /* Verde principal */
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #A65E1F; /* Tono tierra */
+    font-style: italic;
+    margin-top: 0;
+}
+
+/* Tarjeta del Formulario (usando article) */
+.card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-left: 10px solid #5c8c14;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #40180A;
+    border-bottom: 2px solid #86BF0B; /* Verde lima */
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #A65E1F;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #5c8c14;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: #40180A;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #86BF0B;
+}
+
+/* Botones */
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-save {
+    background-color: #86BF0B;
+    color: white;
+    width: 100%;
+}
+
+.btn-save:hover {
+    background-color: #5c8c14;
+    transform: translateY(-2px);
+}
+
+/* Tabla */
+.table-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #5c8c14;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.btn-edit {
+    background-color: #A65E1F;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #40180A;
+    color: white;
+}
