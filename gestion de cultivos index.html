@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de cultivos - Registro de Actividades</title>
+    <link rel="stylesheet" href="css/gestiondecultivos.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Gestion de cultivos</h1>
+            <p>Seguimiento digital para una mejor productividad</p>
+         <img src="/img/logo2 (1).png" alt="">
+        </header>
+        
+        <!-- Formulario de Registro -->
+        <section id="registro-seccion">
+            <article class="card">
+                <h2 id="form-title">Registrar Nueva Actividad</h2>
+                <input type="hidden" id="edit-index">
+                
+                <p class="form-group">
+                    <label for="fecha">Fecha de la Labor:</label>
+                    <input type="date" id="fecha">
+                </p>
+
+                <p class="form-group">
+                    <label for="actividad">Tipo de Actividad:</label>
+                    <select id="actividad">
+                        <option value="Siembra">Siembra</option>
+                        <option value="Fertilización">Fertilización</option>
+                        <option value="Desyerbe">Desyerbe / Limpia</option>
+                        <option value="Control de Plagas">Control de Plagas (Broca/Roya)</option>
+                        <option value="Poda">Poda / Zoqueo</option>
+                        <option value="Recolección">Recolección (Cosecha)</option>
+                        <option value="Beneficiado">Beneficiado (Lavado/Secado)</option>
+                    </select>
+                </p>
+
+                <p class="form-group">
+                    <label for="observaciones">Observaciones / Detalles:</label>
+                    <textarea id="observaciones" placeholder="Ej: Se aplicaron 50g de fertilizante por árbol..."></textarea>
+                </p>
+
+                <footer class="btn-container">
+                    <button class="btn-save" onclick="guardarActividad()">Guardar Actividad</button>
+                </footer>
+            </article>
+        </section>
+
+        <!-- Tabla de Historial -->
+        <section class="table-container">
+            <h2>Historial de Actividades</h2>
+            <figure class="table-wrapper">
+                <table id="tabla-actividades">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Actividad</th>
+                            <th>Observaciones</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-actividades">
+                        <!-- Los registros aparecerán aquí -->
+                    </tbody>
+                </table>
+            </figure>
+        </section>
+    </main>
+
+    <script>
+        let actividades = [];
+
+        function guardarActividad() {
+            const fecha = document.getElementById('fecha').value;
+            const actividad = document.getElementById('actividad').value;
+            const observaciones = document.getElementById('observaciones').value;
+            const editIndex = document.getElementById('edit-index').value;
+
+            if (!fecha || !actividad) {
+                alert("Por favor completa la fecha y el tipo de actividad.");
+                return;
+            }
+
+            const nuevaLabor = { fecha, actividad, observaciones };
+
+            if (editIndex === "") {
+                actividades.push(nuevaLabor);
+            } else {
+                actividades[editIndex] = nuevaLabor;
+                document.getElementById('edit-index').value = "";
+                document.getElementById('form-title').innerText = "Registrar Nueva Actividad";
+            }
+
+            limpiarFormulario();
+            actualizarTabla();
+        }
+
+        function actualizarTabla() {
+            const tbody = document.getElementById('lista-actividades');
+            tbody.innerHTML = "";
+
+            actividades.forEach((item, index) => {
+                const fila = `<tr>
+                    <td>${item.fecha}</td>
+                    <td class="text-bold">${item.actividad}</td>
+                    <td>${item.observaciones}</td>
+                    <td class="actions">
+                        <button class="btn-edit" onclick="prepararEdicion(${index})">Editar</button>
+                        <button class="btn-delete" onclick="eliminarActividad(${index})">X</button>
+                    </td>
+                </tr>`;
+                tbody.innerHTML += fila;
+            });
+        }
+
+        function prepararEdicion(index) {
+            const item = actividades[index];
+            document.getElementById('fecha').value = item.fecha;
+            document.getElementById('actividad').value = item.actividad;
+            document.getElementById('observaciones').value = item.observaciones;
+            document.getElementById('edit-index').value = index;
+            document.getElementById('form-title').innerText = "Editando Actividad #" + (index + 1);
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        function eliminarActividad(index) {
+            if (confirm("¿Estás seguro de eliminar este registro?")) {
+                actividades.splice(index, 1);
+                actualizarTabla();
+            }
+        }
+
+        function limpiarFormulario() {
+            document.getElementById('fecha').value = "";
+            document.getElementById('actividad').selectedIndex = 0;
+            document.getElementById('observaciones').value = "";
+        }
+    </script>
+</body>
+</html>
