@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<!-- ===================================================== -->
+<!-- CONFIGURACIÓN GENERAL DEL DOCUMENTO -->
+<!-- ===================================================== -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Coffee+Vision | Dashboard Administrador</title>
+
+<!-- ===================================================== -->
+<!-- BOOTSTRAP -->
+<!-- ===================================================== -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- ===================================================== -->
+<!-- HOJA DE ESTILOS -->
+<!-- ===================================================== -->
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+</head>
+
+<body>
+
+
+<!-- ===================================================== -->
+<!-- SIDEBAR / MENÚ LATERAL -->
+<!-- Navegación principal del administrador -->
+<!-- ===================================================== -->
+
+<aside class="sidebar">
+
+    <h2 class="logo">Coffee+Vision</h2>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#inicio"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+            </svg> Inicio</a></li>
+
+            <li><a href="#usuarios"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+            </svg> Usuarios</a></li>
+
+            <li><a href="#reportes"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-text" viewBox="0 0 16 16">
+            <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>
+            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1"/>
+            </svg> Reportes</a></li>
+
+            <li><a href="#estadisticas"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/>
+            </svg> Estadísticas</a></li>
+
+        </ul>
+
+    </nav>
+
+</aside>
+
+<!-- ===================================================== -->
+<!-- CONTENIDO PRINCIPAL -->
+<!-- ===================================================== -->
+
+<main class="contenido container-fluid">
+
+    <!-- ===================================================== -->
+    <!-- HEADER DEL DASHBOARD -->
+    <!-- Información del administrador -->
+    <!-- ===================================================== -->
+
+    <header class="encabezado" id="inicio">
+
+        <section>
+
+            <h1>Panel de Administración Coffee+Vision</h1>
+
+            <p>Bienvenido Alejo</p>
+
+        </section>
+
+        <article class="perfil-admin">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                alt="Administrador">
+
+            <section>
+
+                <h3>Alejo</h3>
+
+                <p>Administrador</p>
+
+                <!-- Botón para cerrar sesión -->
+
+                <button class="btn-cerrar">
+                    Cerrar Sesión
+                </button>
+
+            </section>
+
+        </article>
+
+    </header>
+
+    <!-- ===================================================== -->
+    <!-- TARJETAS RESUMEN -->
+    <!-- Información rápida del sistema -->
+    <!-- ===================================================== -->
+
+    <section class="row g-4 tarjetas">
+
+        <article class="col-lg-3 col-md-6">
+
+            <section class="card-dashboard verde">
+
+                <h3>Usuarios</h3>
+
+                <h2 id="totalUsuarios">2</h2>
+
+            </section>
+
+        </article>
+
+        <article class="col-lg-3 col-md-6">
+
+            <section class="card-dashboard claro">
+
+                <h3>Cultivos</h3>
+
+                <h2>85</h2>
+
+            </section>
+
+        </article>
+
+        <article class="col-lg-3 col-md-6">
+
+            <section class="card-dashboard cafe">
+
+                <h3>Plagas</h3>
+
+                <h2>12</h2>
+
+            </section>
+
+        </article>
+
+        <article class="col-lg-3 col-md-6">
+
+            <section class="card-dashboard azul">
+
+                <h3>Reportes</h3>
+
+                <h2>34</h2>
+
+            </section>
+
+        </article>
+
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- PRIORIDADES DEL ADMINISTRADOR -->
+    <!-- Alertas rápidas del sistema -->
+    <!-- ===================================================== -->
+
+    <section class="prioridades">
+
+        <h2>Prioridades del Administrador</h2>
+
+        <div class="row g-3 mt-2">
+
+            <div class="col-md-3">
+                <div class="card-prioridad">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-data" viewBox="0 0 16 16">
+                    <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0z"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg> 5 Reportes Pendientes
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card-prioridad">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bug-fill" viewBox="0 0 16 16">
+                   <path d="M4.978.855a.5.5 0 1 0-.956.29l.41 1.352A5 5 0 0 0 3 6h10a5 5 0 0 0-1.432-3.503l.41-1.352a.5.5 0 1 0-.956-.29l-.291.956A5 5 0 0 0 8 1a5 5 0 0 0-2.731.811l-.29-.956z"/>
+                   <path d="M13 6v1H8.5v8.975A5 5 0 0 0 13 11h.5a.5.5 0 0 1 .5.5v.5a.5.5 0 1 0 1 0v-.5a1.5 1.5 0 0 0-1.5-1.5H13V9h1.5a.5.5 0 0 0 0-1H13V7h.5A1.5 1.5 0 0 0 15 5.5V5a.5.5 0 0 0-1 0v.5a.5.5 0 0 1-.5.5zm-5.5 9.975V7H3V6h-.5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 0-1 0v.5A1.5 1.5 0 0 0 2.5 7H3v1H1.5a.5.5 0 0 0 0 1H3v1h-.5A1.5 1.5 0 0 0 1 11.5v.5a.5.5 0 1 0 1 0v-.5a.5.5 0 0 1 .5-.5H3a5 5 0 0 0 4.5 4.975"/>
+                   </svg> 
+                    3 Plagas Críticas
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card-prioridad">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-video3" viewBox="0 0 16 16">
+                    <path d="M14 9.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-6 5.7c0 .8.8.8.8.8h6.4s.8 0 .8-.8-.8-3.2-4-3.2-4 2.4-4 3.2"/>
+                    <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h5.243c.122-.326.295-.668.526-1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v7.81c.353.23.656.496.91.783Q16 12.312 16 12V4a2 2 0 0 0-2-2z"/>
+                    </svg>
+                     7 Nuevos Caficultores
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card-prioridad">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-yelp" viewBox="0 0 16 16">
+                    <path d="m4.188 10.095.736-.17.073-.02A.813.813 0 0 0 5.45 8.65a1 1 0 0 0-.3-.258 3 3 0 0 0-.428-.198l-.808-.295a76 76 0 0 0-1.364-.493C2.253 7.3 2 7.208 1.783 7.14c-.041-.013-.087-.025-.124-.038a2.1 2.1 0 0 0-.606-.116.72.72 0 0 0-.572.245 2 2 0 0 0-.105.132 1.6 1.6 0 0 0-.155.309c-.15.443-.225.908-.22 1.376.002.423.013.966.246 1.334a.8.8 0 0 0 .22.24c.166.114.333.129.507.141.26.019.513-.045.764-.103l2.447-.566zm8.219-3.911a4.2 4.2 0 0 0-.8-1.14 1.6 1.6 0 0 0-.275-.21 2 2 0 0 0-.15-.073.72.72 0 0 0-.621.031c-.142.07-.294.182-.496.37-.028.028-.063.06-.094.089-.167.156-.353.35-.574.575q-.51.516-1.01 1.042l-.598.62a3 3 0 0 0-.298.365 1 1 0 0 0-.157.364.8.8 0 0 0 .007.301q0 .007.003.013a.81.81 0 0 0 .945.616l.074-.014 3.185-.736c.251-.058.506-.112.732-.242.151-.088.295-.175.394-.35a.8.8 0 0 0 .093-.313c.05-.434-.178-.927-.36-1.308M6.706 7.523c.23-.29.23-.722.25-1.075.07-1.181.143-2.362.201-3.543.022-.448.07-.89.044-1.34-.022-.372-.025-.799-.26-1.104C6.528-.077 5.644-.033 5.04.05q-.278.038-.553.104a8 8 0 0 0-.543.149c-.58.19-1.393.537-1.53 1.204-.078.377.106.763.249 1.107.173.417.41.792.625 1.185.57 1.036 1.15 2.066 1.728 3.097.172.308.36.697.695.857q.033.015.068.025c.15.057.313.068.469.032l.028-.007a.8.8 0 0 0 .377-.226zm-.276 3.161a.74.74 0 0 0-.923-.234 1 1 0 0 0-.145.09 2 2 0 0 0-.346.354c-.026.033-.05.077-.08.104l-.512.705q-.435.591-.861 1.193c-.185.26-.346.479-.472.673l-.072.11c-.152.235-.238.406-.282.559a.7.7 0 0 0-.03.314c.013.11.05.217.108.312q.046.07.1.138a1.6 1.6 0 0 0 .257.237 4.5 4.5 0 0 0 2.196.76 1.6 1.6 0 0 0 .349-.027 2 2 0 0 0 .163-.048.8.8 0 0 0 .278-.178.7.7 0 0 0 .17-.266c.059-.147.098-.335.123-.613l.012-.13c.02-.231.03-.502.045-.821q.037-.735.06-1.469l.033-.87a2.1 2.1 0 0 0-.055-.623 1 1 0 0 0-.117-.27Zm5.783 1.362a2.2 2.2 0 0 0-.498-.378l-.112-.067c-.199-.12-.438-.246-.719-.398q-.644-.353-1.295-.695l-.767-.407c-.04-.012-.08-.04-.118-.059a2 2 0 0 0-.466-.166 1 1 0 0 0-.17-.018.74.74 0 0 0-.725.616 1 1 0 0 0 .01.293c.038.204.13.406.224.583l.41.768q.341.65.696 1.294c.152.28.28.52.398.719q.036.057.068.112c.145.239.261.39.379.497a.73.73 0 0 0 .596.201 2 2 0 0 0 .168-.029 1.6 1.6 0 0 0 .325-.129 4 4 0 0 0 .855-.64c.306-.3.577-.63.788-1.006q.045-.08.076-.165a2 2 0 0 0 .051-.161q.019-.083.029-.168a.8.8 0 0 0-.038-.327.7.7 0 0 0-.165-.27"/>
+                    </svg>
+                     4 Revisiones Pendientes
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- FORMULARIO DE REGISTRO -->
+    <!-- Permite agregar usuarios -->
+    <!-- ===================================================== -->
+
+    <section class="formulario-usuarios">
+
+        <h2>Agregar Usuario</h2>
+
+        <form id="formulario">
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Nombre"
+                required>
+
+            <select id="rol">
+
+                <option value="Caficultor">Caficultor</option>
+
+                <option value="Administrador">Administrador</option>
+
+            </select>
+
+            <button
+                type="submit"
+                class="btn btn-success">
+
+                Guardar
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- GESTIÓN DE USUARIOS -->
+    <!-- Tabla principal -->
+    <!-- ===================================================== -->
+
+    <section class="tabla-usuarios" id="usuarios">
+
+        <h2>Gestión de Usuarios</h2>
+
+        <table class="table table-hover align-middle">
+
+            <thead>
+
+                <tr>
+
+                    <th>Nombre</th>
+                    <th>Rol</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tablaBody">
+
+                <tr>
+
+                    <td>Carlos Pérez</td>
+                    <td>Caficultor</td>
+                    <td>Activo</td>
+
+                    <td>
+
+                        <button class="btn btn-danger btn-sm">
+
+                            Eliminar
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>María López</td>
+                    <td>Administrador</td>
+                    <td>Activo</td>
+
+                    <td>
+
+                        <button class="btn btn-danger btn-sm">
+
+                            Eliminar
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- ACTIVIDADES RECIENTES -->
+    <!-- Historial de acciones -->
+    <!-- ===================================================== -->
+
+    <section class="actividad-reciente">
+
+        <h2>Actividades Recientes</h2>
+
+        <table class="table table-striped">
+
+            <thead>
+
+                <tr>
+
+                    <th>Caficultor</th>
+                    <th>Actividad</th>
+                    <th>Fecha</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Juan Pérez</td>
+                    <td>Reportó Roya</td>
+                    <td>Hoy</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Laura Gómez</td>
+                    <td>Actualizó Finca</td>
+                    <td>Ayer</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Carlos Ruiz</td>
+                    <td>Registró Cultivo</td>
+                    <td>Hace 2 días</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- ESTADO DE LAS FINCAS -->
+    <!-- Información rápida para el administrador -->
+    <!-- ===================================================== -->
+
+    <section class="fincas-admin">
+
+        <h2>Estado de las Fincas</h2>
+
+        <div class="card-finca">
+
+            <h4>🌱 Finca El Paraíso</h4>
+
+            <p><strong>Municipio:</strong> Salgar</p>
+
+            <p><strong>Estado:</strong> Activa</p>
+
+            <p><strong>Último Reporte:</strong> Roya Detectada</p>
+
+            <p><strong>Nivel de Riesgo:</strong> Medio</p>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- ESTADÍSTICAS GENERALES -->
+    <!-- Indicadores del sistema -->
+    <!-- ===================================================== -->
+
+    <section class="estadisticas" id="estadisticas">
+
+        <h2>Estadísticas Generales</h2>
+
+        <article class="barra">
+
+            <p>Usuarios activos</p>
+
+            <progress value="80" max="100"></progress>
+
+        </article>
+
+        <article class="barra">
+
+            <p>Producción mensual</p>
+
+            <progress value="60" max="100"></progress>
+
+        </article>
+
+        <article class="barra">
+
+            <p>Alertas resueltas</p>
+
+            <progress value="70" max="100"></progress>
+
+        </article>
+
+        <hr>
+
+        <h3>🐛 Estadísticas de Plagas</h3>
+
+        <article class="barra">
+
+            <p>Roya</p>
+
+            <progress value="45" max="100"></progress>
+
+        </article>
+
+        <article class="barra">
+
+            <p>Broca</p>
+
+            <progress value="35" max="100"></progress>
+
+        </article>
+
+        <article class="barra">
+
+            <p>Ojo de Gallo</p>
+
+            <progress value="20" max="100"></progress>
+
+        </article>
+
+    </section>
+
+</main>
+
+<!-- ===================================================== -->
+<!-- JAVASCRIPT -->
+<!-- ===================================================== -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
