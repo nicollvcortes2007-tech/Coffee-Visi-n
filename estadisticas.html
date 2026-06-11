@@ -1,304 +1,107 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estadísticas Coffee+Vision</title>
-
+    <title>Coffee+visión - Estadísticas de Cultivo</title>
     <link rel="stylesheet" href="css/estadisticas.css">
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-    <nav>
+    <aside class="sidebar">
+        <header class="brand">
+            <img src="Imagenes/logo2.png" alt="Coffee+visión Logo" class="logo">
+        </header>
+        <nav class="menu">
+            <a href="#">Dashboard</a>
+            <a href="#">Notificaciones <span class="badge">12</span></a>
+            <a href="#">Usuarios</a>
+            <a href="#">Cultivos</a>
+            <a href="#">Plagas y Enfermedades</a>
+            <a href="#">Chatbot IA</a>
+            <a href="#">Contenidos</a>
+            <a href="#" class="active">Reportes y Estadísticas</a>
+            <a href="#">Configuración</a>
+        </nav>
+        <footer class="sidebar-footer">
+            <a href="#" class="logout">Cerrar sesión</a>
+        </footer>
+    </aside>
 
-        <img src="img/logo2.png" alt="logo" class="logo">
+    <main class="main-content">
+        
+        <header class="content-header">
+            <h1>ESTADISTICAS DE CULTIVO</h1>
+            <p class="subtitle">Panel de estadisticas</p>
+            <section class="page-title-area">
+                       </header>
 
-        <ul>
-
-            <li class="activo">
-                <i class="fa-solid fa-house"></i>
-                Inicio
-            </li>
-
-            <li>
-                <i class="fa-solid fa-seedling"></i>
-                Mis cultivos
-            </li>
-
-            <li>
-                <i class="fa-solid fa-chart-column"></i>
-                Datos de cultivo
-            </li>
-
-            <li>
-                <i class="fa-solid fa-lightbulb"></i>
-                Recomendaciones
-            </li>
-
-            <li>
-                <i class="fa-solid fa-cloud-rain"></i>
-                Clima
-            </li>
-
-            <li>
-                <i class="fa-solid fa-gear"></i>
-                Configuración
-            </li>
-
-        </ul>
-
-        <img src="perfil.jpg" alt="perfil" class="perfil">
-
-    </nav>
-
-    <main>
-
-        <section class="card clima">
-
-            <i class="fa-solid fa-cloud-sun"></i>
-
-            <h2>Condiciones Climáticas</h2>
-
-            <h1>24°C</h1>
-
-            <p>
-                Clima parcialmente nublado con humedad moderada.
-                Las condiciones actuales son favorables para el cultivo
-                de café y el crecimiento de las plantas.
-            </p>
-
+        <section class="summary-cards">
+            <article class="card">
+                <h3>Total Hectáreas</h3>
+                <p class="metric">24.5 ha</p>
+                <span class="trend positive">↑ 1.2% este mes</span>
+            </article>
+            <article class="card">
+                <h3>Producción Estimada</h3>
+                <p class="metric">1,250 Cargas</p>
+                <span class="trend">Variedad Castillo / Cenicafé</span>
+            </article>
+            <article class="card">
+                <h3>Estado Sanitario</h3>
+                <p class="metric text-green">94% Sano</p>
+                <span class="trend negative">6% Alerta de Roya</span>
+            </article>
         </section>
 
-        <section class="card">
+        <section class="dashboard-grid">
+            
+            <article class="chart-container">
+                <h3>Rendimiento de Cosecha (Últimos meses)</h3>
+                <figure class="mock-chart">
+                    <progress value="40" max="100"></progress>
+                    <progress value="65" max="100"></progress>
+                    <progress value="85" max="100"></progress>
+                    <progress value="50" max="100"></progress>
+                </figure>
+            </article>
 
-            <h2>Estado de Crecimiento</h2>
-
-            <p>
-                Tus plantas están en la fase de floración avanzada.
-                El monitoreo indica que el crecimiento es óptimo y
-                la producción estimada aumentará en las próximas semanas.
-            </p>
-
-            <progress value="75" max="100"></progress>
-
-            <span class="porcentaje">75%</span>
-
-        </section>
-
-        <section class="card recomendacion">
-
-            <h2>Recomendación Importante</h2>
-
-            <p>
-                Se pronostican lluvias intensas para las próximas 24 horas.
-                Se recomienda ajustar el sistema de riego automático y
-                verificar el drenaje del terreno para evitar exceso de agua.
-            </p>
-
-        </section>
-
-        <section class="card actividad">
-
-            <h2>Actividad Reciente</h2>
-
-            <ul>
-
-                <li>✔ Riego automático completado correctamente.</li>
-
-                <li>✔ Sensor de temperatura actualizado.</li>
-
-                <li>✔ Nueva recomendación agronómica disponible.</li>
-
-                <li>✔ Nivel de humedad registrado al 68%.</li>
-
-                <li>✔ Sistema de monitoreo funcionando sin errores.</li>
-
-            </ul>
-
-        </section>
-
-        <section class="card estadistica">
-
-            <h2>Producción Estimada</h2>
-
-            <h1>92%</h1>
-
-            <span>
-                Rendimiento positivo esperado para esta temporada.
-            </span>
+            <article class="table-container">
+                <h3>Estado por Lote de Cultivo</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lote</th>
+                            <th>Variedad</th>
+                            <th>Edad</th>
+                            <th>Rendimiento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lote El Paraíso</td>
+                            <td>Castillo</td>
+                            <td>3 años</td>
+                            <td><mark class="status-good">Óptimo</mark></td>
+                        </tr>
+                        <tr>
+                            <td>Lote La Esperanza</td>
+                            <td>Caturra</td>
+                            <td>5 años</td>
+                            <td><mark class="status-alert">Mantenimiento</mark></td>
+                        </tr>
+                        <tr>
+                            <td>Lote Central</td>
+                            <td>Cenicafé 1</td>
+                            <td>1 año</td>
+                            <td><mark class="status-good">Crecimiento</mark></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
 
         </section>
-
-        <section class="card estadistica">
-
-            <h2>Humedad del Suelo</h2>
-
-            <h1>68%</h1>
-
-            <span>
-                Nivel adecuado para mantener un cultivo saludable.
-            </span>
-
-        </section>
-
     </main>
 
 </body>
-=======
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estadísticas Coffee+Vision</title>
-
-    <link rel="stylesheet" href="css/estadisticas.css">
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-
-<body>
-
-    <nav>
-
-        <img src="Imagenes/logo2.png" alt="logo" class="logo">
-
-        <ul>
-
-            <li class="activo">
-                <i class="fa-solid fa-house"></i>
-                Inicio
-            </li>
-
-            <li>
-                <i class="fa-solid fa-seedling"></i>
-                Mis cultivos
-            </li>
-
-            <li>
-                <i class="fa-solid fa-chart-column"></i>
-                Datos de cultivo
-            </li>
-
-            <li>
-                <i class="fa-solid fa-lightbulb"></i>
-                Recomendaciones
-            </li>
-
-            <li>
-                <i class="fa-solid fa-cloud-rain"></i>
-                Clima
-            </li>
-
-            <li>
-                <i class="fa-solid fa-gear"></i>
-                Configuración
-            </li>
-
-        </ul>
-
-        <img src="perfil.jpg" alt="perfil" class="perfil">
-
-    </nav>
-
-    <main>
-
-        <section class="card clima">
-
-            <i class="fa-solid fa-cloud-sun"></i>
-
-            <h2>Condiciones Climáticas</h2>
-
-            <h1>24°C</h1>
-
-            <p>
-                Clima parcialmente nublado con humedad moderada.
-                Las condiciones actuales son favorables para el cultivo
-                de café y el crecimiento de las plantas.
-            </p>
-
-        </section>
-
-        <section class="card">
-
-            <h2>Estado de Crecimiento</h2>
-
-            <p>
-                Tus plantas están en la fase de floración avanzada.
-                El monitoreo indica que el crecimiento es óptimo y
-                la producción estimada aumentará en las próximas semanas.
-            </p>
-
-            <progress value="75" max="100"></progress>
-
-            <span class="porcentaje">75%</span>
-
-        </section>
-
-        <section class="card recomendacion">
-
-            <h2>Recomendación Importante</h2>
-
-            <p>
-                Se pronostican lluvias intensas para las próximas 24 horas.
-                Se recomienda ajustar el sistema de riego automático y
-                verificar el drenaje del terreno para evitar exceso de agua.
-            </p>
-
-        </section>
-
-        <section class="card actividad">
-
-            <h2>Actividad Reciente</h2>
-
-            <ul>
-
-                <li>✔ Riego automático completado correctamente.</li>
-
-                <li>✔ Sensor de temperatura actualizado.</li>
-
-                <li>✔ Nueva recomendación agronómica disponible.</li>
-
-                <li>✔ Nivel de humedad registrado al 68%.</li>
-
-                <li>✔ Sistema de monitoreo funcionando sin errores.</li>
-
-            </ul>
-
-        </section>
-
-        <section class="card estadistica">
-
-            <h2>Producción Estimada</h2>
-
-            <h1>92%</h1>
-
-            <span>
-                Rendimiento positivo esperado para esta temporada.
-            </span>
-
-        </section>
-
-        <section class="card estadistica">
-
-            <h2>Humedad del Suelo</h2>
-
-            <h1>68%</h1>
-
-            <span>
-                Nivel adecuado para mantener un cultivo saludable.
-            </span>
-
-        </section>
-
-    </main>
-
-</body>
->>>>>>> 757735585532e22b97206fd4d96cc68c52aea547
 </html>
