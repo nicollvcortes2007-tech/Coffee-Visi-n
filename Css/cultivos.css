@@ -2,11 +2,14 @@ body{
     margin:0;
     font-family:Calibri;
     background:#f3efe8;
+<<<<<<< HEAD
     background-image:
     linear-gradient(rgba(255,255,255,0.75),
     rgba(255,255,255,0.75)),
     url("../img/cafetal.jpg");
 
+=======
+>>>>>>> 757735585532e22b97206fd4d96cc68c52aea547
 }
 
 header{
