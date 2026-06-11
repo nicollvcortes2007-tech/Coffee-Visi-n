@@ -27,6 +27,13 @@
                 <label for="password">Contraseña</label>
                 <input type="password" id="password" name="password" placeholder="••••••••" autocomplete="off" required>
 
+                <label for="user-type">Tipo de usuario</label>
+                <select id="user-type" name="user-type" required>
+                    <option value="" disabled selected>Selecciona tu rol</option>
+                    <option value="caficultor">Caficultor</option>
+                    <option value="administrador">Administrador</option>
+                </select>
+
                 <fieldset class="form-options">
                     <label class="remember-me">
                         <input type="checkbox" name="recordarme"> Recordarme
@@ -45,7 +52,31 @@
     
     <script>
         document.getElementById('formLogin').addEventListener('submit', function(event) {
-            alert("¡Ingreso exitoso a CoffeeTech!");
+            event.preventDefault();
+
+            const email = document.getElementById('email').value.trim().toLowerCase();
+            const password = document.getElementById('password').value;
+            const selectedRole = document.getElementById('user-type').value;
+            const users = JSON.parse(localStorage.getItem('coffeeUsers')) || [];
+            const registeredUser = users.find(user => user.email === email && user.password === password);
+
+            if (registeredUser && registeredUser.role !== selectedRole) {
+                alert("El rol seleccionado no coincide con el usuario registrado.");
+                return;
+            }
+
+            const role = registeredUser ? registeredUser.role : selectedRole;
+            localStorage.setItem('coffeeActiveUser', JSON.stringify({
+                email: email,
+                role: role
+            }));
+
+            if (role === 'administrador') {
+                window.location.href = 'dashboard-admin.html';
+                return;
+            }
+
+            window.location.href = 'dashboard-caficultor.html';
         });
     </script>
     <!-- halo -->
