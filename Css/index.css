@@ -6,7 +6,9 @@
 }
 
 body{
-    background-image: url(/image/cultivo.jpg);
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('/Imagenes/cultivo.jpg'); 
+                
     padding: 40px;
     display: flex;
     justify-content: center;
@@ -29,6 +31,20 @@ body{
     margin-bottom: 22px;
     color: rgb(96, 24, 24);
     font-family: "Calibri";
+}
+.volver{
+    color: rgb(96, 24, 24);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+}
+.volver:hover {
+    color: #769f1a;
+    transform: translateX(-3px);
 }
 
 .info-usuario{
