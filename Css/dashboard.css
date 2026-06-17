@@ -138,6 +138,93 @@ button {
     align-items: center;
 }
 
+/* ==========================================
+   CAMBIO: BOTÓN NOTIFICACIÓN Y CHIP DE PERFIL
+   ========================================== */
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-link,
+.notification-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.notification-button {
+    background-color: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--coffee);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.notification-button:hover {
+    border-color: var(--green);
+}
+
+.notification-button .badge {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--danger);
+    border-radius: 50%;
+    border: none;
+}
+
+.profile-chip {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 6px 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.profile-chip img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--green-soft);
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile-text strong {
+    font-size: 1rem;
+    color: var(--ink);
+    font-weight: 700;
+}
+
+.profile-text small {
+    color: var(--muted);
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0px;
+}
+/* ========================================== */
+
 .hero-dashboard {
     min-height: 270px;
     padding: 34px;
@@ -250,71 +337,6 @@ h2 {
 h3 {
     color: var(--coffee);
     font-size: 0.98rem;
-}
-
-.topbar-actions {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.topbar-actions button {
-    width: 44px;
-    height: 44px;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: var(--surface);
-    color: var(--coffee);
-}
-
-.notification-button {
-    position: relative;
-}
-
-.notification-button span {
-    width: 9px;
-    height: 9px;
-    border: 2px solid var(--surface);
-    border-radius: 50%;
-    background: var(--danger);
-    position: absolute;
-    top: 9px;
-    right: 10px;
-}
-
-.profile-chip {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 8px 12px;
-}
-
-.profile-chip > span {
-    width: 38px;
-    height: 38px;
-    display: grid;
-    place-items: center;
-    border-radius: 8px;
-    background: var(--coffee);
-    color: white;
-    font-weight: 800;
-}
-
-.profile-chip img {
-    width: 42px;
-    height: 42px;
-    border-radius: 8px;
-    object-fit: cover;
-    border: 2px solid var(--green-soft);
-}
-
-.profile-chip small {
-    color: var(--muted);
-    display: block;
-    margin-top: 2px;
 }
 
 .metric-grid {
