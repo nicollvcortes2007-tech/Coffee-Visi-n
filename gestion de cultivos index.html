@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cultivos - Registro de Actividades</title>
+    <link rel="stylesheet" href="css/gestiondecultivos.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Gestión de Cultivos</h1>
+            <p>Seguimiento digital para una mejor productividad</p>
+            <img src="/Imagenes/logo2.png" alt="Logo de la aplicación" class="logo-header">
+        </header>
+        
+        <section id="registro-seccion">
+            <article class="card">
+                <h2 id="form-title">Registrar Nueva Actividad</h2>
+                
+                <form action="#" method="POST">
+                    <p class="form-group">
+                        <label for="fecha">Fecha de la Labor:</label>
+                        <input type="date" id="fecha" required>
+                    </p>
+
+                    <p class="form-group">
+                        <label for="actividad">Tipo de Actividad:</label>
+                        <select id="actividad" required>
+                            <option value="" disabled selected>Selecciona una opción...</option>
+                            <option value="Siembra">Siembra</option>
+                            <option value="Fertilización">Fertilización</option>
+                            <option value="Desyerbe">Desyerbe / Limpia</option>
+                            <option value="Control de Plagas">Control de Plagas (Broca/Roya)</option>
+                            <option value="Poda">Poda / Zoqueo</option>
+                            <option value="Recolección">Recolección (Cosecha)</option>
+                            <option value="Beneficiado">Beneficiado (Lavado/Secado)</option>
+                        </select>
+                    </p>
+
+                    <p class="form-group">
+                        <label for="observaciones">Observaciones / Detalles:</label>
+                        <textarea id="observaciones" rows="3" placeholder="Ej: Se aplicaron 50g de fertilizante por árbol..."></textarea>
+                    </p>
+
+                    <footer class="btn-container">
+                        <button type="submit" class="btn-save">Guardar Actividad</button>
+                    </footer>
+                </form>
+            </article>
+        </section>
+
+        <section class="table-container">
+            <h2>Historial de Cultivos</h2>
+            <figure class="table-wrapper">
+                <table id="tabla-actividades">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Actividad</th>
+                            <th>Observaciones</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-actividades">
+                        <tr>
+                            <td>2026-06-10</td>
+                            <td class="text-bold">Control de Plagas</td>
+                            <td>Monitoreo de broca en el lote principal. Se observa baja incidencia.</td>
+                            <td>
+                                <details class="dropdown-actions">
+                                    <summary class="btn-trigger">Acciones ▾</summary>
+                                    <div class="dropdown-menu">
+                                        <a href="#editar-id-1" class="dropdown-item item-edit"> Editar Registro</a>
+                                        <a href="#ver-id-1" class="dropdown-item"> Ver Detalles</a>
+                                
+                                        <hr>
+                                        <a href="#eliminar-id-1" class="dropdown-item item-delete"> Eliminar</a>
+                                    </div>
+                                </details>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2026-06-08</td>
+                            <td class="text-bold">Fertilización</td>
+                            <td>Aplicación de abono orgánico en la zona de renovación.</td>
+                            <td>
+                                <details class="dropdown-actions">
+                                    <summary class="btn-trigger">Acciones ▾</summary>
+                                    <div class="dropdown-menu">
+                                        <a href="#editar-id-2" class="dropdown-item item-edit"> Editar Registro</a>
+                                        <a href="#ver-id-2" class="dropdown-item"> Ver Detalles</a>
+                                     
+                                        <hr>
+                                        <a href="#eliminar-id-2" class="dropdown-item item-delete"> Eliminar</a>
+                                    </div>
+                                </details>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </figure>
+        </section>
+    </main>
+
+</body>
+</html>
