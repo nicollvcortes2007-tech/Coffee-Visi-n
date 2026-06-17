@@ -66,9 +66,10 @@ button {
 }
 
 .brand img {
-    width: 76px;
-    height: 48px;
-    object-fit: contain;
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  height: 100px;        
 }
 
 .sidebar-nav {
@@ -176,6 +177,7 @@ button {
 }
 
 .hero-actions button,
+.hero-actions a,
 .chat-form button {
     min-height: 44px;
     border: none;
@@ -188,6 +190,7 @@ button {
     align-items: center;
     justify-content: center;
     gap: 8px;
+    text-decoration: none;
 }
 
 .hero-actions .secondary-action {
@@ -264,6 +267,21 @@ h3 {
     color: var(--coffee);
 }
 
+.notification-button {
+    position: relative;
+}
+
+.notification-button span {
+    width: 9px;
+    height: 9px;
+    border: 2px solid var(--surface);
+    border-radius: 50%;
+    background: var(--danger);
+    position: absolute;
+    top: 9px;
+    right: 10px;
+}
+
 .profile-chip {
     display: flex;
     align-items: center;
@@ -283,6 +301,14 @@ h3 {
     background: var(--coffee);
     color: white;
     font-weight: 800;
+}
+
+.profile-chip img {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid var(--green-soft);
 }
 
 .profile-chip small {
@@ -359,7 +385,7 @@ h3 {
 
 .ai-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.75fr);
+    grid-template-columns: 1fr;
     gap: 18px;
     align-items: stretch;
 }
@@ -535,6 +561,112 @@ h3 {
     color: var(--muted);
     margin-top: 6px;
     line-height: 1.55;
+}
+
+.floating-ai-button {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--green), var(--green-deep));
+    color: white;
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    z-index: 30;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    box-shadow: 0 16px 32px rgba(79, 125, 22, 0.32);
+}
+
+.floating-ai-button i {
+    font-size: 1.45rem;
+}
+
+.floating-ai-button:hover {
+    transform: translateY(-2px);
+}
+
+.floating-ai-panel {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.22s ease;
+}
+
+.floating-ai-panel:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.floating-ai-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(31, 41, 51, 0.42);
+    backdrop-filter: blur(5px);
+}
+
+.floating-ai-card {
+    width: min(760px, calc(100vw - 32px));
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    position: absolute;
+    right: 24px;
+    bottom: 104px;
+    transform: translateY(14px);
+    transition: transform 0.22s ease;
+}
+
+.floating-ai-panel:target .floating-ai-card {
+    transform: translateY(0);
+}
+
+.floating-ai-close {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: var(--green-soft);
+    color: var(--coffee);
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    flex: 0 0 auto;
+}
+
+.floating-ai-close:hover {
+    color: var(--green-deep);
+}
+
+.floating-ai-tools {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+    gap: 16px;
+}
+
+.floating-tool {
+    min-width: 0;
+}
+
+.floating-tool-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.floating-tool.chatbot-panel {
+    min-height: auto;
+}
+
+.floating-ai-card .chat-window {
+    min-height: 260px;
+}
+
+.floating-ai-card .upload-zone {
+    min-height: 220px;
 }
 
 .stats-strip {
@@ -729,6 +861,7 @@ h3 {
 @media (max-width: 760px) {
     .dashboard-shell {
         padding: 18px;
+        padding-bottom: 96px;
     }
 
     .hero-dashboard,
@@ -762,6 +895,23 @@ h3 {
 
     .message {
         max-width: 100%;
+    }
+
+    .floating-ai-button {
+        width: 58px;
+        height: 58px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .floating-ai-card {
+        width: calc(100vw - 24px);
+        right: 12px;
+        bottom: 88px;
+    }
+
+    .floating-ai-tools {
+        grid-template-columns: 1fr;
     }
 
     .profile-chip {

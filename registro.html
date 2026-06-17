@@ -65,16 +65,50 @@
 
     <script>
         document.getElementById('formRegistro').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById('nombre').value.trim();
+            const email = document.getElementById('email').value.trim().toLowerCase();
+            const role = document.getElementById('user-type').value;
+            const finca = document.getElementById('finca').value.trim();
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirm-password').value;
 
             if (password !== confirmPassword) {
                 alert("¡Ups! Las contraseñas no coinciden. Por favor, verifícalas.");
-                event.preventDefault(); 
                 return;
             }
 
+            const users = JSON.parse(localStorage.getItem('coffeeUsers')) || [];
+            const existingUserIndex = users.findIndex(user => user.email === email);
+            const userData = {
+                nombre: nombre,
+                email: email,
+                password: password,
+                role: role,
+                finca: finca
+            };
+
+            if (existingUserIndex >= 0) {
+                users[existingUserIndex] = userData;
+            } else {
+                users.push(userData);
+            }
+
+            localStorage.setItem('coffeeUsers', JSON.stringify(users));
+            localStorage.setItem('coffeeActiveUser', JSON.stringify({
+                email: email,
+                role: role
+            }));
+
             alert("¡Registro exitoso en CoffeeTech!");
+
+            if (role === 'administrador') {
+                window.location.href = 'dashboard-admin.html';
+                return;
+            }
+
+            window.location.href = 'dashboard-caficultor.html';
         });
     </script>
 </body>

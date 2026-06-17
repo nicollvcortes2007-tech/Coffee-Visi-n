@@ -11,14 +11,11 @@
     <aside class="sidebar">
         <a href="index.html" class="brand">
             <img src="Imagenes/logo2.png" alt="Coffee+vision Logo">
-            <span>Coffee+vision</span>
         </a>
 
         <nav class="sidebar-nav" aria-label="Menu caficultor">
             <a href="#" class="active"><i class="fa-solid fa-house"></i> Mi finca</a>
             <a href="#"><i class="fa-solid fa-seedling"></i> Cultivos</a>
-            <a href="#"><i class="fa-solid fa-robot"></i> Asistente IA</a>
-            <a href="#"><i class="fa-solid fa-camera"></i> Deteccion</a>
             <a href="#"><i class="fa-solid fa-chart-simple"></i> Estadisticas</a>
             <a href="#"><i class="fa-solid fa-book-open"></i> Guias</a>
         </nav>
@@ -33,13 +30,32 @@
     </aside>
 
     <main class="dashboard-shell">
+        <header class="topbar">
+            <section>
+                <p class="eyebrow">Bienvenido</p>
+                <h1>Mi finca cafetera</h1>
+            </section>
+            <section class="topbar-actions">
+                <button type="button" class="notification-button" aria-label="Notificaciones">
+                    <i class="fa-regular fa-bell"></i>
+                    <span></span>
+                </button>
+                <article class="profile-chip">
+                    <img src="Imagenes/image.png" alt="Foto de perfil del caficultor">
+                    <div>
+                        <strong>Caficultor</strong>
+                        <small>Finca El Paraiso</small>
+                    </div>
+                </article>
+            </section>
+        </header>
+
         <header class="hero-dashboard">
             <section class="hero-copy">
                 <p class="eyebrow">Panel caficultor</p>
                 <h1>Finca El Paraiso</h1>
                 <p>Gestiona tus cultivos, revisa recomendaciones y consulta el asistente inteligente para tomar mejores decisiones en tu produccion cafetera.</p>
                 <div class="hero-actions">
-                    <button type="button"><i class="fa-solid fa-camera"></i> Analizar foto</button>
                     <button type="button" class="secondary-action"><i class="fa-solid fa-plus"></i> Registrar labor</button>
                 </div>
             </section>
@@ -75,64 +91,6 @@
                 <p>Labores pendientes</p>
                 <strong>5</strong>
                 <small>Esta semana</small>
-            </article>
-        </section>
-
-        <section class="ai-layout">
-            <article class="panel chatbot-panel">
-                <header class="panel-header">
-                    <div>
-                        <p class="eyebrow">Asistente inteligente</p>
-                        <h2>Chatbot agricola Coffee+vision</h2>
-                    </div>
-                    <span class="status ok">Prototipo</span>
-                </header>
-
-                <section class="chat-window" aria-label="Conversacion con asistente IA">
-                    <div class="message bot">
-                        <strong>Asistente IA</strong>
-                        <p>Hola. Puedes preguntarme sobre plagas, enfermedades, fertilizacion, cosecha o buenas practicas del cafe.</p>
-                    </div>
-                    <div class="message user">
-                        <strong>Caficultor</strong>
-                        <p>Mis hojas tienen manchas amarillas. Que debo revisar?</p>
-                    </div>
-                    <div class="message bot">
-                        <strong>Asistente IA</strong>
-                        <p>Podria estar relacionado con roya o deficiencias nutricionales. Sube una foto clara de la hoja para apoyar el analisis.</p>
-                    </div>
-                </section>
-
-                <form class="chat-form">
-                    <input type="text" placeholder="Escribe tu consulta sobre el cultivo...">
-                    <label class="icon-upload" title="Subir foto">
-                        <i class="fa-solid fa-paperclip"></i>
-                        <input type="file" accept="image/*">
-                    </label>
-                    <button type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
-                </form>
-            </article>
-
-            <article class="panel detection-panel">
-                <header class="panel-header">
-                    <div>
-                        <p class="eyebrow">Vision artificial</p>
-                        <h2>Deteccion de plagas por foto</h2>
-                    </div>
-                </header>
-
-                <label class="upload-zone">
-                    <i class="fa-solid fa-cloud-arrow-up"></i>
-                    <strong>Sube una imagen del cultivo</strong>
-                    <span>Hojas, frutos, tallos o ramas en JPG, PNG o WEBP</span>
-                    <input type="file" accept="image/*">
-                </label>
-
-                <section class="result-preview">
-                    <p class="eyebrow">Resultado simulado</p>
-                    <h3>Posible broca del cafe</h3>
-                    <p>Nivel de riesgo: medio. Se recomienda revisar frutos afectados y registrar el lote para seguimiento.</p>
-                </section>
             </article>
         </section>
 
@@ -276,5 +234,82 @@
             </article>
         </section>
     </main>
+
+    <a href="#vision-artificial-panel" class="floating-ai-button" aria-label="Abrir asistente IA">
+        <i class="fa-solid fa-robot"></i>
+    </a>
+
+    <section id="vision-artificial-panel" class="floating-ai-panel" aria-label="Asistente IA y vision artificial">
+        <a href="#" class="floating-ai-backdrop" aria-label="Cerrar asistente IA"></a>
+        <article class="panel floating-ai-card">
+            <header class="panel-header">
+                <div>
+                    <p class="eyebrow">Inteligencia artificial</p>
+                    <h2>Asistente y vision artificial</h2>
+                </div>
+                <a href="#" class="floating-ai-close" aria-label="Cerrar asistente IA">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </header>
+
+            <section class="floating-ai-tools">
+                <section class="floating-tool chatbot-panel">
+                    <header class="floating-tool-header">
+                        <div>
+                            <p class="eyebrow">Asistente inteligente</p>
+                            <h3>Chatbot agricola Coffee+vision</h3>
+                        </div>
+                        <span class="status ok">Prototipo</span>
+                    </header>
+
+                    <section class="chat-window" aria-label="Conversacion con asistente IA">
+                        <div class="message bot">
+                            <strong>Asistente IA</strong>
+                            <p>Hola. Puedes preguntarme sobre plagas, enfermedades, fertilizacion, cosecha o buenas practicas del cafe.</p>
+                        </div>
+                        <div class="message user">
+                            <strong>Caficultor</strong>
+                            <p>Mis hojas tienen manchas amarillas. Que debo revisar?</p>
+                        </div>
+                        <div class="message bot">
+                            <strong>Asistente IA</strong>
+                            <p>Podria estar relacionado con roya o deficiencias nutricionales. Sube una foto clara de la hoja para apoyar el analisis.</p>
+                        </div>
+                    </section>
+
+                    <form class="chat-form">
+                        <input type="text" placeholder="Escribe tu consulta sobre el cultivo...">
+                        <label class="icon-upload" title="Subir foto">
+                            <i class="fa-solid fa-paperclip"></i>
+                            <input type="file" accept="image/*">
+                        </label>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+                    </form>
+                </section>
+
+                <section class="floating-tool detection-panel">
+                    <header class="floating-tool-header">
+                        <div>
+                            <p class="eyebrow">Vision artificial</p>
+                            <h3>Deteccion de plagas por foto</h3>
+                        </div>
+                    </header>
+
+                    <label class="upload-zone">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <strong>Sube una imagen del cultivo</strong>
+                        <span>Hojas, frutos, tallos o ramas en JPG, PNG o WEBP</span>
+                        <input type="file" accept="image/*">
+                    </label>
+
+                    <section class="result-preview">
+                        <p class="eyebrow">Resultado simulado</p>
+                        <h3>Posible broca del cafe</h3>
+                        <p>Nivel de riesgo: medio. Se recomienda revisar frutos afectados y registrar el lote para seguimiento.</p>
+                    </section>
+                </section>
+            </section>
+        </article>
+    </section>
 </body>
 </html>
