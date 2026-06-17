@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee + Visión - Notificaciones Administrador</title>
+    <link rel="stylesheet" href="/css/Perfil_caficultor.css">
+</head>
+<body>
+
+    
+    <aside class="sidebar">
+        <header class="sidebar-header">
+            <figure class="logo-container">
+                <img src="/img/WhatsApp Image 2026-06-04 at 7.59.02 AM.jpeg" alt="Logotipo Coffee + Visión" class="logo">
+            </figure>
+        </header>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#"><span class="icon"></span> Dashboard</a></li>
+                <li><a href="#" class="active"><span class="icon"></span> Notificaciones <mark class="badge">12</mark></a></li>
+                <li><a href="#"><span class="icon"></span> Usuarios</a></li>
+                <li><a href="#"><span class="icon"></span> Cultivos</a></li>
+                <li><a href="#"><span class="icon"></span> Plagas y Enfermedades</a></li>
+                <li><a href="#"><span class="icon"></span> Chatbot IA</a></li>
+                <li><a href="#"><span class="icon"></span> Contenidos</a></li>
+                <li><a href="#"><span class="icon"></span> Reportes y Estadísticas</a></li>
+                <li><a href="#"><span class="icon"></span> Configuración</a></li>
+            </ul>
+        </nav>
+
+        <footer class="sidebar-footer">
+            <a href="#" class="logout-btn"><span class="icon"></span> Cerrar sesión</a>
+        </footer>
+    </aside>
+
+  
+    <main class="main-content">
+        
+        
+        <header class="top-header">
+            <hgroup>
+                <h1>Administrador</h1>
+                <p>Panel de Administración</p>
+            </hgroup>
+            
+            <section class="user-status">
+                <button class="notif-bell" aria-label="Notificaciones">
+                    <mark class="badge-top">12</mark>
+                </button>
+                <button class="user-menu-btn">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=300&h=300" alt="Foto de perfil de Administrador">
+                    <span class="user-info-text">
+                        <strong>Administrador</strong>
+                        <small>admin@coffeetech.com</small>
+                    </span>
+                    <span class="arrow-down">▼</span>
+                </button>
+            </section>
+        </header>
+
+        <hr>
+
+        
+        <header class="section-header">
+            <h2>Panel de Notificaciones del Sistema</h2>
+            <p>Monitoreo global de incidencias, reportes de usuarios y estado de los módulos de IA.</p>
+        </header>
+
+        
+        <section class="notifications-container">
+            
+            
+            <nav class="form-tabs">
+                <ul>
+                    <li><a href="#" class="active-tab">Todas las alertas</a></li>
+                    <li><a href="#">Soporte Técnico</a></li>
+                    <li><a href="#">Servidor e IA</a></li>
+                    <li><a href="#">Seguridad</a></li>
+                </ul>
+            </nav>
+
+            
+            <ul class="notifications-list">
+                
+                <li class="notification-item unread critical">
+                    <span class="notification-icon"></span>
+                    <article class="notification-body">
+                        <h3>Fallo de Conexión en API Chatbot IA</h3>
+                        <p>La API del <strong>Chatbot IA</strong> está experimentando una tasa de error del 85% en las peticiones entrantes. Se requiere reinicio del contenedor del servicio de inmediato.</p>
+                        <time datetime="2026-06-04T08:45">Hace 5 minutos</time>
+                    </article>
+                    <button type="button" class="btn-action-notif" aria-label="Resolver incidencia">✓</button>
+                </li>
+
+                <li class="notification-item unread">
+                    <span class="notification-icon"></span>
+                    <article class="notification-body">
+                        <h3>Solicitud de Verificación de Cuenta</h3>
+                        <p>El caficultor <strong>Carlos Mendoza</strong> de la zona del Tambo ha subido su documentación legal para habilitar el rol avanzado de exportador. Pendiente de aprobación.</p>
+                        <time datetime="2026-06-04T07:15">Hace 1 hora</time>
+                    </article>
+                    <button type="button" class="btn-action-notif" aria-label="Revisar caso">✓</button>
+                </li>
+
+                <li class="notification-item">
+                    <span class="notification-icon"></span>
+                    <article class="notification-body">
+                        <h3>Copia de Seguridad Completada</h3>
+                        <p>El respaldo automatizado de la base de datos de <strong>Cultivos, Plagas y Estadísticas</strong> se completó con éxito en el servidor de almacenamiento en la nube.</p>
+                        <time datetime="2026-06-03">Ayer a las 11:59 PM</time>
+                    </article>
+                </li>
+                <li class="notification-item">
+                    <span class="notification-icon"></span>
+                    <article class="notification-body">
+                        <h3>Actualización del Glosario de Plagas</h3>
+                        <p>Se cargó exitosamente la nueva base de datos del ICA con más de 45 variantes de hongos fitopatógenos que afectan al café variedad Arábica.</p>
+                        <time datetime="2026-06-02">Hace 2 días</time>
+                    </article>
+                </li>
+
+            </ul>
+
+        </section>
+    </main>
+
+</body>
+</html>

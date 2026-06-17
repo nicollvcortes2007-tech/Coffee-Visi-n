@@ -1,0 +1,476 @@
+/* ==========================================
+   1. VARIABLES DE COLOR (CoffeeTech)
+   ========================================== */
+:root {
+    --cafe: #4e2a15;
+    --verde: #769f1a;
+    --verde-claro: #f4f9ed;
+    --texto: #555555;
+    --blanco: #ffffff;
+    --borde: #f0f0f0;
+}
+
+/* ==========================================
+   2. RESET Y ESTILOS GLOBALES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--verde-claro);
+    color: var(--texto);
+}
+
+/* Accesibilidad para lectores de pantalla */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--borde);
+    margin-bottom: 24px;
+}
+
+/* ==========================================
+   3. BARRA LATERAL (SIDEBAR)
+   ========================================== */
+.sidebar {
+    width: 260px;
+    background-color: var(--cafe);
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+    border-right: 3px solid var(--verde);
+}
+
+.sidebar-header {
+    padding: 0 24px 24px;
+    text-align: center;
+}
+
+.logo {
+    background-color: var(--blanco);
+    padding: 16px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+    border: 2px solid var(--verde);
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    color: var(--verde-claro);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+    background-color: var(--verde);
+    color: var(--blanco);
+}
+
+.sidebar-nav a.active {
+    font-weight: 600;
+}
+
+.badge {
+    background-color: var(--verde);
+    color: var(--blanco);
+    border-radius: 20px;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 0 24px;
+}
+
+.logout-btn {
+    color: #d32f2f;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   4. CONTENIDO PRINCIPAL Y CABECERA
+   ========================================== */
+.main-content {
+    flex-grow: 1;
+    padding: 24px 40px;
+    max-width: 1400px;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.top-header h1 {
+    font-size: 18px;
+    color: var(--cafe);
+    font-weight: 700;
+}
+
+.top-header p {
+    font-size: 13px;
+    color: var(--texto);
+}
+
+.user-status {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notif-bell {
+    background: none;
+    border: none;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+}
+
+.badge-top {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: var(--verde);
+    color: var(--blanco);
+    border-radius: 50%;
+    padding: 1px 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.user-menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.user-menu-btn img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--verde);
+}
+
+.user-info-text strong {
+    display: block;
+    font-size: 13px;
+    color: var(--cafe);
+}
+
+.user-info-text small {
+    display: block;
+    font-size: 11px;
+    color: var(--texto);
+}
+
+.arrow-down {
+    font-size: 10px;
+    color: var(--texto);
+}
+
+.section-header h2 {
+    font-size: 22px;
+    color: var(--cafe);
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.section-header p {
+    color: var(--texto);
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+
+/* ==========================================
+   5. DISEÑO DE FILAS Y TARJETAS (GRID)
+   ========================================== */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    gap: 24px;
+    align-items: start;
+}
+
+.card {
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================
+   6. COLUMNA 1: PERFIL RESUMEN
+   ========================================== */
+.profile-summary {
+    text-align: center;
+}
+
+.summary-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.summary-logo img {
+    max-width: 110px;
+    height: auto;
+}
+
+.profile-summary h3 {
+    font-size: 18px;
+    color: var(--cafe);
+    margin-bottom: 6px;
+}
+
+.role-tag {
+    display: inline-block;
+    background-color: var(--verde-claro);
+    color: var(--verde);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid var(--verde);
+    margin-bottom: 24px;
+}
+
+.contact-info ul {
+    list-style: none;
+    text-align: left;
+    font-size: 13px;
+    color: var(--texto);
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.member-since {
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--texto);
+    border-top: 1px solid var(--borde);
+    padding-top: 16px;
+    text-align: left;
+}
+
+/* ==========================================
+   7. COLUMNA 2: PESTAÑAS Y FORMULARIO
+   ========================================== */
+.form-tabs ul {
+    display: flex;
+    list-style: none;
+    border-bottom: 1px solid var(--borde);
+    margin-bottom: 24px;
+    gap: 24px;
+}
+
+.form-tabs a {
+    text-decoration: none;
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 12px;
+    display: block;
+}
+
+.form-tabs a.active-tab {
+    color: var(--verde);
+    border-bottom: 2px solid var(--verde);
+    font-weight: 600;
+}
+
+.form-grid {
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 24px;
+    margin-bottom: 32px;
+}
+
+.form-grid p {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-grid label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--cafe);
+}
+
+.form-grid input,
+.form-grid select {
+    padding: 10px 14px;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    font-size: 14px;
+    color: var(--texto);
+    background-color: var(--blanco);
+    outline: none;
+    width: 100%;
+}
+
+.form-grid input:focus,
+.form-grid select:focus {
+    border-color: var(--verde);
+}
+
+.select-wrapper select {
+    appearance: none;
+    padding-right: 40px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-cancel {
+    background-color: var(--blanco);
+    border: 1px solid var(--cafe);
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--cafe);
+}
+
+.btn-save {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--verde);
+    color: var(--blanco);
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-save:hover {
+    background-color: #648716;
+}
+
+/* ==========================================
+   8. COLUMNA 3: PANEL FOTO DE PERFIL
+   ========================================== */
+.profile-photo-upload h3 {
+    font-size: 14px;
+    color: var(--cafe);
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.upload-instructions {
+    font-size: 12px;
+    color: var(--texto);
+    margin-bottom: 24px;
+    line-height: 1.4;
+}
+
+.avatar-large {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.avatar-large img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--verde);
+}
+
+.photo-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-upload {
+    display: block;
+    border: 1px solid var(--verde);
+    color: var(--verde);
+    padding: 10px 0;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    background-color: var(--blanco);
+}
+
+.btn-upload:hover {
+    background-color: var(--verde-claro);
+}
+
+.btn-delete {
+    background: none;
+    border: none;
+    color: #d32f2f;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 4px;
+}
