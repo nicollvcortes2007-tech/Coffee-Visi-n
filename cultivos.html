@@ -1,0 +1,440 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee+Vision — Mis Cultivos</title>
+    <link rel="stylesheet" href="css/cultivos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <section class="brand">
+            <a href="#" class="logo-link" aria-label="Volver al inicio">
+                <img src="Imagenes/logo2.png" alt="Coffee+vision Logo" class="brand-logo-img">
+            </a>
+            <h1 class="brand-title">Coffee+Vision</h1>
+        </section>
+
+        <nav aria-label="Navegación de la plataforma">
+            <ul id="main-nav">
+                <li><a href="#" data-target="inicio">Inicio</a></li>
+                <li><a href="#" class="activo" data-target="cultivos">Mis cultivos</a></li>
+                <li><a href="#" data-target="datos">Datos de cultivo</a></li>
+                <li><a href="#" data-target="recomendaciones">Recomendaciones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="hero-banner">
+            <article class="hero-location">
+                <span class="geo-tag">📍 POPAYÁN, CAUCA - 1,738 M S.N.M.</span>
+                <h2>Mi Cultivo — Lote Principal</h2>
+                <p>Caturra / Castillo • 4.5 hectáreas • 3 años de edad</p>
+                <footer class="hero-actions">
+                    <button class="btn-hero btn-gestionar"><i class="fa-solid fa-gear"></i> Gestionar lote</button>
+                    <button class="btn-hero btn-mapa"><i class="fa-solid fa-map-location-dot"></i> Ver en mapa</button>
+                </footer>
+            </article>
+
+            <aside class="hero-stats">
+                <section class="stat-item">
+                    <strong>75%</strong>
+                    <span>Producción</span>
+                </section>
+                <section class="stat-item">
+                    <strong>4.5</strong>
+                    <span>Hectáreas</span>
+                </section>
+                <section class="stat-item">
+                    <strong>3°</strong>
+                    <span>Años</span>
+                </section>
+            </aside>
+        </section>
+
+        <h3 class="section-heading">RESUMEN DEL LOTE</h3>
+        
+        <section class="summary-grid">
+            <article class="summary-card">
+                <header class="card-header">
+                    <i class="fa-regular fa-comment-dots"></i>
+                    <h4>Estado general</h4>
+                </header>
+                <strong>Bueno</strong>
+                <small>75% producción</small>
+            </article>
+
+            <article class="summary-card">
+                <header class="card-header">
+                    <i class="fa-solid fa-droplet"></i>
+                    <h4>Humedad del suelo</h4>
+                </header>
+                <strong>68%</strong>
+                <small>Ligeramente alta</small>
+            </article>
+
+            <article class="summary-card">
+                <header class="card-header">
+                    <i class="fa-solid fa-temperature-half"></i>
+                    <h4>Temperatura</h4>
+                </header>
+                <strong>17°C</strong>
+                <small>Parcialmente nublado</small>
+            </article>
+
+            <article class="summary-card">
+                <header class="card-header">
+                    <i class="fa-regular fa-calendar"></i>
+                    <h4>Próx. cosecha</h4>
+                </header>
+                <strong>Oct '26</strong>
+                <small>~4 meses</small>
+            </article>
+        </section>
+
+        <section class="details-split">
+            
+            <article class="panel-card">
+                <header class="panel-card-header">
+                    <h3><i class="fa-solid fa-seedling"></i> Detalle del cultivo</h3>
+                    <mark class="badge status-active">Activo</mark>
+                </header>
+                
+                <table class="panel-table">
+                    <tbody>
+                        <tr>
+                            <td>Variedad</td>
+                            <td>Caturra / Castillo</td>
+                        </tr>
+                        <tr>
+                            <td>Área sembrada</td>
+                            <td>4.5 ha</td>
+                        </tr>
+                        <tr>
+                            <td>Edad del lote</td>
+                            <td>3 años (óptimo)</td>
+                        </tr>
+                        <tr>
+                            <td>Densidad</td>
+                            <td>~2,200 plantas/ha</td>
+                        </tr>
+                        <tr>
+                            <td>Sombra</td>
+                            <td>Parcial (30%)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <section class="metrics-container">
+                    <article class="metric-progress">
+                        <header>
+                            <span>Salud foliar</span>
+                            <strong class="metric-value">82%</strong>
+                        </header>
+                        <progress value="82" max="100" class="progress-green"></progress>
+                    </article>
+                    <article class="metric-progress">
+                        <header>
+                            <span>Control de maleza</span>
+                            <strong class="metric-value">60%</strong>
+                        </header>
+                        <progress value="60" max="100" class="progress-orange"></progress>
+                    </article>
+                </section>
+
+                <button class="btn-panel-action btn-editar"><i class="fa-regular fa-pen-to-square"></i> Editar lote</button>
+            </article>
+
+            <article class="panel-card">
+                <header class="panel-card-header">
+                    <h3><i class="fa-solid fa-cloud-sun"></i> Ubicación y clima</h3>
+                    <mark class="badge status-gps pointer-element" id="gps-badge">GPS activo</mark>
+                </header>
+
+                <table class="panel-table">
+                    <tbody>
+                        <tr>
+                            <td>Municipio</td>
+                            <td>Popayán, Cauca</td>
+                        </tr>
+                        <tr>
+                            <td>Altitud</td>
+                            <td>1,738 m s.n.m.</td>
+                        </tr>
+                        <tr>
+                            <td>Clima</td>
+                            <td>Parcialmente nublado</td>
+                        </tr>
+                        <tr>
+                            <td>Precipitación mensual</td>
+                            <td>~180 mm</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <aside class="coordinates-box">
+                    <code id="coordinates-text">2°27'48" N, 76°36'06" W</code>
+                </aside>
+
+                <section class="weather-subgrid">
+                    <article class="weather-item">
+                        <i class="fa-solid fa-wind"></i>
+                        <strong>12 km/h</strong>
+                        <small>Viento</small>
+                    </article>
+                    <article class="weather-item">
+                        <i class="fa-solid fa-droplet"></i>
+                        <strong>78%</strong>
+                        <small>Humedad</small>
+                    </article>
+                    <article class="weather-item">
+                        <i class="fa-solid fa-eye"></i>
+                        <strong>8 km</strong>
+                        <small>Visibilidad</small>
+                    </article>
+                </section>
+
+                <button class="btn-panel-action btn-mapa"><i class="fa-regular fa-map"></i> Ver en mapa</button>
+            </article>
+        </section>
+
+        <section class="recommendations-box">
+            <header class="recommendations-header">
+                <h3><i class="fa-solid fa-triangle-exclamation"></i> Recomendaciones técnicas activas</h3>
+                <span class="pending-tag" id="pending-counter">3 pendientes</span>
+            </header>
+
+            <ul class="recommendations-list">
+                <li>
+                    <article class="rec-item">
+                        <section class="rec-text">
+                            <h4><i class="fa-solid fa-faucet-drip"></i> Sistema de riego</h4>
+                            <p>Ajustar para evitar exceso de humedad en raíces. La nubosidad reduce evapotranspiración.</p>
+                        </section>
+                        <button class="btn-rec">Ver detalle</button>
+                    </article>
+                </li>
+                <li>
+                    <article class="rec-item">
+                        <section class="rec-text">
+                            <h4><i class="fa-solid fa-bug-slash"></i> Monitoreo fitosanitario</h4>
+                            <p>Riesgo elevado de broca y roya por nubosidad persistente. Revisión preventiva recomendada.</p>
+                        </section>
+                        <button class="btn-rec">Ver detalle</button>
+                    </article>
+                </li>
+                <li>
+                    <article class="rec-item">
+                        <section class="rec-text">
+                            <h4><i class="fa-solid fa-leaf"></i> Fertilización orgánica</h4>
+                            <p>Planificar dosificación para próximas 3 semanas antes de inicio de floración.</p>
+                        </section>
+                        <button class="btn-rec-full">Plan completo</button>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <section class="history-split">
+            
+            <article class="panel-card">
+                <header class="panel-card-header">
+                    <h3><i class="fa-regular fa-calendar-lines"></i> Ciclo fenológico</h3>
+                    <mark class="badge status-dev">Desarrollo</mark>
+                </header>
+
+                <section class="timeline-months">
+                    <ol id="timeline-list">
+                        <li class="fase-activa floracion interactive-fase"><span>Flor.</span><small>Ene</small></li>
+                        <li class="fase-activa crecimiento interactive-fase"><span>Crec.</span><small>Mar</small></li>
+                        <li class="fase-activa maduracion interactive-fase"><span>Mad.</span><small>May</small></li>
+                        <li class="fase-activa cosecha interactive-fase"><span>Cose.</span><small>Jul</small></li>
+                        <li class="fase-reposo interactive-fase"><span>Reposo</span><small>Sep / Nov</small></li>
+                    </ol>
+                </section>
+
+                <footer class="legend-fenologia">
+                    <span><i class="fa-solid fa-circle" style="color: #aed581;"></i> Floración</span>
+                    <span><i class="fa-solid fa-circle" style="color: #cddc39;"></i> Crecimiento</span>
+                    <span><i class="fa-solid fa-circle" style="color: #4caf50;"></i> Maduración</span>
+                    <span><i class="fa-solid fa-circle" style="color: #1b5e20;"></i> Cosecha</span>
+                </footer>
+            </article>
+
+            <article class="panel-card">
+                <header class="panel-card-header">
+                    <h3><i class="fa-solid fa-clock-rotate-left"></i> Actividad reciente</h3>
+                </header>
+
+                <ul class="activity-timeline" id="activity-list">
+                    <li>
+                        <time datetime="2026-06-08">8 Jun 2026</time>
+                        <strong>Aplicación de fertilizante</strong>
+                        <p>250 kg/ha de compost orgánico</p>
+                    </li>
+                    <li>
+                        <time datetime="2026-06-03">3 Jun 2026</time>
+                        <strong>Monitoreo de plagas</strong>
+                        <p>Sin presencia activa detectada</p>
+                    </li>
+                    <li>
+                        <time datetime="2026-05-28">28 May 2026</time>
+                        <strong>Revisión de sistema de riego</strong>
+                        <p class="warning-text"> Ajuste pendiente por exceso de humedad</p>
+                    </li>
+                    <li>
+                        <time datetime="2026-05-15">15 May 2026</time>
+                        <strong>Poda de renovación</strong>
+                        <p>Lote sur — 1.2 ha intervenidas</p>
+                    </li>
+                </ul>
+
+                <button class="btn-panel-action secondary" id="btn-historial">Ver historial completo</button>
+            </article>
+
+        </section>
+
+    </main>
+
+    <div id="modal-dinamico" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal-btn">&times;</button>
+            <h3 id="modal-title">Título</h3>
+            <hr class="modal-divider">
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Navegación Activa
+            const navLinks = document.querySelectorAll('#main-nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    navLinks.forEach(l => l.classList.remove('activo'));
+                    link.classList.add('activo');
+                });
+            });
+
+            // Modales Dinámicos
+            const modal = document.getElementById('modal-dinamico');
+            const modalTitle = document.getElementById('modal-title');
+            const modalBody = document.getElementById('modal-body');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+
+            const abrirModal = (titulo, contenido) => {
+                modalTitle.textContent = titulo;
+                modalBody.innerHTML = contenido;
+                modal.style.display = 'flex';
+            };
+
+            closeModalBtn.addEventListener('click', () => modal.style.display = 'none');
+            window.addEventListener('click', (e) => { if(e.target === modal) modal.style.display = 'none'; });
+
+            // Eventos de Mapa
+            document.querySelectorAll('.btn-mapa').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    abrirModal('Ubicación Georreferenciada — Lote Principal', `
+                        <p><strong>Coordenadas:</strong> 2°27'48" N, 76°36'06" W</p>
+                        <p>Popayán, Cauca. Altitud óptima calculada a 1,738 m s.n.m.</p>
+                        <div class="map-simulation-box">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <span>[Simulación del Mapa Satelital de Caficultura]</span>
+                        </div>
+                    `);
+                });
+            });
+
+            // Eventos de Gestión/Edición
+            document.querySelectorAll('.btn-editar, .btn-gestionar').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    abrirModal('Configuración del Lote Principal', `
+                        <form id="edit-form" onsubmit="event.preventDefault(); alert('Cambios guardados localmente.');">
+                            <label class="form-label"><strong>Variedad de Café:</strong></label>
+                            <input type="text" value="Caturra / Castillo" class="form-input">
+                            <label class="form-label"><strong>Área del lote (Hectáreas):</strong></label>
+                            <input type="number" step="0.1" value="4.5" class="form-input">
+                            <button type="submit" class="form-submit-btn">Actualizar Datos del Lote</button>
+                        </form>
+                    `);
+                });
+            });
+
+            // Eventos de Recomendaciones Técnicas
+            let pendingCount = 3;
+            const counterElement = document.getElementById('pending-counter');
+
+            document.querySelectorAll('.btn-rec, .btn-rec-full').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const card = e.target.closest('li');
+                    const tituloRec = card.querySelector('h4').textContent;
+                    
+                    abrirModal(`Detalle Técnico: ${tituloRec}`, `
+                        <p>${card.querySelector('p').textContent}</p>
+                        <button id="btn-marcar-leido" class="action-success-btn">
+                            <i class="fa-solid fa-check"></i> Marcar como atendida
+                        </button>
+                    `);
+
+                    document.getElementById('btn-marcar-leido').addEventListener('click', () => {
+                        card.classList.add('rec-atendida');
+                        btn.disabled = true;
+                        btn.textContent = "Atendida";
+                        if (pendingCount > 0) {
+                            pendingCount--;
+                            counterElement.textContent = `${pendingCount} ${pendingCount === 1 ? 'pendiente' : 'pendientes'}`;
+                            if(pendingCount === 0) counterElement.classList.add('counter-resolved');
+                        }
+                        modal.style.display = 'none';
+                    });
+                });
+            });
+
+            // Clic en Ciclo Fenológico
+            document.querySelectorAll('#timeline-list li').forEach(fase => {
+                fase.addEventListener('click', () => {
+                    alert(`Fase seleccionada: ${fase.querySelector('span').textContent} (${fase.querySelector('small').textContent}). Optimizando variables para este periodo.`);
+                });
+            });
+
+            // Historial Incremental
+            const btnHistorial = document.getElementById('btn-historial');
+            btnHistorial.addEventListener('click', () => {
+                const nuevosItems = `
+                    <li>
+                        <time datetime="2026-05-02">2 May 2026</time>
+                        <strong>Muestreo de Suelos</strong>
+                        <p>Análisis de pH en laboratorio: 5.4 (Óptimo para café)</p>
+                    </li>
+                    <li>
+                        <time datetime="2026-04-18">18 Abr 2026</time>
+                        <strong>Limpieza de Canales de Drenaje</strong>
+                        <p>Preparación preventiva ante aumento de lluvias regionales</p>
+                    </li>`;
+                document.getElementById('activity-list').insertAdjacentHTML('beforeend', nuevosItems);
+                btnHistorial.disabled = true;
+                btnHistorial.textContent = "Todo el historial cargado";
+            });
+
+            // Efecto GPS
+            const gpsBadge = document.getElementById('gps-badge');
+            gpsBadge.addEventListener('click', () => {
+                const coordBox = document.getElementById('coordinates-text');
+                gpsBadge.textContent = "Actualizando...";
+                setTimeout(() => {
+                    gpsBadge.textContent = "GPS Activo";
+                    coordBox.classList.add('highlight-text');
+                    setTimeout(() => coordBox.classList.remove('highlight-text'), 1000);
+                }, 800);
+            });
+        });
+    </script>
+</body>
+</html>

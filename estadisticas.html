@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee+visión - Estadísticas de Cultivo</title>
+    <link rel="stylesheet" href="css/estadisticas.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <header class="brand">
+            <img src="Imagenes/logo2.png" alt="Coffee+visión Logo" class="logo">
+        </header>
+        <nav class="menu">
+            <a href="#">Dashboard</a>
+            <a href="#">Notificaciones <span class="badge">12</span></a>
+            <a href="#">Usuarios</a>
+            <a href="#">Cultivos</a>
+            <a href="#">Plagas y Enfermedades</a>
+            <a href="#">Chatbot IA</a>
+            <a href="#">Contenidos</a>
+            <a href="#" class="active">Reportes y Estadísticas</a>
+            <a href="#">Configuración</a>
+        </nav>
+        <footer class="sidebar-footer">
+            <a href="#" class="logout">Cerrar sesión</a>
+        </footer>
+    </aside>
+
+    <main class="main-content">
+        
+        <header class="content-header">
+            <h1>ESTADISTICAS DE CULTIVO</h1>
+            <p class="subtitle">Panel de estadisticas</p>
+            <section class="page-title-area">
+                       </header>
+
+        <section class="summary-cards">
+            <article class="card">
+                <h3>Total Hectáreas</h3>
+                <p class="metric">24.5 ha</p>
+                <span class="trend positive">↑ 1.2% este mes</span>
+            </article>
+            <article class="card">
+                <h3>Producción Estimada</h3>
+                <p class="metric">1,250 Cargas</p>
+                <span class="trend">Variedad Castillo / Cenicafé</span>
+            </article>
+            <article class="card">
+                <h3>Estado Sanitario</h3>
+                <p class="metric text-green">94% Sano</p>
+                <span class="trend negative">6% Alerta de Roya</span>
+            </article>
+        </section>
+
+        <section class="dashboard-grid">
+            
+            <article class="chart-container">
+                <h3>Rendimiento de Cosecha (Últimos meses)</h3>
+                <figure class="mock-chart">
+                    <progress value="40" max="100"></progress>
+                    <progress value="65" max="100"></progress>
+                    <progress value="85" max="100"></progress>
+                    <progress value="50" max="100"></progress>
+                </figure>
+            </article>
+
+            <article class="table-container">
+                <h3>Estado por Lote de Cultivo</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lote</th>
+                            <th>Variedad</th>
+                            <th>Edad</th>
+                            <th>Rendimiento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lote El Paraíso</td>
+                            <td>Castillo</td>
+                            <td>3 años</td>
+                            <td><mark class="status-good">Óptimo</mark></td>
+                        </tr>
+                        <tr>
+                            <td>Lote La Esperanza</td>
+                            <td>Caturra</td>
+                            <td>5 años</td>
+                            <td><mark class="status-alert">Mantenimiento</mark></td>
+                        </tr>
+                        <tr>
+                            <td>Lote Central</td>
+                            <td>Cenicafé 1</td>
+                            <td>1 año</td>
+                            <td><mark class="status-good">Crecimiento</mark></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+        </section>
+    </main>
+
+</body>
+</html>
