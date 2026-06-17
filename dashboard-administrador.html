@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Administrador | Coffee+vision</title>
+    <link rel="stylesheet" href="Css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <a href="index.html" class="brand">
+            <img src="Imagenes/logo2.png" alt="Coffee+vision Logo">
+        
+        </a>
+
+        <nav class="sidebar-nav" aria-label="Menu administrador">
+            <a href="#" class="active"><i class="fa-solid fa-chart-pie"></i> Resumen</a>
+            <a href="#"><i class="fa-solid fa-users"></i> Usuarios</a>
+            <a href="#"><i class="fa-solid fa-seedling"></i> Fincas</a>
+            <a href="#"><i class="fa-solid fa-bug"></i> Alertas</a>
+            <a href="#"><i class="fa-solid fa-chart-line"></i> Reportes</a>
+            <a href="#"><i class="fa-solid fa-gear"></i> Configuracion</a>
+        </nav>
+
+        <a class="logout-link" href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesion</a>
+    </aside>
+
+    <main class="dashboard-shell">
+        <header class="topbar">
+            <section>
+                <p class="eyebrow">Panel administrador</p>
+                <h1>Control general de Coffee+vision</h1>
+            </section>
+            <section class="topbar-actions">
+    <a href="notificaciones_admin.html" class="notification-link" aria-label="Notificaciones">
+        <button type="button" class="notification-button">
+            <i class="fa-regular fa-bell"></i>
+            <span class="badge"></span>
+        </button>
+    </a>
+
+    <a href="admin.html" class="profile-link">
+        <article class="profile-chip">
+            <img src="Imagenes/persona.jpg" alt="Avatar del administrador">
+            <strong>Administrador</strong>
+            <small>Gestión Central</small>
+        </article>
+    </a>
+</section>
+        </header>
+
+        <section class="metric-grid" aria-label="Indicadores principales">
+            <article class="metric-card">
+                <span><i class="fa-solid fa-users"></i></span>
+                <p>Usuarios activos</p>
+                <strong>2</strong>
+                <small>+12 este mes</small>
+            </article>
+            <article class="metric-card">
+                <span><i class="fa-solid fa-map-location-dot"></i></span>
+                <p>Fincas registradas</p>
+                <strong>2</strong>
+                <small>8 pendientes por validar</small>
+            </article>
+            <article class="metric-card">
+                <span><i class="fa-solid fa-triangle-exclamation"></i></span>
+                <p>Alertas abiertas</p>
+                <strong>17</strong>
+                <small>4 de prioridad alta</small>
+            </article>
+            <article class="metric-card">
+                <span><i class="fa-solid fa-mug-hot"></i></span>
+                <p>Produccion reportada</p>
+                <strong>18.4 t</strong>
+                <small>Ultimos 30 dias</small>
+            </article>
+        </section>
+
+        <section class="dashboard-grid">
+            <article class="panel wide-panel">
+                <header class="panel-header">
+                    <div>
+                        <p class="eyebrow">Seguimiento</p>
+                        <h2>Actividad reciente por finca</h2>
+                    </div>
+                    <button type="button" class="text-button">Ver todo</button>
+                </header>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Finca</th>
+                            <th>Caficultor</th>
+                            <th>Municipio</th>
+                            <th>Estado</th>
+                            <th>Ultimo reporte</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>El Paraiso</td>
+                            <td>Mariana Gomez</td>
+                            <td>Popayan</td>
+                            <td><span class="status ok">Activa</span></td>
+                            <td>Hoy, 8:20 a. m.</td>
+                        </tr>
+                        <tr>
+                            <td>La Esperanza</td>
+                            <td>Carlos Munoz</td>
+                            <td>Cajibio</td>
+                            <td><span class="status warning">Revision</span></td>
+                            <td>Ayer, 4:10 p. m.</td>
+                        </tr>
+                        <tr>
+                            <td>Los Guaduales</td>
+                            <td>Andrea Ruiz</td>
+                            <td>Timbio</td>
+                            <td><span class="status danger">Alerta</span></td>
+                            <td>Hace 2 dias</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="panel">
+                <header class="panel-header">
+                    <div>
+                        <p class="eyebrow">Prioridad</p>
+                        <h2>Alertas del sistema</h2>
+                    </div>
+                </header>
+                <ul class="alert-list">
+                    <li>
+                        <i class="fa-solid fa-bug"></i>
+                        <span><strong>Broca detectada</strong><small>1 fincas solicitan revision</small></span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-cloud-sun-rain"></i>
+                        <span><strong>Riesgo climatico</strong><small>Lluvia alta en zona norte</small></span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-user-clock"></i>
+                        <span><strong>Usuarios pendientes</strong><small>5 cuentas por aprobar</small></span>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="panel">
+                <header class="panel-header">
+                    <div>
+                        <p class="eyebrow">Gestion</p>
+                        <h2>Acciones rapidas</h2>
+                    </div>
+                </header>
+                <section class="quick-actions">
+                    <button type="button"><i class="fa-solid fa-user-plus"></i> Crear usuario</button>
+                    <button type="button"><i class="fa-solid fa-file-export"></i> Exportar reporte</button>
+                    <button type="button"><i class="fa-solid fa-circle-check"></i> Validar fincas</button>
+                </section>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
