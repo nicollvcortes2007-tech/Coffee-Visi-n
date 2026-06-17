@@ -1,0 +1,282 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('/Imagenes/cultivo.jpg'); 
+                
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.perfil_info{
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
+.encabezado-principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    color: rgb(96, 24, 24);
+    font-family: "Calibri";
+}
+.volver{
+    color: rgb(96, 24, 24);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+}
+.volver:hover {
+    color: #769f1a;
+    transform: translateX(-3px);
+}
+
+.info-usuario{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-family: "Calibri";
+}
+
+.foto1{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info-usuario h3{
+    font-size: 1.1rem;
+    color: #111;
+}
+
+.info-usuario p{
+    font-size: 0.9rem;
+    color: #666;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-bottom: 30px;
+}
+.seccion-datos{
+    margin-bottom: 30px;
+}
+
+.seccion-datos h4{
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #111;
+    font-family: "Calibri";
+}
+
+.campos{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    font-family: "Calibri";
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+input{
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.seccion-finca{
+    margin-top: 2%;
+}
+
+
+/* Punto de quiebre para pantalla con nombre s */
+@media screen and (min-width: 256px) and (max-width: 767px){
+    .s-1{
+        width: 8.333%;
+    }
+    .s-2{
+        width: 16.666%;
+    }
+    .s-3{
+        width: 25%;
+    }
+    .s-4{
+        width: 33.332%;
+    }
+    .s-5{
+        width: 41.665%;
+    }
+    .s-6{
+        width: 50%;
+    }
+    .s-7{
+        width: 58.331%;
+    }
+    .s-8{
+        width: 66.664%;
+    }
+    .s-9{
+        width: 75%;
+    }
+    .s-10{
+        width: 83.33%;
+    }
+    .s-11{
+        width: 91.663%;
+    }
+    .s-12{
+        width: 100%;
+    }
+
+}
+
+/* Punto de quiebre para pantalla con nombre m */
+@media screen and (min-width: 768px) and (max-width: 1000px){
+    .m-1{
+        width: 8.333%;
+    }
+    .m-2{
+        width: 16.666%;
+    }
+    .m-3{
+        width: 25%;
+    }
+    .m-4{
+        width: 33.332%;
+    }
+    .m-5{
+        width: 41.665%;
+    }
+    .m-6{
+        width: 50%;
+    }
+    .m-7{
+        width: 58.331%;
+    }
+    .m-8{
+        width: 66.664%;
+    }
+    .m-9{
+        width: 75%;
+    }
+    .m-10{
+        width: 83.33%;
+    }
+    .m-11{
+        width: 91.663%;
+    }
+    .m-12{
+        width: 100%;
+    }
+
+}  
+
+
+/* Punto de quiebre para pantalla con nombre l */
+@media screen and (min-width: 1001px) and (max-width: 1465px){
+    .l-1{
+        width: 8.333%;
+    }
+    .l-2{
+        width: 16.666%;
+    }
+    .l-3{
+        width: 25%;
+    }
+    .l-4{
+        width: 33.332%;
+    }
+    .l-5{
+        width: 41.665%;
+    }
+    .l-6{
+        width: 50%;
+    }
+    .l-7{
+        width: 58.331%;
+    }
+    .l-8{
+        width: 66.664%;
+    }
+    .l-9{
+        width: 75%;
+    }
+    .l-10{
+        width: 83.33%;
+    }
+    .l-11{
+        width: 91.663%;
+    }
+    .l-12{
+        width: 100%;
+    }
+}
+
+
+/* Punto de quiebre para pantalla con nombre g */
+@media screen and (min-width: 1466px) {
+    .g-1{
+        width: 8.333%;
+    }
+    .g-2{
+        width: 16.666%;
+    }
+    .g-3{
+        width: 25%;
+    }
+    .g-4{
+        width: 33.332%;
+    }
+    .g-5{
+        width: 41.665%;
+    }
+    .g-6{
+        width: 50%;
+    }
+    .g-7{
+        width: 58.331%;
+    }
+    .g-8{
+        width: 66.664%;
+    }
+    .g-9{
+        width: 75%;
+    }
+    .g-10{
+        width: 83.33%;
+    }
+    .g-11{
+        width: 91.663%;
+    }
+    .g-12{
+        width: 100%;
+    }
+
+}
