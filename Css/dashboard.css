@@ -190,6 +190,7 @@ button {
     display: flex;
     align-items: center;
     gap: 12px;
+    min-width: 250px;
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 16px;
@@ -209,6 +210,8 @@ button {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 2px;
+    line-height: 1.2;
 }
 
 .profile-text strong {
