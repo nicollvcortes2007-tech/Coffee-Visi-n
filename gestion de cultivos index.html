@@ -3,30 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Cultivos - Registro de Actividades</title>
-    <link rel="stylesheet" href="css/gestiondecultivos.css">
+    <title>Gestión de Cultivos - Panel de Control</title>
+    <link rel="stylesheet" href="/css/gestiondecultivos.css">
+    <link rel="stylesheet" href="Css/responsive.css">
 </head>
-<body>
+<body class="app-layout">
 
-    <main class="container">
-        <header>
-            <h1>Gestión de Cultivos</h1>
-            <p>Seguimiento digital para una mejor productividad</p>
-            <img src="/Imagenes/logo2.png" alt="Logo de la aplicación" class="logo-header">
+    <!-- Barra de Navegación Izquierda -->
+    <aside class="sidebar">
+        <header class="sidebar-header">
+          
+            <span class="brand-title">LOGO
+</span>
         </header>
-        
+
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="nav-link active">
+                <span class="nav-icon"></span>
+                <span class="nav-text">Panel Principal</span>
+            </a>
+            <a href="#registro-seccion" class="nav-link">
+                <span class="nav-icon"></span>
+                <span class="nav-text">Registrar Labor</span>
+            </a>
+            <a href="#historial" class="nav-link">
+                <span class="nav-icon"></span>
+                <span class="nav-text">Historial</span>
+            </a>
+            text">Configuración</span>
+            </a>
+        </nav>
+
+        <footer class="sidebar-footer">
+            
+            <span class="user-name">Administrador</span>
+        </footer>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <header class="top-header">
+            <section class="header-titles">
+                <h1>Gestión de Cultivos</h1>
+                <p>Seguimiento digital para optimizar el rendimiento agrícola</p>
+            </section>
+        </header>
+
+        <!-- Formulario -->
         <section id="registro-seccion">
             <article class="card">
-                <h2 id="form-title">Registrar Nueva Actividad</h2>
-                
-                <form action="#" method="POST">
+                <header class="card-header">
+                    <h2 id="form-title">Registrar Nueva Actividad</h2>
+                </header>
+
+                <form action="#" method="POST" class="activity-form">
                     <p class="form-group">
-                        <label for="fecha">Fecha de la Labor:</label>
+                        <label for="fecha">Fecha de la Labor</label>
                         <input type="date" id="fecha" required>
                     </p>
 
                     <p class="form-group">
-                        <label for="actividad">Tipo de Actividad:</label>
+                        <label for="actividad">Tipo de Actividad</label>
                         <select id="actividad" required>
                             <option value="" disabled selected>Selecciona una opción...</option>
                             <option value="Siembra">Siembra</option>
@@ -39,20 +76,23 @@
                         </select>
                     </p>
 
-                    <p class="form-group">
-                        <label for="observaciones">Observaciones / Detalles:</label>
+                    <p class="form-group full-width">
+                        <label for="observaciones">Observaciones / Detalles</label>
                         <textarea id="observaciones" rows="3" placeholder="Ej: Se aplicaron 50g de fertilizante por árbol..."></textarea>
                     </p>
 
-                    <footer class="btn-container">
+                    <footer class="btn-container full-width">
                         <button type="submit" class="btn-save">Guardar Actividad</button>
                     </footer>
                 </form>
             </article>
         </section>
 
-        <section class="table-container">
-            <h2>Historial de Cultivos</h2>
+        <!-- Tabla de Datos -->
+        <section id="historial" class="table-container">
+            <header class="table-header">
+                <h2>Historial de Cultivos</h2>
+            </header>
             <figure class="table-wrapper">
                 <table id="tabla-actividades">
                     <thead>
@@ -65,36 +105,34 @@
                     </thead>
                     <tbody id="lista-actividades">
                         <tr>
-                            <td>2026-06-10</td>
-                            <td class="text-bold">Control de Plagas</td>
+                            <td class="text-date">2026-06-10</td>
+                            <td><span class="badge badge-warning">Control de Plagas</span></td>
                             <td>Monitoreo de broca en el lote principal. Se observa baja incidencia.</td>
                             <td>
                                 <details class="dropdown-actions">
                                     <summary class="btn-trigger">Acciones ▾</summary>
-                                    <div class="dropdown-menu">
-                                        <a href="#editar-id-1" class="dropdown-item item-edit"> Editar Registro</a>
-                                        <a href="#ver-id-1" class="dropdown-item"> Ver Detalles</a>
-                                
+                                    <nav class="dropdown-menu">
+                                        <a href="#editar-id-1" class="dropdown-item item-edit">Editar Registro</a>
+                                        <a href="#ver-id-1" class="dropdown-item">Ver Detalles</a>
                                         <hr>
-                                        <a href="#eliminar-id-1" class="dropdown-item item-delete"> Eliminar</a>
-                                    </div>
+                                        <a href="#eliminar-id-1" class="dropdown-item item-delete">Eliminar</a>
+                                    </nav>
                                 </details>
                             </td>
                         </tr>
                         <tr>
-                            <td>2026-06-08</td>
-                            <td class="text-bold">Fertilización</td>
+                            <td class="text-date">2026-06-08</td>
+                            <td><span class="badge badge-success">Fertilización</span></td>
                             <td>Aplicación de abono orgánico en la zona de renovación.</td>
                             <td>
                                 <details class="dropdown-actions">
                                     <summary class="btn-trigger">Acciones ▾</summary>
-                                    <div class="dropdown-menu">
-                                        <a href="#editar-id-2" class="dropdown-item item-edit"> Editar Registro</a>
-                                        <a href="#ver-id-2" class="dropdown-item"> Ver Detalles</a>
-                                     
+                                    <nav class="dropdown-menu">
+                                        <a href="#editar-id-2" class="dropdown-item item-edit">Editar Registro</a>
+                                        <a href="#ver-id-2" class="dropdown-item">Ver Detalles</a>
                                         <hr>
-                                        <a href="#eliminar-id-2" class="dropdown-item item-delete"> Eliminar</a>
-                                    </div>
+                                        <a href="#eliminar-id-2" class="dropdown-item item-delete">Eliminar</a>
+                                    </nav>
                                 </details>
                             </td>
                         </tr>

@@ -79,35 +79,7 @@
         </section>
     </main>
 
-    <script>
-        function previewImage(event) {
-            const reader = new FileReader();
-            reader.onload = function() {
-                const output = document.getElementById('img-preview');
-                output.src = reader.result;
-                output.style.display = 'block';
-            }
-            reader.readAsDataURL(event.target.files[0]);
-        }
 
-        function guardarDatos() {
-            const nombre = document.getElementById('nombre-tecnico').value;
-            const cat = document.getElementById('categoria').value;
-            const tabla = document.getElementById('lista-registros');
-            const fecha = new Date().toLocaleDateString();
 
-            const nuevaFila = `<tr>
-                <td>${fecha}</td>
-                <td class="bold">${nombre}</td>
-                <td>${cat.toUpperCase()}</td>
-                <td><span class="status-tag">Entrenando...</span></td>
-            </tr>`;
-
-            tabla.innerHTML = nuevaFila + tabla.innerHTML;
-            alert("Datos técnicos enviados al servidor de IA con éxito.");
-            document.getElementById('ia-form').reset();
-            document.getElementById('img-preview').style.display = 'none';
-        }
-    </script>
 </body>
 </html>
