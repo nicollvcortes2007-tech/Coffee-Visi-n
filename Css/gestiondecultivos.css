@@ -77,7 +77,7 @@ body.app-layout {
     align-items: center;
     gap: 12px;
     padding: 12px 16px;
-    color: #e2e8f0;
+    color: gray;
     text-decoration: none;
     font-weight: 500;
     border-radius: var(--border-radius);
