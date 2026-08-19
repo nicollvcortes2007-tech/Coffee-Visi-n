@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee+Vision — Mis Cultivos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/cultivos.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <section class="brand">
+            <a href="#" class="logo-link" aria-label="Volver al inicio">
+                <img src="Imagenes/logo2.png" alt="Coffee+vision Logo" class="brand-logo-img">
+            </a>
+            <h1 class="brand-title">Coffee+Vision</h1>
+        </section>
+
+        <nav aria-label="Navegación de la plataforma">
+            <ul id="main-nav">
+                <li><a href="#" data-target="inicio">Inicio</a></li>
+                <li><a href="#" class="activo" data-target="cultivos">Mis cultivos</a></li>
+                <li><a href="#" data-target="datos">Datos de cultivo</a></li>
+                <li><a href="#" data-target="recomendaciones">Recomendaciones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="hero-banner">
+            <article class="hero-location">
+                <span class="geo-tag">📍 POPAYÁN, CAUCA - 1,738 M S.N.M.</span>
+                <h2>Mi Cultivo — Lote Principal</h2>
+                <p>Caturra / Castillo • 4.5 hectáreas • 3 años de edad</p>
+                <p class="hero-sub">Lote en fase de desarrollo con buen vigor vegetativo. Suelo franco-arcilloso con drenaje moderado, sombra parcial de guamo y nogal cafetero, y monitoreo satelital activo desde marzo de 2024.</p>
+                <footer class="hero-actions">
+                    <button class="btn-hero btn-gestionar"><i class="fa-solid fa-gear"></i> Gestionar lote</button>
+                    <button class="btn-hero btn-mapa"><i class="fa-solid fa-map-location-dot"></i> Ver en mapa</button>
+                </footer>
+            </article>
+
+            <aside class="hero-stats">
+                <section class="stat-item">
+                    <strong>75%</strong>
+                    <span>Producción</span>
+                </section>
+                <section class="stat-item">
+                    <strong>4.5</strong>
+                    <span>Hectáreas</span>
+                </section>
+                <section class="stat-item">
+                    <strong>3°</strong>
+                    <span>Años</span>
+                </section>
+                <section class="stat-item">
+                    <strong>0.81</strong>
+                    <span>Índice NDVI</span>
+                </section>
+            </aside>
+        </section>
+
+        <h3 class="section-heading">RESUMEN DEL LOTE</h3>
+
+        <section class="summary-grid">
+            <article class="summary-card">
+                <header class="card-header">
+                    <i class="fa-regular fa-comment-dots"></i>
+                    <h4>Estado general</h4>
+                </header>
+                <strong>Bueno</strong>
+                <small>75% producción</small>
+            </article>
+
+            <article class="summary-card">
+                <header class="card-header">
+                    <i class="fa-solid fa-droplet"></i>
+                    <h4>Humedad del suelo</h4>
+                </header>
+                <strong>68%</strong>
+                <small>Ligeramente alta</small>
+            </article>
+
+            <article class="summary-card">
+                <header class="card-header">
+                    <i class="fa-solid fa-temperature-half"></i>
+                    <h4>Temperatura</h4>
+                </header>
+                <strong>17°C</strong>
+                <small>Parcialmente nublado</small>
+            </article>
+
+            <article class="summary-card">
+                <header class="card-header">
+                    <i class="fa-regular fa-calendar"></i>
+                    <h4>Próx. cosecha</h4>
+                </header>
+                <strong>Oct '26</strong>
+                <small>~4 meses</small>
+            </article>
+
+            <article class="summary-card">
+                <header class="card-header">
+                    <i class="fa-solid fa-flask"></i>
+                    <h4>pH del suelo</h4>
+                </header>
+                <strong>5.4</strong>
+                <small>Óptimo para café</small>
+            </article>
+
+            <article class="summary-card">
+                <header class="card-header">
+                    <i class="fa-solid fa-sun"></i>
+                    <h4>Radiación solar</h4>
+                </header>
+                <strong>4.8 kWh/m²</strong>
+                <small>Promedio diario</small>
+            </article>
+        </section>
+
+        <section class="details-split">
+
+            <article class="panel-card">
+                <header class="panel-card-header">
+                    <h3><i class="fa-solid fa-seedling"></i> Detalle del cultivo</h3>
+                    <mark class="badge status-active">Activo</mark>
+                </header>
+
+                <table class="panel-table">
+                    <tbody>
+                        <tr>
+                            <td>Variedad</td>
+                            <td>Caturra / Castillo</td>
+                        </tr>
+                        <tr>
+                            <td>Área sembrada</td>
+                            <td>4.5 ha</td>
+                        </tr>
+                        <tr>
+                            <td>Edad del lote</td>
+                            <td>3 años (óptimo)</td>
+                        </tr>
+                        <tr>
+                            <td>Densidad</td>
+                            <td>~2,200 plantas/ha</td>
+                        </tr>
+                        <tr>
+                            <td>Sombra</td>
+                            <td>Parcial (30%)</td>
+                        </tr>
+                        <tr>
+                            <td>Tipo de suelo</td>
+                            <td>Franco-arcilloso</td>
+                        </tr>
+                        <tr>
+                            <td>Fuente de agua</td>
+                            <td>Aljibe + acequia</td>
+                        </tr>
+                        <tr>
+                            <td>Rendimiento estimado</td>
+                            <td>21 @/ha</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <section class="metrics-container">
+                    <article class="metric-progress">
+                        <header>
+                            <span>Salud foliar</span>
+                            <strong class="metric-value">82%</strong>
+                        </header>
+                        <progress value="82" max="100" class="progress-green"></progress>
+                    </article>
+                    <article class="metric-progress">
+                        <header>
+                            <span>Control de maleza</span>
+                            <strong class="metric-value">60%</strong>
+                        </header>
+                        <progress value="60" max="100" class="progress-orange"></progress>
+                    </article>
+                    <article class="metric-progress">
+                        <header>
+                            <span>Vigor vegetativo (NDVI)</span>
+                            <strong class="metric-value">81%</strong>
+                        </header>
+                        <progress value="81" max="100" class="progress-blue"></progress>
+                    </article>
+                </section>
+
+                <button class="btn-panel-action btn-editar"><i class="fa-regular fa-pen-to-square"></i> Editar lote</button>
+            </article>
+
+            <article class="panel-card">
+                <header class="panel-card-header">
+                    <h3><i class="fa-solid fa-cloud-sun"></i> Ubicación y clima</h3>
+                    <mark class="badge status-gps pointer-element" id="gps-badge">GPS activo</mark>
+                </header>
+
+                <table class="panel-table">
+                    <tbody>
+                        <tr>
+                            <td>Municipio</td>
+                            <td>Popayán, Cauca</td>
+                        </tr>
+                        <tr>
+                            <td>Altitud</td>
+                            <td>1,738 m s.n.m.</td>
+                        </tr>
+                        <tr>
+                            <td>Clima</td>
+                            <td>Parcialmente nublado</td>
+                        </tr>
+                        <tr>
+                            <td>Precipitación mensual</td>
+                            <td>~180 mm</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <aside class="coordinates-box">
+                    <code id="coordinates-text">2°27'48" N, 76°36'06" W</code>
+                </aside>
+
+                <section class="weather-subgrid">
+                    <article class="weather-item">
+                        <i class="fa-solid fa-wind"></i>
+                        <strong>12 km/h</strong>
+                        <small>Viento</small>
+                    </article>
+                    <article class="weather-item">
+                        <i class="fa-solid fa-droplet"></i>
+                        <strong>78%</strong>
+                        <small>Humedad</small>
+                    </article>
+                    <article class="weather-item">
+                        <i class="fa-solid fa-eye"></i>
+                        <strong>8 km</strong>
+                        <small>Visibilidad</small>
+                    </article>
+                </section>
+
+                <section class="forecast-row">
+                    <article class="forecast-day">
+                        <span>Jue</span>
+                        <i class="fa-solid fa-cloud-sun"></i>
+                        <strong>17°</strong>
+                    </article>
+                    <article class="forecast-day">
+                        <span>Vie</span>
+                        <i class="fa-solid fa-cloud-rain"></i>
+                        <strong>15°</strong>
+                    </article>
+                    <article class="forecast-day">
+                        <span>Sáb</span>
+                        <i class="fa-solid fa-cloud-rain"></i>
+                        <strong>16°</strong>
+                    </article>
+                    <article class="forecast-day">
+                        <span>Dom</span>
+                        <i class="fa-solid fa-cloud"></i>
+                        <strong>18°</strong>
+                    </article>
+                    <article class="forecast-day">
+                        <span>Lun</span>
+                        <i class="fa-solid fa-sun"></i>
+                        <strong>19°</strong>
+                    </article>
+                </section>
+
+                <button class="btn-panel-action btn-mapa" style="margin-top:16px;"><i class="fa-regular fa-map"></i> Ver en mapa</button>
+            </article>
+        </section>
+
+        <section class="recommendations-box">
+            <header class="recommendations-header">
+                <h3><i class="fa-solid fa-triangle-exclamation"></i> Recomendaciones técnicas activas</h3>
+                <span class="pending-tag" id="pending-counter">4 pendientes</span>
+            </header>
+
+            <ul class="recommendations-list">
+                <li>
+                    <article class="rec-item">
+                        <section class="rec-text">
+                            <span class="rec-priority prioridad-alta">Prioridad alta</span>
+                            <h4><i class="fa-solid fa-faucet-drip"></i> Sistema de riego</h4>
+                            <p>Ajustar para evitar exceso de humedad en raíces. La nubosidad reduce evapotranspiración.</p>
+                        </section>
+                        <button class="btn-rec">Ver detalle</button>
+                    </article>
+                </li>
+                <li>
+                    <article class="rec-item">
+                        <section class="rec-text">
+                            <span class="rec-priority prioridad-alta">Prioridad alta</span>
+                            <h4><i class="fa-solid fa-bug-slash"></i> Monitoreo fitosanitario</h4>
+                            <p>Riesgo elevado de broca y roya por nubosidad persistente. Revisión preventiva recomendada.</p>
+                        </section>
+                        <button class="btn-rec">Ver detalle</button>
+                    </article>
+                </li>
+                <li>
+                    <article class="rec-item">
+                        <section class="rec-text">
+                            <span class="rec-priority prioridad-media">Prioridad media</span>
+                            <h4><i class="fa-solid fa-leaf"></i> Fertilización orgánica</h4>
+                            <p>Planificar dosificación para próximas 3 semanas antes de inicio de floración.</p>
+                        </section>
+                        <button class="btn-rec-full">Plan completo</button>
+                    </article>
+                </li>
+                <li>
+                    <article class="rec-item">
+                        <section class="rec-text">
+                            <span class="rec-priority prioridad-baja">Prioridad baja</span>
+                            <h4><i class="fa-solid fa-scissors"></i> Poda selectiva</h4>
+                            <p>Evaluar ramas improductivas en el lote sur antes del pico de maduración.</p>
+                        </section>
+                        <button class="btn-rec">Ver detalle</button>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <h3 class="section-heading">CICLO Y ACTIVIDAD</h3>
+
+        <section class="history-split">
+
+            <article class="panel-card">
+                <header class="panel-card-header">
+                    <h3><i class="fa-regular fa-calendar-lines"></i> Ciclo fenológico</h3>
+                    <mark class="badge status-dev">Desarrollo</mark>
+                </header>
+
+                <section class="timeline-months">
+                    <ol id="timeline-list">
+                        <li class="fase-activa floracion interactive-fase" data-desc="La floración ocurre tras lluvias que rompen la dormancia de las yemas. Dura entre 2 y 3 días por evento floral."><span>Flor.</span><small>Ene</small></li>
+                        <li class="fase-activa crecimiento interactive-fase" data-desc="El fruto pasa por expansión celular. Es clave mantener nutrición balanceada de nitrógeno y potasio."><span>Crec.</span><small>Mar</small></li>
+                        <li class="fase-activa maduracion interactive-fase" data-desc="Los frutos acumulan azúcares y cambian de verde a rojo. Se recomienda monitoreo semanal de grados brix."><span>Mad.</span><small>May</small></li>
+                        <li class="fase-activa cosecha interactive-fase" data-desc="Recolección selectiva de cerezas maduras. Se estima un rendimiento de 21 @/ha para este ciclo."><span>Cose.</span><small>Jul</small></li>
+                        <li class="fase-reposo interactive-fase" data-desc="Periodo de descanso vegetativo. Ideal para podas de renovación y análisis de suelo."><span>Reposo</span><small>Sep / Nov</small></li>
+                    </ol>
+                </section>
+
+                <p class="fase-descripcion" id="fase-descripcion">Toca una fase del ciclo para ver su detalle técnico.</p>
+
+                <footer class="legend-fenologia">
+                    <span><i class="fa-solid fa-circle" style="color: #aed581;"></i> Floración</span>
+                    <span><i class="fa-solid fa-circle" style="color: #cddc39;"></i> Crecimiento</span>
+                    <span><i class="fa-solid fa-circle" style="color: #4caf50;"></i> Maduración</span>
+                    <span><i class="fa-solid fa-circle" style="color: #1b5e20;"></i> Cosecha</span>
+                </footer>
+            </article>
+
+            <article class="panel-card">
+                <header class="panel-card-header">
+                    <h3><i class="fa-solid fa-clock-rotate-left"></i> Actividad reciente</h3>
+                </header>
+
+                <nav class="activity-filters" id="activity-filters">
+                    <button class="filtro-btn activo" data-filtro="todas">Todas</button>
+                    <button class="filtro-btn" data-filtro="riego">Riego</button>
+                    <button class="filtro-btn" data-filtro="plagas">Plagas</button>
+                    <button class="filtro-btn" data-filtro="fertilizacion">Fertilización</button>
+                    <button class="filtro-btn" data-filtro="suelo">Suelo</button>
+                </nav>
+
+                <ul class="activity-timeline" id="activity-list">
+                    <li data-categoria="fertilizacion">
+                        <time datetime="2026-06-08">8 Jun 2026</time>
+                        <strong>Aplicación de fertilizante</strong>
+                        <p>250 kg/ha de compost orgánico</p>
+                    </li>
+                    <li data-categoria="plagas">
+                        <time datetime="2026-06-03">3 Jun 2026</time>
+                        <strong>Monitoreo de plagas</strong>
+                        <p>Sin presencia activa detectada</p>
+                    </li>
+                    <li data-categoria="riego">
+                        <time datetime="2026-05-28">28 May 2026</time>
+                        <strong>Revisión de sistema de riego</strong>
+                        <p class="warning-text">Ajuste pendiente por exceso de humedad</p>
+                    </li>
+                    <li data-categoria="suelo">
+                        <time datetime="2026-05-15">15 May 2026</time>
+                        <strong>Poda de renovación</strong>
+                        <p>Lote sur — 1.2 ha intervenidas</p>
+                    </li>
+                </ul>
+
+                <button class="btn-panel-action secondary" id="btn-historial">Ver historial completo</button>
+            </article>
+
+        </section>
+
+        <h3 class="section-heading">PRODUCCIÓN Y COSTOS</h3>
+
+        <section class="extra-split">
+
+            <article class="panel-card">
+                <header class="panel-card-header">
+                    <h3><i class="fa-solid fa-chart-column"></i> Producción histórica</h3>
+                    <mark class="badge status-active">Últimas 5 cosechas</mark>
+                </header>
+
+                <ul class="chart-bars">
+                    <li class="bar-col"><span class="bar-fill" style="height:55%;"></span><strong>16 @</strong><span>2022</span></li>
+                    <li class="bar-col"><span class="bar-fill" style="height:68%;"></span><strong>18 @</strong><span>2023</span></li>
+                    <li class="bar-col"><span class="bar-fill" style="height:62%;"></span><strong>17 @</strong><span>2024</span></li>
+                    <li class="bar-col"><span class="bar-fill" style="height:80%;"></span><strong>20 @</strong><span>2025</span></li>
+                    <li class="bar-col"><span class="bar-fill" style="height:88%;"></span><strong>21 @</strong><span>2026 (est.)</span></li>
+                </ul>
+                <p class="chart-note">Rendimiento por hectárea en arrobas (@). Tendencia ascendente sostenida desde la renovación de 2023.</p>
+            </article>
+
+            <article class="panel-card">
+                <header class="panel-card-header">
+                    <h3><i class="fa-solid fa-coins"></i> Costos e insumos recientes</h3>
+                </header>
+
+                <table class="costs-table">
+                    <thead>
+                        <tr><th>Insumo / labor</th><th>Fecha</th><th>Valor</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Compost orgánico</td><td>8 Jun</td><td>$420,000</td></tr>
+                        <tr><td>Jornales de monitoreo</td><td>3 Jun</td><td>$180,000</td></tr>
+                        <tr><td>Mantenimiento riego</td><td>28 May</td><td>$95,000</td></tr>
+                        <tr><td>Poda de renovación</td><td>15 May</td><td>$260,000</td></tr>
+                    </tbody>
+                </table>
+                <footer class="costs-total">
+                    <span>Total del mes</span>
+                    <span>$955,000</span>
+                </footer>
+            </article>
+
+        </section>
+
+        <h3 class="section-heading">SOSTENIBILIDAD</h3>
+
+        <section class="panel-card">
+            <header class="panel-card-header">
+                <h3><i class="fa-solid fa-leaf"></i> Certificaciones y sostenibilidad</h3>
+                <mark class="badge status-active">En progreso</mark>
+            </header>
+            <section class="cert-grid">
+                <article class="cert-card">
+                    <i class="fa-solid fa-seedling"></i>
+                    <strong>Orgánico</strong>
+                    <progress value="70" max="100" class="progress-green"></progress>
+                    <small>70% de transición</small>
+                </article>
+                <article class="cert-card">
+                    <i class="fa-solid fa-frog"></i>
+                    <strong>Rainforest Alliance</strong>
+                    <progress value="45" max="100" class="progress-orange"></progress>
+                    <small>45% de requisitos</small>
+                </article>
+                <article class="cert-card">
+                    <i class="fa-solid fa-handshake"></i>
+                    <strong>Comercio Justo</strong>
+                    <progress value="30" max="100" class="progress-blue"></progress>
+                    <small>30% de requisitos</small>
+                </article>
+                <article class="cert-card">
+                    <i class="fa-solid fa-droplet-slash"></i>
+                    <strong>Huella hídrica</strong>
+                    <progress value="60" max="100" class="progress-green"></progress>
+                    <small>60% optimizado</small>
+                </article>
+            </section>
+        </section>
+
+        <footer class="site-footer">
+            <span>2026 Coffee+Vision — Monitoreo inteligente de caficultura</span>
+            <nav class="footer-links">
+                <a href="#">Soporte técnico</a>
+                <a href="#">Comunidad de caficultores</a>
+                <a href="#">Política de datos</a>
+            </nav>
+        </footer>
+
+    </main>
+
+    <section id="modal-dinamico" class="modal">
+        <article class="modal-content">
+            <button class="close-modal" id="close-modal-btn">&times;</button>
+            <h3 id="modal-title">Título</h3>
+            <hr class="modal-divider">
+            <section id="modal-body"></section>
+        </article>
+    </section>
+
+    <script src="js/cultivo.js"></script>
+</body>
+</html>
