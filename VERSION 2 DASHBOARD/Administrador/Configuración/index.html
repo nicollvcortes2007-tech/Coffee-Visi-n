@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Configuración</title>
+</head>
+<body>
+
+<section class="contenedor">
+
+  <!-- BARRA LATERAL -->
+  <aside class="sidebar">
+    <article class="logo">
+        <img class="logo_imagen" src="/VERSION 2 DASHBOARD/Administrador/Configuración/imagen/Logo Proyecto.png" alt="Logo">
+    </article>
+
+<!--Faltan los iconos-->
+    <ul>
+      <li>Panel Principal</li>
+      <li>Gestión de usuarios</li>
+      <li>BD buenas prácticas</li>
+      <li>BD Plagas y enfermedades</li>
+      <li>Gestión de contenido y noticias</li>
+      <li>Métricas del chat bot</li>
+      <li>Reportes Globales</li>
+      <li class="activo">Configuración</li>
+    </ul>
+
+    <hr class="separador">
+
+    <ul>
+      <li>Biblioteca de recursos</li>
+      <li>Manuales</li>
+    </ul>
+  </aside>
+
+  <!-- Contenido principal - las opciones superiores -->
+  <main class="contenido">
+    <h1>Configuración</h1>
+
+    <nav class="pestanas">
+      <article class="activa">Datos del administrador</article>
+      <article>Seguridad</article>
+      <article>Cambiar contraseña</article>
+      <article>Eliminación de cuenta</article>
+    </nav>
+
+
+
+
+    <!--CUERPO-->
+    <section class="seccion-titulo">
+      <h2>Información del Administrador y Finca</h2>
+      <p>Actualice sus datos personales y de contacto</p>
+    </section>
+
+    <form class="formulario">
+      <section class="campo">
+        <label for="nombres">Nombres y Apellidos</label>
+        <input type="text" id="nombres" name="nombres">
+      </section>
+
+      <section class="campo">
+        <label for="direccion">Dirección del administrador</label>
+        <input type="text" id="direccion" name="direccion">
+      </section>
+
+      <section class="campo">
+        <label for="correo">Correo Electrónico</label>
+        <input type="email" id="correo" name="correo">
+      </section>
+
+      <section class="campo">
+        <label for="finca">Nombre de la finca</label>
+        <input type="text" id="finca" name="finca">
+      </section>
+
+    </form>
+
+  <!--Faltan los iconos-->
+    <button class="boton-guardar" type="submit">Guardar</button>
+
+
+    <hr class="linea">
+
+
+    <!--FOOTER-->
+    <h3>Two-factor authentication (2FA)</h3>
+    <p class="descripcion-2fa">Refuerce la seguridad de su cuenta de administrador con un código OTP de 6 dígitos numéricos enviado a su celular o correo registrado</p>
+
+    <section class="opciones-2fa">
+      <article class="tarjeta-2fa">
+        <h4>Text message SMS</h4>
+        <p>Código por mensaje de texto (SMS) al celular registrado</p>
+      </article>
+
+      <article class="tarjeta-2fa">
+        <h4>Authenticator app (TOTP)</h4>
+        <p>Código de verificación por Correo Electrónico.</p>
+      </article>
+    </section>
+
+  </main>
+
+</section>
+
+</body>
+</html>
