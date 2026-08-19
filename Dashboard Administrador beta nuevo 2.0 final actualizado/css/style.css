@@ -1,0 +1,448 @@
+/* ==========================================
+   1. VARIABLES GLOBALES Y RESET DE ESTILOS
+   ========================================== */
+:root {
+  --bg-main: #F8F9F5;            /* Fondo crema/beige suave */
+  --bg-card: #FFFFFF;            /* Fondo de tarjetas */
+  --primary-emerald: #047857;     /* Verde esmeralda principal */
+  --primary-emerald-hover: #065f46;
+  --emerald-light: #ecfdf5;
+  --text-dark: #1f2937;          /* Texto principal */
+  --text-muted: #6b7280;         /* Texto secundario */
+  --border-color: #f3f4f6;
+  --amber-alert: #451a03;        /* Tono café/tierra oscuro para alertas */
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+}
+
+/* Desplazamiento suave para la navegación por IDs (#) */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.dashboard-body {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+/* ==========================================
+   2. MENÚ LATERAL (SIDEBAR)
+   ========================================== */
+.sidebar {
+  width: 260px;
+  background-color: var(--bg-card);
+  border-right: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; /* Ocultar sidebar en móviles para diseño responsivo */
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.brand-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--primary-emerald);
+}
+
+.brand-name {
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #022c22;
+  letter-spacing: -0.025em;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #f3f4f6;
+  color: var(--text-dark);
+}
+
+.nav-link.active {
+  background-color: #d1fae5;
+  color: #064e3b;
+  font-weight: 700;
+}
+
+.alert-box {
+  background-color: var(--amber-alert);
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+}
+
+.alert-tag {
+  color: #fbbf24;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.alert-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* ==========================================
+   3. CONTENIDO PRINCIPAL & HERO BANNER
+   ========================================== */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.hero-banner {
+  position: relative;
+  background-color: #1c1917;
+  color: #ffffff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  padding: 2.5rem 2rem;
+  min-height: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  /* Imagen de cultivo de café */
+  background-image: url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(12, 10, 9, 0.88) 0%, rgba(28, 25, 23, 0.45) 100%);
+  z-index: 1;
+}
+
+.hero-banner hgroup,
+.hero-banner figure {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-subtitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #34d399;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top: 0.25rem;
+}
+
+.user-badge {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--primary-emerald);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.user-name { font-size: 0.875rem; font-weight: 700; }
+.user-role { font-size: 0.75rem; color: #d1d5db; }
+
+/* ==========================================
+   4. TARJETAS KPI
+   ========================================== */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.kpi-card {
+  background-color: var(--bg-card);
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.kpi-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; }
+.kpi-value { font-size: 1.875rem; font-weight: 800; margin-top: 0.25rem; color: var(--text-dark); }
+
+.kpi-icon { padding: 0.75rem; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; }
+.kpi-icon-amber { background-color: #fef3c7; color: #92400e; }
+.kpi-icon-emerald { background-color: #d1fae5; color: #065f46; }
+.kpi-icon-stone { background-color: #f5f5f4; color: #44403c; }
+
+/* ==========================================
+   5. PANELES DE CONTENIDO Y FORMULARIO
+   ========================================== */
+.card-panel {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  scroll-margin-top: 2rem; /* Espaciado superior al hacer scroll por ID */
+}
+
+.card-panel.no-padding { padding: 0; }
+.panel-header { padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-color); }
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-dark);
+}
+
+.user-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-input, .form-select {
+  padding: 0.65rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  outline: none;
+  background-color: #ffffff;
+  transition: border-color 0.2s;
+}
+
+.form-input { flex: 1; min-width: 200px; }
+.form-input:focus, .form-select:focus { border-color: var(--primary-emerald); }
+
+.btn-primary {
+  background-color: var(--primary-emerald);
+  color: white;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover { background-color: var(--primary-emerald-hover); }
+
+/* ==========================================
+   6. TABLA DE DATOS
+   ========================================== */
+.table-container { overflow-x: auto; }
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.data-table th {
+  background-color: #f9fafb;
+  padding: 0.75rem 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-color);
+  font-weight: 700;
+}
+
+.data-table td { padding: 1rem 1.5rem; border-bottom: 1px solid var(--border-color); }
+
+.font-bold { font-weight: 600; color: var(--text-dark); }
+.text-right { text-align: right; }
+
+.badge {
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.badge-success { background-color: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
+
+.btn-danger-soft {
+  background-color: #f5f5f4;
+  border: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  color: #44403c;
+  transition: all 0.2s;
+}
+
+.btn-danger-soft:hover { background-color: #fee2e2; color: #dc2626; }
+
+/* ==========================================
+   7. SECCIÓN DE FINCAS (IMÁGENES DE CAFÉ)
+   ========================================== */
+.finca-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  background-color: #f5f5f4;
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  margin-top: 1rem;
+}
+
+.finca-image-container {
+  height: 140px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin: 0;
+}
+
+.finca-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Reseteo de estilo de la etiqueta <address> */
+address.finca-details {
+  font-style: normal;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  justify-content: center;
+}
+
+address.finca-details h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.text-emerald { color: var(--primary-emerald); font-weight: 700; }
+.text-amber { color: #b45309; font-weight: 700; }
+
+/* ==========================================
+   8. ESTADÍSTICAS Y BARRAS DE PROGRESO (dl, dt, dd)
+   ========================================== */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  scroll-margin-top: 2rem;
+}
+
+.progress-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.progress-item {
+  display: flex;
+  flex-direction: column;
+}
+
+dt.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+dd.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #f3f4f6;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.fill-dark { background-color: #44403c; }
+.fill-emerald { background-color: var(--primary-emerald); }
