@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee + Visión - Mi Perfil</title>
+<<<<<<< Updated upstream
     <link rel="stylesheet" href="Css/per_cafi.css">
     <link rel="stylesheet" href="Css/responsive.css">
+=======
+    <link rel="stylesheet" href="Css/Perfil_caficultor.css">
+>>>>>>> Stashed changes
 </head>
 <body>
 
@@ -43,7 +47,7 @@
             
             <section class="user-status">
                 <button class="notif-bell" aria-label="Notificaciones">
-                     <mark class="badge-top">12</mark>
+                     <mark class="badge-top">🔔12</mark>
                 </button>
                 <button class="user-menu-btn">
                     <img src="Imagenes/persona.jpg" alt="Foto de perfil de Administrador">
@@ -69,12 +73,12 @@
                 <figure class="summary-logo">
                     <img src="Imagenes/logo2.png" alt="Logotipo Coffee + Visión">
                 </figure>
-                <h3>Administrador</h3>
+                <h3>Administrador Sistema</h3>
                 <p class="role-tag">Administrador del Sistema</p>
                 
                 <address class="contact-info">
                     <ul>
-                        <li><span class="icon"></span> admin@coffeetech.com</li>
+                        <li><span class="icon"></span> admin@coffevision.com</li>
                         <li><span class="icon"></span> +57 300 123 4567</li>
                         <li><span class="icon"></span> Popayán, Cauca, Colombia</li>
                     </ul>
@@ -87,27 +91,27 @@
             <form class="card profile-form" action="#" method="POST">
                 <nav class="form-tabs">
                     <ul>
-                        <li><a href="#" class="active-tab">Información personal</a></li>
-                        <li><a href="#">Seguridad</a></li>
-                        <li><a href="#">Notificaciones</a></li>
-                        <li><a href="#">Actividad reciente</a></li>
+                        <li><a href="#" class="active-tab" data-tab="tab-informacion">Información personal</a></li>
+                        <li><a href="#" data-tab="tab-seguridad">Seguridad</a></li>
+                        <li><a href="#" data-tab="tab-notificaciones">Notificaciones</a></li>
+                        <li><a href="#" data-tab="tab-actividad">Actividad reciente</a></li>
                     </ul>
                 </nav>
 
-                <fieldset class="form-grid">
+                <fieldset id="tab-informacion" class="form-grid tab-pane active-pane">
                     <legend class="visually-hidden">Datos Personales</legend>
                     
                     <p>
                         <label for="nombres">Nombres</label>
-                        <input type="text" id="nombres" name="nombres" value="Administrador">
+                        <input type="text" id="nombres" name="nombres" placeholder="Administrador">
                     </p>
                     <p>
                         <label for="apellidos">Apellidos</label>
-                        <input type="text" id="apellidos" name="apellidos" value="Sistema">
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Sistema">
                     </p>
                     <p>
                         <label for="correo">Correo electrónico</label>
-                        <input type="email" id="correo" name="correo" value="admin@coffeetech.com">
+                        <input type="email" id="correo" name="correo" placeholder="admin@coffeetech.com">
                     </p>
                     <p class="select-wrapper">
                         <label for="rol">Rol</label>
@@ -118,15 +122,15 @@
                     </p>
                     <p>
                         <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono" value="+57 300 123 4567">
+                        <input type="tel" id="telefono" name="telefono" placeholder="+57 300 123 4567">
                     </p>
                     <p>
                         <label for="direccion">Dirección</label>
-                        <input type="text" id="direccion" name="direccion" value="Calle 5 #12-45, Centro">
+                        <input type="text" id="direccion" name="direccion" placeholder="Calle 5 #12-45, Centro">
                     </p>
                     <p>
                         <label for="municipio">Municipio</label>
-                        <input type="text" id="municipio" name="municipio" value="Popayán">
+                        <input type="text" id="municipio" name="municipio" placeholder="Popayán">
                     </p>
                     <p class="select-wrapper">
                         <label for="departamento">Departamento</label>
@@ -134,6 +138,50 @@
                             <option value="cauca" selected>Cauca</option>
                             <option value="valle">Valle del Cauca</option>
                         </select>
+                    </p>
+                </fieldset>
+
+                <fieldset id="tab-seguridad" class="form-grid tab-pane">
+                    <legend class="visually-hidden">Seguridad</legend>
+                    <p>
+                        <label for="pass-actual">Contraseña actual</label>
+                        <input type="password" id="pass-actual" name="pass-actual" placeholder="••••••••">
+                    </p>
+                    <p>
+                        <label for="pass-nueva">Nueva contraseña</label>
+                        <input type="password" id="pass-nueva" name="pass-nueva" placeholder="Nueva contraseña">
+                    </p>
+                    <p>
+                        <label for="pass-confirmar">Confirmar contraseña</label>
+                        <input type="password" id="pass-confirmar" name="pass-confirmar" placeholder="Repetir contraseña">
+                    </p>
+                </fieldset>
+
+                <!-- Pestaña 3: Notificaciones -->
+                <fieldset id="tab-notificaciones" class="form-grid tab-pane">
+                    <legend class="visually-hidden">Notificaciones</legend>
+                    <p>
+                        <label for="notif-email">Notificaciones por correo</label>
+                        <select id="notif-email" name="notif-email">
+                            <option value="activadas">Activadas</option>
+                            <option value="desactivadas">Desactivadas</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="notif-alertas">Alertas de plagas</label>
+                        <select id="notif-alertas" name="notif-alertas">
+                            <option value="inmediatas">Inmediatas</option>
+                            <option value="diarias">Resumen diario</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <fieldset id="tab-actividad" class="form-grid tab-pane">
+                    <legend class="visually-hidden">Actividad Reciente</legend>
+                    <p style="grid-column: 1 / -1;">
+                        <strong>Últimos inicios de sesión:</strong><br>
+                        • Hoy a las 08:30 AM desde Popayán, Cauca<br>
+                        • Ayer a las 02:15 PM desde Popayán, Cauca
                     </p>
                 </fieldset>
 
@@ -166,5 +214,6 @@
         </section>
     </main>
 
+    <script src="/botones.js"></script>
 </body>
 </html>
