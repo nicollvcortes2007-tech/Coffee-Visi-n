@@ -1,0 +1,191 @@
+body {
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    /* Usando tu imagen local con un degradado sutil para proteger el contraste del texto */
+    background: linear-gradient(rgba(244, 247, 240, 0.75), rgba(64, 24, 10, 0.3)), 
+                url('../img/plantacafe.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #40180A; /* Marrón */
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-header {
+    text-align: center;
+    padding: 20px 0;
+    /* Efecto cristal para el header */
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.main-header h1 {
+    color: #5c8c14; /* Verde principal */
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+.main-header p {
+    color: #A65E1F;
+    font-size: 1.2rem;
+    margin: 5px 0 0 0;
+}
+
+/* Distribución en Grid (Organización Avanzada tipo Dashboard sin divs) */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* Formulario más ancho, historial al lado */
+    gap: 30px;
+    align-items: start;
+}
+
+/* Tarjeta Principal (Reutilizada en secciones para consistencia visual) */
+.card-admin {
+    background-color: rgba(255, 255, 255, 0.95); /* Ligeramente translúcida */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 35px;
+    border-top: 10px solid #86BF0B; /* Verde lima */
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #40180A;
+    border-left: 5px solid #5c8c14;
+    padding-left: 15px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #A65E1F;
+}
+
+input[type="text"], select, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #5c8c14;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #40180A;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Zona de Carga de Imagen (Aside) */
+.image-upload-zone {
+    background-color: rgba(244, 247, 240, 0.6);
+    padding: 20px;
+    border: 2px dashed #A65E1F;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#img-preview {
+    max-width: 100%;
+    max-height: 150px;
+    margin: 15px auto;
+    border-radius: 8px;
+    border: 3px solid #86BF0B;
+    display: block;
+}
+
+figcaption {
+    font-size: 0.8rem;
+    color: #A65E1F;
+    margin-top: 5px;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #5c8c14;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #40180A;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Historial (Table) */
+.table-scroll {
+    overflow-x: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #5c8c14;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.bold { font-weight: bold; }
+
+.status-tag {
+    background-color: #86BF0B;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+/* Responsividad (Móviles y Tablets) */
+@media (max-width: 900px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr; /* Pasa a una sola columna en pantallas medianas/chicas */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    body { padding: 10px; }
+    .main-header h1 { font-size: 2rem; }
+    .card-admin { padding: 20px; }
+}

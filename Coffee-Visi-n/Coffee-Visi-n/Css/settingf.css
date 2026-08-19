@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8fafb;
+}
+
+.principal{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+}
+
+.barra{
+    background-color: rgb(155, 77, 26);
+    border-right: 1px solid #e0e0e0;
+    color: #f8fafb;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.barra_menu{
+    list-style: none;
+    padding: 0;
+}
+
+.barra_nav ul li:hover{
+    color:white;
+    font-weight: bold;
+}
+
+.menu-item{
+    padding: 12px 10px;
+    color: green;
+    border-radius: 5px;
+    color:#f8fafb;
+    cursor: pointer;
+}
+
+.menu-item.active{
+    color: rgb(94, 33, 33); 
+    background-color: rgb(193, 172, 130);
+    font-weight: bold;
+}
+
+.imagen1{
+    width: 160px;
+    height: 160px;
+    border-radius: 90px;
+}
+.main_header{
+    padding: 40px;
+}
+.main_header_header{
+    display:flex;
+}
+.main_header_contenido_nombre{
+    font-family: "Arial";
+    font-size: 55px;
+    color: rgb(113, 56, 18);
+}
+.barra_info{
+    border-bottom: 1px solid #e0e0e0;
+    margin: 20px 0;
+}
+
+.pestaña{
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.pestaña.active{
+    color: #10b981;
+    border-bottom: 2px solid #10b981;
+}
+
+.carta_info{
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.carta_info_header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: "Arial";
+    color: rgb(113, 56, 18);
+}
+
+.seccion_info_article{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    font-size: 20px; 
+}
+
+.field{
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: #333;
+}
+
+.field strong{
+    display: block;
+    color: rgb(140, 70, 70);
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.botn-edit{
+    background: none;
+    border: 1px solid #e0e0e0;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
