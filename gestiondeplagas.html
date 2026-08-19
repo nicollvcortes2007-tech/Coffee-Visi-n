@@ -154,11 +154,6 @@
             }
         }
 
-        function guardarDatos() {
-            const nombre = document.getElementById('nombre-tecnico').value;
-            const cat = document.getElementById('categoria').value;
-            const tabla = document.getElementById('lista-registros');
-            const fecha = new Date().toLocaleDateString();
 
             const nuevaFila = `<tr>
                 <td>${fecha}</td>
@@ -171,7 +166,7 @@
             alert("Datos técnicos enviados al servidor de IA con éxito.");
             document.getElementById('ia-form').reset();
             document.getElementById('img-preview').style.display = 'none';
-        }
+        
     </script>
 </body>
 </html>
