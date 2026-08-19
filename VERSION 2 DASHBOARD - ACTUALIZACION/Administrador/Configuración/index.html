@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/index.css">
+  <title>Configuración</title>
+</head>
+
+<body>
+
+  <v class="contenedor">
+
+    <!-- BARRA LATERAL -->
+    <aside class="sidebar">
+      <article class="logo">
+        <img class="logo_imagen" src="/imagen/Logo Proyecto.png" alt="Logo">
+      </article>
+
+      <!--Faltan los iconos-->
+      <ul>
+        <li>Panel Principal</li>
+        <li>Gestión de usuarios</li>
+        <li>BD buenas prácticas</li>
+        <li>BD Plagas y enfermedades</li>
+        <li>Gestión de contenido y noticias</li>
+        <li>Reportes Globales</li>
+        <li class="activo">Configuración</li>
+      </ul>
+
+      <hr class="separador">
+
+      <ul>
+        <li>Biblioteca de recursos</li>
+      </ul>
+    </aside>
+
+    <!-- Contenido principal - las opciones superiores -->
+    <main class="contenido">
+      <h1>Configuración</h1>
+
+      <nav class="pestanas">
+        <article class="activa">Datos del administrador</article>
+        <article>Seguridad</article>
+        <article>Métricas del chat bot</article>
+      </nav>
+
+
+
+
+      <!--CUERPO-->
+      <section class="seccion_titulo">
+        <h2>Información del Administrador y Finca</h2>
+        <p>Actualice sus datos personales y de contacto</p>
+      </section>
+
+      <form class="formulario">
+        <section class="campo">
+          <label for="nombres">Nombres y Apellidos</label>
+          <input type="text" id="nombres" name="nombres">
+        </section>
+
+        <section class="campo">
+          <label for="direccion">Dirección del administrador</label>
+          <input type="text" id="direccion" name="direccion">
+        </section>
+
+        <section class="campo">
+          <label for="correo">Correo Electrónico</label>
+          <input type="email" id="correo" name="correo">
+        </section>
+
+        <section class="campo">
+          <label for="finca">Nombre de la finca</label>
+          <input type="text" id="finca" name="finca">
+        </section>
+
+      </form>
+
+      <!--Faltan los iconos-->
+      <button class="boton_guardar" type="submit">Guardar</button>
+
+
+      <hr class="linea">
+
+
+
+
+
+
+      <!-- SECCIÓN DE CAMBIO DE CONTRASEÑA -->
+      <section class="caja_formulario">
+        <h2 class="caja_formulario_titulo">Cambiar Contraseña</h2>
+        <p class="subtitulo">Actualice su contraseña periódicamente para mantener su cuenta segura.</p>
+
+        <form class="grid-formulario">
+          <section class="campo campo_completo">
+            <label for="current-pass">Contraseña actual *</label>
+            <input type="password" id="current-pass" class="control" placeholder="Ingrese su contraseña actual"
+              required>
+          </section>
+
+          <!-- Nueva Contraseña -->
+          <section class="campo">
+            <label for="new-pass">Nueva contraseña *</label>
+            <input type="password" id="new-pass" class="control" placeholder="Mínimo 8 caracteres" required>
+          </section>
+
+          <!-- Confirmación de ontraseña -->
+          <section class="campo">
+            <label for="confirm-pass">Confirmar nueva contraseña *</label>
+            <input type="password" id="confirm-pass" class="control" placeholder="Repita la nueva contraseña"
+              required>
+          </section>
+
+          <!--seguridad -->
+          <section class="campo campo_completo">
+            <ul class="requisitos">
+              <li>La contraseña debe tener al menos 8 caracteres, incluir un número y una letra mayúscula.</li>
+            </ul>
+          </section>
+
+          <!-- Botón de guardado -->
+          <section class="campo campo_completo">
+            <button type="submit" class="boton_guarda_contraseña">Actualizar contraseña</button>
+          </section>
+        </form>
+      </section>
+
+
+      <hr class="linea">
+
+
+      <!-- ELIMINAR CONTRASEÑA -->
+
+      <section class="eliminar_cuenta">
+        <h2 class="titulo_eliminar_cuenta">Eliminación de cuenta</h2>
+        <p class="subtitulo">Esta acción es irreversible y borrará los datos de la finca y el administrador.</p>
+
+        <form class="formulario">
+          <!--Motivo y Contraseña -->
+          <section class="campo">
+            <label for="motivo">Motivo de cancelación (Opcional)</label>
+            <select id="motivo" class="control">
+              <option value="">Seleccione un motivo</option>
+              <option value="no-uso">Ya no utilizo el sistema</option>
+              <option value="finca">Cambié de finca o administración</option>
+              <option value="otro">Otro motivo</option>
+            </select>
+          </section>
+
+          <section class="campo">
+            <label for="pass-confirm">Contraseña actual *</label>
+            <input type="password" id="pass-confirm" class="control" placeholder="Ingrese su contraseña" required>
+          </section>
+
+          <!--Confirmación  -->
+          <section class="campo_completo">
+            <article class="caja">
+              <input type="checkbox" id="check-riesgo" required>
+              <label for="check-riesgo">Confirmo que deseo eliminar permanentemente los registros e historial de esta
+                cuenta.</label>
+            </article>
+          </section>
+
+          <!-- Botón -->
+          <section class="campo_completo">
+            <button type="submit" class="boton_eliminar">Eliminar cuenta definitivamente</button>
+          </section>
+        </form>
+      </section>
+    </main>
+</body>
+
+</html>

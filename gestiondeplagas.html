@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración IA - Coffee+Vision</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="Css/responsive.css">
+</head>
+<body class="app-layout">
+
+    <!-- Barra de Navegación Lateral (Sidebar) -->
+    <nav class="sidebar">
+        <header class="brand-header">
+            <span class="brand-icon"></span>
+            <h2 class="brand-title">Coffee<span>+Vision</span></h2>
+        </header>
+
+        <ul class="nav-list">
+            <li class="nav-item active">
+                <a href="#dashboard" class="nav-link">
+                    <span class="nav-icon"></span>
+                    <span class="nav-text">Panel Principal</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#dataset" class="nav-link">
+                    <span class="nav-icon"></span>
+                    <span class="nav-text">IA</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#patogenos" class="nav-link">
+                    <span class="nav-icon"></span>
+                    <span class="nav-text">Patógenos</span>
+                </a>
+            </li>
+           
+           
+        
+        </ul>
+
+        <footer class="sidebar-user">
+            <figure class="user-avatar">
+                <span class="avatar-initials">AD</span>
+            </figure>
+            <section class="user-info">
+                <strong class="user-name">Administrador</strong>
+                <small class="user-role">Gestor de Modelo IA</small>
+            </section>
+        </footer>
+    </nav>
+
+    <!-- Área de Contenido Principal -->
+    <main class="main-content">
+        <header class="top-header">
+            <section class="header-titles">
+                <h1>Gestión técnica de patógenos y plagas del café</h1>
+                <p>Plataforma de entrenamiento y control del modelo de visión artificial</p>
+            </section>
+            <aside class="system-status">
+                <span class="status-indicator online"></span>
+                <span class="status-label">Servidor IA Activo</span>
+            </aside>
+        </header>
+
+        <section class="gestiondeplagas-grid">
+            
+            <!-- Formulario de Actualización -->
+            <article class="card-admin upload-section">
+                <header class="card-header">
+                    <h2>Actualizar Base de Datos</h2>
+                    <p>Ingrese muestras para reentrenar la red neuronal</p>
+                </header>
+                
+                <form id="ia-form" onsubmit="event.preventDefault(); guardarDatos();">
+                    <p class="input-group">
+                        <label for="nombre-tecnico">Nombre Técnico / Científico:</label>
+                        <input type="text" id="nombre-tecnico" placeholder="Ej: Hemileia vastatrix (Roya)" required>
+                    </p>
+
+                    <p class="input-group">
+                        <label for="categoria">Categoría de Riesgo:</label>
+                        <select id="categoria">
+                            <option value="plaga">Plaga (Insectos/Artrópodos)</option>
+                            <option value="enfermedad">Enfermedad (Hongos/Bacterias)</option>
+                            <option value="deficiencia">Deficiencia Nutricional</option>
+                        </select>
+                    </p>
+
+                    <p class="input-group">
+                        <label for="descripcion-tecnica">Descripción Detallada para IA:</label>
+                        <textarea id="descripcion-tecnica" placeholder="Describa patrones visuales, coloración y síntomas clave para el modelo..." required></textarea>
+                    </p>
+
+                    <aside class="image-upload-zone">
+                        <label for="imagen-plaga" class="drop-label">
+                            <span class="upload-icon">📷</span>
+                            <strong>Muestras Visuales IA</strong>
+                            <small>Suelte una imagen aquí o haga clic para examinar</small>
+                        </label>
+                        <input type="file" id="imagen-plaga" accept="image/*" onchange="previewImage(event)">
+                        <figure id="preview-container">
+                            <img id="img-preview" src="" alt="Vista previa de la muestra" style="display: none;">
+                            <figcaption>Previsualización de la muestra técnica</figcaption>
+                        </figure>
+                    </aside>
+
+                    <footer class="form-actions">
+                        <button type="submit" class="btn-primary">
+                            <span></span> Actualizar Modelo de IA
+                        </button>
+                    </footer>
+                </form>
+            </article>
+
+            <!-- Sección de Registros / Historial -->
+            <section class="card-admin log-section">
+                <header class="card-header">
+                    <h2>Registros Recientes</h2>
+                    <p>Últimas entradas enviadas al pipeline de entrenamiento</p>
+                </header>
+
+                <figure class="table-scroll">
+                    <table id="tabla-registros">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Patógeno</th>
+                                <th>Tipo</th>
+                                <th>Estado IA</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lista-registros">
+                            <!-- Datos dinámicos -->
+                        </tbody>
+                    </table>
+                </figure>
+            </section>
+
+        </section>
+    </main>
+
+    <script>
+        function previewImage(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const output = document.getElementById('img-preview');
+                output.src = reader.result;
+                output.style.display = 'block';
+            }
+            if (event.target.files[0]) {
+                reader.readAsDataURL(event.target.files[0]);
+            }
+        }
+
+        function guardarDatos() {
+            const nombre = document.getElementById('nombre-tecnico').value;
+            const cat = document.getElementById('categoria').value;
+            const tabla = document.getElementById('lista-registros');
+            const fecha = new Date().toLocaleDateString();
+
+            const nuevaFila = `<tr>
+                <td>${fecha}</td>
+                <td class="bold">${nombre}</td>
+                <td><span class="badge badge-${cat}">${cat.toUpperCase()}</span></td>
+                <td><span class="status-tag pulse">Entrenando...</span></td>
+            </tr>`;
+
+            tabla.innerHTML = nuevaFila + tabla.innerHTML;
+            alert("Datos técnicos enviados al servidor de IA con éxito.");
+            document.getElementById('ia-form').reset();
+            document.getElementById('img-preview').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

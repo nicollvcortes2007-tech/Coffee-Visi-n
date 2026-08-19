@@ -1,0 +1,343 @@
+:root {
+    --cafe: #4e2a15;
+    --verde: #769f1a;
+    --verde-claro: #f4f9ed;
+    --texto: #555555;
+    --blanco: #ffffff;
+    --borde: #f0f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--verde-claro); /* Cambiado de gris frío a verde crema claro */
+    color: var(--texto); /* Ajustado al color de texto base */
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* --- SIDEBAR (Barra Lateral) --- */
+.sidebar {
+    width: 260px;
+    background-color: var(--cafe); /* Cambiado de azul oscuro (#0b151e) al marrón café */
+    color: #d1c7bd; /* Color de texto más claro y cálido sobre el marrón */
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+}
+
+.sidebar-header {
+    padding: 0 24px 24px;
+    text-align: center;
+}
+
+.logo {
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 100px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 200px; 
+    aspect-ratio: 1 / 1; 
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    color: #d1c7bd; /* Texto de enlaces en un tono crema suave */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Efecto Hover y Estado Activo del Menú Coincidente */
+.sidebar-nav a:hover, 
+.sidebar-nav a.active {
+    background-color: var(--verde); /* Cambiado a verde oliva institucional */
+    color: var(--blanco);
+}
+
+.sidebar-nav a.active {
+    color: var(--blanco);
+    font-weight: 600;
+}
+
+/* Indicador de número de notificaciones en el menú */
+.badge {
+    background-color: var(--verde); /* Sincronizado con el verde de la marca */
+    color: white;
+    border-radius: 20px;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 0 24px;
+}
+
+.logout-btn {
+    color: #f87171;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* --- MAIN CONTENT (Contenido Principal) --- */
+.main-content {
+    flex-grow: 1;
+    padding: 24px 40px;
+    max-width: 1400px;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.top-header h1 {
+    font-size: 18px;
+    color: var(--cafe); /* Título superior en marrón café */
+    font-weight: 700;
+}
+
+.top-header p {
+    font-size: 13px;
+    color: var(--texto);
+}
+
+.user-status {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notif-bell {
+    background: none;
+    border: none;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+}
+
+.badge-top {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: var(--verde); /* Modificado a verde oliva */
+    color: white;
+    border-radius: 50%;
+    padding: 1px 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.user-menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.user-menu-btn img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info-text strong {
+    display: block;
+    font-size: 13px;
+    color: var(--cafe); /* Nombre del usuario en marrón */
+}
+
+.user-info-text small {
+    display: block;
+    font-size: 11px;
+    color: var(--texto);
+}
+
+.arrow-down {
+    font-size: 10px;
+    color: var(--texto);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--borde);
+    margin-bottom: 24px;
+}
+
+.section-header h2 {
+    font-size: 22px;
+    color: var(--cafe); /* Título principal de la sección en marrón */
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.section-header p {
+    color: var(--texto);
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+
+/* --- TABS (Pestañas de Navegación) --- */
+.form-tabs ul {
+    display: flex;
+    list-style: none;
+    border-bottom: 1px solid var(--borde);
+    margin-bottom: 24px;
+    gap: 24px;
+}
+
+.form-tabs a {
+    text-decoration: none;
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 12px;
+    display: block;
+}
+
+.form-tabs a.active-tab {
+    color: var(--verde); /* Modificado de verde cian/azul a verde oliva */
+    border-bottom: 2px solid var(--verde); /* Subrayado en verde oliva */
+    font-weight: 600;
+}
+
+/* --- NOTIFICATIONS CONTAINER & LIST (Lista de Alertas) --- */
+.notifications-container {
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02); /* Suave sombra para dar profundidad */
+}
+
+.notifications-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.notification-item {
+    display: flex;
+    align-items: start;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    background-color: var(--blanco);
+    transition: background-color 0.2s;
+}
+
+/* Alertas Leídas / Estándar */
+.notification-item.unread {
+    background-color: var(--verde-claro); /* Sutil fondo verde crema para elementos no leídos */
+    border-left: 4px solid var(--verde); /* Línea lateral en verde oliva */
+}
+
+/* Alerta Meteorológica u otras alertas informativas unread */
+.notification-item.weather.unread {
+    border-left: 4px solid var(--verde); 
+    background-color: var(--verde-claro);
+}
+
+/* Alertas Críticas (Mantiene el rojo de advertencia pero suavizado) */
+.notification-item.critical.unread {
+    border-left: 4px solid #ef4444;
+    background-color: #fef2f2; /* Fondo rojizo suave de advertencia */
+}
+
+.notification-icon {
+    font-size: 20px;
+    padding-top: 2px;
+}
+
+.notification-body {
+    flex-grow: 1;
+}
+
+.notification-body h3 {
+    font-size: 15px;
+    color: var(--cafe); /* Títulos de las alertas en marrón */
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.notification-body p {
+    font-size: 13.5px;
+    color: var(--texto);
+    line-height: 1.5;
+    margin-bottom: 6px;
+}
+
+.notification-body time {
+    font-size: 12px;
+    color: #a0a0a0; /* Gris neutro cálido para el tiempo transcurrido */
+    display: block;
+}
+
+/* Botón de check (Marcar como leída) */
+.btn-action-notif {
+    background: none;
+    border: 1px solid #cbd5e1;
+    color: var(--texto);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transition: all 0.2s;
+    align-self: center;
+    flex-shrink: 0;
+}
+
+.btn-action-notif:hover {
+    background-color: var(--verde); /* Cambio al hacer hover al verde institucional */
+    color: white;
+    border-color: var(--verde);
+}
