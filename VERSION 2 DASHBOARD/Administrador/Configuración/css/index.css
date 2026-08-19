@@ -1,0 +1,254 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f7f3ea;
+  color: #333;
+}
+
+.contenedor{
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Barra lateral */
+.sidebar{
+  width: 260px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-right: 1px solid #e0dccf;
+}
+
+.logo{
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.logo_imagen{
+    height: 160px;
+    width: 160px;
+}
+
+.logo p{
+  font-weight: bold;
+  font-style: italic;
+  color: #4a7c2f;
+  margin-top: 5px;
+}
+
+.sidebar ul{
+  list-style: none;
+}
+
+.sidebar ul li{
+  padding: 10px 8px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #444;
+  font-size: 18px;
+}
+
+.sidebar ul li.activo{
+  color: #4a7c2f;
+  font-weight: bold;
+}
+
+.sidebar ul li:hover{
+  color: #4a7c2f;
+}
+
+
+.separador{
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 15px 0;
+}
+
+/* Contenido principal */
+.contenido{
+  flex: 1;
+  padding: 30px 40px;
+}
+
+.contenido h1{
+  color: #7a1f1f;
+  margin-bottom: 20px;
+  font-size: 45px;
+}
+
+
+
+/* Pestañas */
+.pestanas{
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 25px;
+}
+
+.pestanas article{
+  padding-bottom: 12px;
+  color: #777;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.pestanas article.activa{
+  color: #333;
+  font-weight: bold;
+  border-bottom: 3px solid #4a9c2f;
+}
+
+/* Formulario */
+.seccion-titulo{
+  margin-bottom: 20px;
+}
+
+.seccion-titulo h2{
+  color: #7a1f1f;
+  font-size: 23px;
+  margin-bottom: 4px;
+}
+
+.seccion-titulo p{
+  color: #888;
+  font-size: 18px;
+}
+
+.formulario{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 40px;
+  margin-bottom: 20px;
+}
+
+.campo label{
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.campo input{
+  width: 80%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.campo input:focus{
+  outline: none;
+  border-color: #4a9c2f;
+}
+
+.boton-guardar{
+  background-color: #4a7c2f;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.boton-guardar:hover{
+  background-color: #3d6826;
+}
+
+
+
+
+
+
+/* Autenticación de dos factores */
+.linea{
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0 25px 0;
+}
+
+.contenido h3{
+  color: #7a1f1f;
+  margin-bottom: 6px;
+  font-size: 20px;
+}
+
+.contenido > p.descripcion-2fa{
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.opciones-2fa{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.tarjeta-2fa{
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 18px;
+  cursor: pointer;
+}
+
+.tarjeta-2fa:hover{
+  border-color: #4a9c2f;
+}
+
+.tarjeta-2fa h4{
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.tarjeta-2fa p{
+  font-size: 18px;
+  color: #777;
+}
+
+
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 900px){
+  .contenedor{
+    flex-direction: column;
+  }
+
+  .sidebar{
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e0dccf;
+  }
+
+  .formulario{
+    grid-template-columns: 1fr;
+  }
+
+  .pestanas{
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .opciones-2fa{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px){
+  .contenido{
+    padding: 20px;
+  }
+}

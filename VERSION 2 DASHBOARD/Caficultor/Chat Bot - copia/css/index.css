@@ -1,0 +1,411 @@
+body{
+    display: flex;
+    background-color:#bca89d;
+}
+nav{
+    margin-right: 1%;
+    border-radius: 8px;
+    background-color: white;
+    width: 18%;
+}
+.nav_header{
+    display: flex;
+}
+.imagenLogo{
+    width: 200px;
+    height: 200px;
+}
+.nav_main h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-top: 2%;
+}
+.nav_main li{
+    font-size: 25px;
+    list-style: none;
+    margin-bottom: 7%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 550; 
+    color: #4e2a15;
+    cursor: pointer;
+}
+li:hover{
+    color: #3f9318;
+}
+.nav_main ul li img {
+  transition: filter 0.3s ease;
+}
+.nav_main ul li:hover img {
+    filter: brightness(0) contrast(200%) saturate(200%);
+    transform: scale(1.10);
+}
+
+.nav_main_seccion1{
+    margin-bottom: 25%;
+}
+.nav_main_seccion2{
+    margin-bottom: 25%;
+}
+.nav_footer{
+    margin-top: 40%;
+}
+.nav_footer_mail{
+    display: flex;
+    margin-top: 10%;
+}
+.nav_footer_imagen{
+    width: 90px;
+    height: 90px;
+}
+.nav_footer h3{
+    font-size: 20px;
+    margin-bottom: 1.5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 550; 
+    color: #4e2a15;
+    margin-top: 1%;
+}
+
+.nav_main ul li img {
+  width: 30px;         
+  height: 35px;
+  margin-top: 10px;        
+  margin-right: 12px; 
+}
+
+
+
+.cuerpo_chat{
+    width: 2450px;
+    border-radius: 8px;
+    background-color: white;
+}
+.cuerpo_chat header{
+    border: 0.5px solid #4e2a15;
+}
+.cuerpo_chat header h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+.main_chat{
+    margin-top: 12%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 550; 
+    font-size: 30px;
+    color: #4e2a15
+}
+.botones{
+    display: flex;
+    flex-wrap: wrap;             
+    margin: 0 auto;              
+    max-width: 800px;            
+    padding: 16px;
+    margin-top: 5%;
+}
+.botones_boton{
+    flex: 0 0 calc(50% - 20px); 
+    box-sizing: border-box;
+    margin: 10px; 
+  
+    background-color: #fcfbfa;
+    border:1px solid #e2dad6;
+    border-radius: 20px;
+    padding: 18px 24px;
+    cursor: pointer;
+  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    font-weight: 550;
+    color: #4e2a15;
+    text-align: center;
+  
+}
+.botones_boton:hover{
+    color:#3f9318;
+}
+.botones_boton:hover {
+    transform: translateY(-2px);
+}
+
+
+
+
+.footer_barraChat{
+    display: flex;
+    flex-direction: column;         
+    background-color: #fdfbf7;      
+    border: 1px solid #7e7b75;   
+    border-radius: 16px;            
+    max-width: 1000px;               
+    margin: 20px auto;   
+    margin-top: 10%;           
+    padding: 90px;                  
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+.entrada_texto{
+    width: 100%;
+    border: none;
+    background: transparent;
+    resize: none;                   
+    outline: none;                  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 12px;
+}
+.entrada_texto::placeholder{
+    color: #9a968e;                
+}
+.footer_barraChat_herramientas{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;          
+
+}
+.footer_barraChat_herramientas_accionesI{
+    display: flex;
+    align-items: center;
+    gap: 8px;                     
+}
+.boton_accion{
+    background: transparent;
+    border: none;
+    color: #5c5850;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.boton_accion:hover{
+    background-color: #f1eee7;     
+}
+
+.boton_enviar{
+    background-color: #71e43c;      
+    border: none;
+    border-radius: 50%;             
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.boton_enviar:hover{
+    background-color: #ce5f2b;    
+}
+
+
+
+/*Punto de quiebre para pantallas pequeñas con nombre xs*/
+@media screen and (max-width: 255px){
+    .xs-1{width: 8.333%;}
+
+    .xs-2{
+        width: 16.666%;
+    }
+    .xs-3{
+        width: 25%;
+    }
+    .xs-4{
+        width: 33.332%;
+    }
+    .xs-5{
+        width: 41.665%;
+    }
+    .xs-6{
+        width: 50%;
+    }
+    .xs-7{
+        width: 58.331%;
+    }
+    .xs-8{
+        width: 66.664%;
+    }
+    .xs-9{
+        width: 75%;
+    }
+    .xs-10{
+        width: 83.33%;
+    }
+    .xs-11{
+        width: 91.663%;
+    }
+    .xs-12{
+        width: 100%;
+    }
+}
+
+/* Punto de quiebre para pantalla con nombre s */
+@media screen and (min-width: 256px) and (max-width: 767px){
+    .s-1{
+        width: 8.333%;
+    }
+    .s-2{
+        width: 16.666%;
+    }
+    .s-3{
+        width: 25%;
+    }
+    .s-4{
+        width: 33.332%;
+    }
+    .s-5{
+        width: 41.665%;
+    }
+    .s-6{
+        width: 50%;
+    }
+    .s-7{
+        width: 58.331%;
+    }
+    .s-8{
+        width: 66.664%;
+    }
+    .s-9{
+        width: 75%;
+    }
+    .s-10{
+        width: 83.33%;
+    }
+    .s-11{
+        width: 91.663%;
+    }
+    .s-12{
+        width: 100%;
+    }
+
+}
+
+/* Punto de quiebre para pantalla con nombre m */
+@media screen and (min-width: 768px) and (max-width: 1000px){
+    .m-1{
+        width: 8.333%;
+    }
+    .m-2{
+        width: 16.666%;
+    }
+    .m-3{
+        width: 25%;
+    }
+    .m-4{
+        width: 33.332%;
+    }
+    .m-5{
+        width: 41.665%;
+    }
+    .m-6{
+        width: 50%;
+    }
+    .m-7{
+        width: 58.331%;
+    }
+    .m-8{
+        width: 66.664%;
+    }
+    .m-9{
+        width: 75%;
+    }
+    .m-10{
+        width: 83.33%;
+    }
+    .m-11{
+        width: 91.663%;
+    }
+    .m-12{
+        width: 100%;
+    }
+
+}  
+
+
+/* Punto de quiebre para pantalla con nombre l */
+@media screen and (min-width: 1001px) and (max-width: 1465px){
+    .l-1{
+        width: 8.333%;
+    }
+    .l-2{
+        width: 16.666%;
+    }
+    .l-3{
+        width: 25%;
+    }
+    .l-4{
+        width: 33.332%;
+    }
+    .l-5{
+        width: 41.665%;
+    }
+    .l-6{
+        width: 50%;
+    }
+    .l-7{
+        width: 58.331%;
+    }
+    .l-8{
+        width: 66.664%;
+    }
+    .l-9{
+        width: 75%;
+    }
+    .l-10{
+        width: 83.33%;
+    }
+    .l-11{
+        width: 91.663%;
+    }
+    .l-12{
+        width: 100%;
+    }
+}
+
+
+/* Punto de quiebre para pantalla con nombre g */
+@media screen and (min-width: 1466px) {
+    .g-1{
+        width: 8.333%;
+    }
+    .g-2{
+        width: 16.666%;
+    }
+    .g-3{
+        width: 25%;
+    }
+    .g-4{
+        width: 33.332%;
+    }
+    .g-5{
+        width: 41.665%;
+    }
+    .g-6{
+        width: 50%;
+    }
+    .g-7{
+        width: 58.331%;
+    }
+    .g-8{
+        width: 66.664%;
+    }
+    .g-9{
+        width: 75%;
+    }
+    .g-10{
+        width: 83.33%;
+    }
+    .g-11{
+        width: 91.663%;
+    }
+    .g-12{
+        width: 100%;
+    }
+
+}
