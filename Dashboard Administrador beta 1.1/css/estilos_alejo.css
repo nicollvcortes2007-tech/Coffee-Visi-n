@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background: #f4f9ed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width: 250px;
+    background:  #4e2a15;
+    padding: 30px 20px;
+}
+
+.logo{
+    color: white;
+    margin-bottom: 40px;
+}
+
+.sidebar ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar li{
+    margin: 20px 0;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+.sidebar a:hover{
+    color: #769f1a;
+}
+
+/* CONTENIDO */
+
+.contenido{
+    padding: 30px;
+}
+
+/* HEADER */
+
+.encabezado{
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.perfil-admin{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.perfil-admin img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+/* TARJETAS */
+
+.tarjetas{
+    margin-bottom: 30px;
+}
+
+.card-dashboard{
+    padding: 25px;
+    border-radius: 15px;
+    color: white;
+}
+
+.card-dashboard h2{
+    margin-top: 10px;
+    font-size: 35px;
+}
+
+.verde{
+    background: #769f1a;
+}
+
+.claro{
+    background: #8b6e4b;
+}
+
+.cafe{
+    background: #4e2a15;
+}
+
+.azul{
+    background: #769f1a;
+}
+
+/* FORMULARIO */
+
+.formulario-usuarios{
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+
+    margin-bottom: 30px;
+}
+
+form{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input,
+select{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* TABLA */
+
+.tabla-usuarios{
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+
+    margin-bottom: 30px;
+}
+
+/* ESTADISTICAS */
+
+.estadisticas{
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.barra{
+    margin-top: 20px;
+}
+
+progress{
+    width: 100%;
+    height: 18px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px){
+
+    body{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+    }
+
+    .encabezado{
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    form{
+        flex-direction: column;
+    }
+
+}

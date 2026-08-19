@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee+Vision - Panel de Administración</title>
+  
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Iconos de Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dashboard-body">
+
+  <!-- ================= SIDEBAR (MENÚ LATERAL) ================= -->
+  <aside class="sidebar">
+    <header class="brand">
+      <i data-lucide="sprout" class="brand-icon"></i>
+      <span class="brand-name">Coffee+Vision</span>
+    </header>
+
+    <!-- Enlaces de navegación vinculados a las secciones por ID -->
+    <nav class="nav-menu">
+      <a href="#inicio" class="nav-link active">
+        <i data-lucide="home"></i> <span>Inicio</span>
+      </a>
+      <a href="#usuarios" class="nav-link">
+        <i data-lucide="users"></i> <span>Usuarios</span>
+      </a>
+      <a href="#reportes" class="nav-link">
+        <i data-lucide="file-text"></i> <span>Reportes</span>
+      </a>
+      <a href="#estadisticas" class="nav-link">
+        <i data-lucide="bar-chart-3"></i> <span>Estadísticas</span>
+      </a>
+    </nav>
+
+    <!-- Alerta crítica -->
+    <section class="alert-box">
+      <span class="alert-tag"><i data-lucide="alert-triangle"></i> Alerta Crítica</span>
+      <p class="alert-title">Lote 2 - Presencia de Broca</p>
+    </section>
+  </aside>
+
+  <!-- ================= CONTENIDO PRINCIPAL ================= -->
+  <main class="main-content">
+
+    <!-- HERO BANNER (SECCIÓN INICIO) -->
+    <header id="inicio" class="hero-banner">
+      <span class="hero-overlay"></span>
+      
+      <hgroup>
+        <span class="hero-subtitle">Panel de Administración Coffee+Vision</span>
+        <h1 class="hero-title">¡BIENVENIDO, JULIO!</h1>
+      </hgroup>
+
+      <figure class="user-badge">
+        <span class="user-avatar">J</span>
+        <figcaption class="user-info">
+          <p class="user-name">Julio</p>
+          <p class="user-role">Administrador</p>
+        </figcaption>
+      </figure>
+    </header>
+
+    <!-- METRICAS / KPIs -->
+    <section class="kpi-grid">
+      <article class="kpi-card">
+        <header>
+          <p class="kpi-label">Usuarios</p>
+          <p class="kpi-value">2</p>
+        </header>
+        <span class="kpi-icon kpi-icon-amber">
+          <i data-lucide="users"></i>
+        </span>
+      </article>
+
+      <article class="kpi-card">
+        <header>
+          <p class="kpi-label">Cultivos</p>
+          <p class="kpi-value">85</p>
+        </header>
+        <span class="kpi-icon kpi-icon-emerald">
+          <i data-lucide="box"></i>
+        </span>
+      </article>
+
+      <article class="kpi-card">
+        <header>
+          <p class="kpi-label">Plagas</p>
+          <p class="kpi-value">12</p>
+        </header>
+        <span class="kpi-icon kpi-icon-emerald">
+          <i data-lucide="bug"></i>
+        </span>
+      </article>
+
+      <article class="kpi-card">
+        <header>
+          <p class="kpi-label">Reportes</p>
+          <p class="kpi-value">34</p>
+        </header>
+        <span class="kpi-icon kpi-icon-stone">
+          <i data-lucide="file-spreadsheets"></i>
+        </span>
+      </article>
+    </section>
+
+    <!-- FORMULARIO Y TABLA (SECCIÓN USUARIOS) -->
+    <section id="usuarios" class="card-panel">
+      <h2 class="section-title"><i data-lucide="user-plus"></i> Agregar usuario</h2>
+      <form class="user-form">
+        <input type="text" placeholder="Nombre completo" class="form-input" required>
+        <select class="form-select">
+          <option value="caficultor">Caficultor</option>
+          <option value="administrador">Administrador</option>
+        </select>
+        <button type="submit" class="btn-primary">Guardar</button>
+      </form>
+    </section>
+
+    <section class="card-panel no-padding">
+      <header class="panel-header">
+        <h2 class="section-title">Usuarios Registrados</h2>
+      </header>
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Rol</th>
+              <th>Estado</th>
+              <th class="text-right">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-bold">Carlos Pérez</td>
+              <td>Caficultor</td>
+              <td><span class="badge badge-success">Activo</span></td>
+              <td class="text-right"><button class="btn-danger-soft">Eliminar</button></td>
+            </tr>
+            <tr>
+              <td class="font-bold">María López</td>
+              <td>Administrador</td>
+              <td><span class="badge badge-success">Activo</span></td>
+              <td class="text-right"><button class="btn-danger-soft">Eliminar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ESTADO DE FINCAS (SECCIÓN REPORTES) -->
+    <section id="reportes" class="card-panel">
+      <h2 class="section-title">Estado de las Fincas</h2>
+      <article class="finca-card">
+        <!-- Foto de Grano / Planta de Café -->
+        <figure class="finca-image-container">
+          <img src="/img/image.png" alt="Granos de café" class="finca-image">
+        </figure>
+        <!-- Foto del Cultivo de Café -->
+        <figure class="finca-image-container">
+          <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80" alt="Cultivo de café" class="finca-image">
+        </figure>
+        <!-- Datos de la Finca -->
+        <address class="finca-details">
+          <h3>🌱 Finca El Paraíso</h3>
+          <p><strong>Municipio:</strong> Salgar</p>
+          <p><strong>Estado:</strong> <span class="text-emerald">Activa</span></p>
+          <p><strong>Último Reporte:</strong> Roya Detectada</p>
+          <p><strong>Nivel de Riesgo:</strong> <span class="text-amber">Medio</span></p>
+        </address>
+      </article>
+    </section>
+
+    <!-- ESTADÍSTICAS (SECCIÓN ESTADÍSTICAS) -->
+    <section id="estadisticas" class="charts-grid">
+      <article class="card-panel">
+        <h2 class="section-title">Estadísticas Generales</h2>
+        <dl class="progress-group">
+          <div class="progress-item">
+            <dt class="progress-labels">
+              <span>Usuarios activos</span>
+              <span>80%</span>
+            </dt>
+            <dd class="progress-bar"><span class="progress-fill fill-dark" style="width: 80%;"></span></dd>
+          </div>
+          <div class="progress-item">
+            <dt class="progress-labels">
+              <span>Producción mensual</span>
+              <span>60%</span>
+            </dt>
+            <dd class="progress-bar"><span class="progress-fill fill-dark" style="width: 60%;"></span></dd>
+          </div>
+          <div class="progress-item">
+            <dt class="progress-labels">
+              <span>Alertas resueltas</span>
+              <span>70%</span>
+            </dt>
+            <dd class="progress-bar"><span class="progress-fill fill-dark" style="width: 70%;"></span></dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="card-panel">
+        <h2 class="section-title"><i data-lucide="shield-alert"></i> Estadísticas de Plagas</h2>
+        <dl class="progress-group">
+          <div class="progress-item">
+            <dt class="progress-labels">
+              <span>Roya</span>
+              <span>65%</span>
+            </dt>
+            <dd class="progress-bar"><span class="progress-fill fill-emerald" style="width: 65%;"></span></dd>
+          </div>
+          <div class="progress-item">
+            <dt class="progress-labels">
+              <span>Broca</span>
+              <span>45%</span>
+            </dt>
+            <dd class="progress-bar"><span class="progress-fill fill-emerald" style="width: 45%;"></span></dd>
+          </div>
+          <div class="progress-item">
+            <dt class="progress-labels">
+              <span>Ojo de Gallo</span>
+              <span>35%</span>
+            </dt>
+            <dd class="progress-bar"><span class="progress-fill fill-emerald" style="width: 35%;"></span></dd>
+          </div>
+        </dl>
+      </article>
+    </section>
+
+  </main>
+
+  <script src="/JavaScript/script.js"></script>
+</body>
+</html>
