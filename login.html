@@ -52,34 +52,35 @@
     </main>
     
     <script>
-        document.getElementById('formLogin').addEventListener('submit', function(event) {
-            event.preventDefault();
+    document.getElementById('formLogin').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-            const email = document.getElementById('email').value.trim().toLowerCase();
-            const password = document.getElementById('password').value;
-            const selectedRole = document.getElementById('user-type').value;
-            const users = JSON.parse(localStorage.getItem('coffeeUsers')) || [];
-            const registeredUser = users.find(user => user.email === email && user.password === password);
+        const email = document.getElementById('email').value.trim().toLowerCase();
+        const password = document.getElementById('password').value;
+        const selectedRole = document.getElementById('user-type').value;
+        const users = JSON.parse(localStorage.getItem('coffeeUsers')) || [];
+        const registeredUser = users.find(user => user.email === email && user.password === password);
 
-            if (registeredUser && registeredUser.role !== selectedRole) {
-                alert("El rol seleccionado no coincide con el usuario registrado.");
-                return;
-            }
+        if (registeredUser && registeredUser.role !== selectedRole) {
+            alert("El rol seleccionado no coincide con el usuario registrado.");
+            return;
+        }
 
-            const role = registeredUser ? registeredUser.role : selectedRole;
-            localStorage.setItem('coffeeActiveUser', JSON.stringify({
-                email: email,
-                role: role
-            }));
+        const role = registeredUser ? registeredUser.role : selectedRole;
+        localStorage.setItem('coffeeActiveUser', JSON.stringify({
+            email: email,
+            role: role
+        }));
 
-            if (role === 'administrador') {
-                window.location.href = 'dashboard_administrador1.1.html';
-                return;
-            }
-
-            window.location.href = '';
-        });
-    </script>
+        // Redirecciones corregidas para GitHub Pages (sin barra "/" al inicio)
+        if (role === 'administrador') {
+            window.location.href = 'dashboard_administrador.html';
+        } else {
+            // AQUÍ ESTABA EL ERROR: Agregamos la vista destino del caficultor
+            window.location.href = 'dashboard-caficultor.html'; 
+        }
+    });
+</script>
     <!-- hello -->
 
 </body>
