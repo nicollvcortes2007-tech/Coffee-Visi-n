@@ -164,7 +164,7 @@ body.dashboard-body {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  background-image: url('Imagenes/cafetal.jpg'); /* Imagen de fondo */
+  background-image: url(Imagenes/cafetal.jpg); /* Imagen de fondo */
   background-size: cover;
   background-position: center;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
