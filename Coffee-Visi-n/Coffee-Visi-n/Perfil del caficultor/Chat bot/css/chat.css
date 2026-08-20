@@ -1,0 +1,354 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex; 
+    height: 100vh;
+    background-color: white;
+}
+.logoimagen{
+    width: 180px;
+    height: 180px;
+}
+
+.barra-lateral{
+    width: 260px;
+    border-right: 1px solid #eeeeee;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.etiqueta-menu{
+    font-size: 17px;
+    font-weight: bold;
+    font-family: "Calibri";
+    margin-top: 25px;
+    letter-spacing: 1px;
+}
+nav ul li:hover{
+    color:green;
+    font-weight: bold;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    padding: 20px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border: green;
+    border-radius: 8px;
+    color: rgba(96, 42, 42, 0.547);
+}
+
+.activo{
+    color:green;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.usuario-info{
+    margin-top: auto;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.contenido-principal{
+    flex-grow: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cabecera-superior{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    font-family: "Berlin Sans FB Demi";
+    font-size: 25px;
+}
+
+.seccion-bienvenida p{
+    text-align: center;
+    font-size: 25px;
+    margin-left: 20%;
+    max-width: 600px;
+    font-family: "Nunito", "Ubuntu", "Arial Rounded MT Bold", sans-serif;
+}
+
+.seccion-bienvenida h3{
+    font-family: "Nunito", "Ubuntu", "Arial Rounded MT Bold", sans-serif;
+    font-weight: 800;
+    color: rgb(95, 3, 3);
+    font-size: 45px;
+    text-align: center;
+}
+
+.cuadricula-opciones button{
+    padding: 20px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: "Arial";
+    font-size: medium;
+    margin-left: 10%;
+}
+.cuadricula-opciones button:hover{
+    color: green;
+    border-color:green;
+}
+
+.contenedor-entrada{
+    width: 90%;
+    max-width: 800px;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    margin-top: auto;
+}
+
+textarea{
+    width: 100%;
+    border: rgba(96, 42, 42, 0.547);
+    height: 50px;
+    font-size: 20px;
+    font-family: "Calibri";
+    outline: none;
+}
+
+.acciones-entrada{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.acciones-entrada ul{
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    color: black;
+}
+
+.boton-enviar{
+    background-color: #e0e0e0;
+    color: black;
+    width: 60px;
+    height: 40px;
+    border-radius: 30%;
+    cursor: pointer;
+}
+.boton-enviar:hover{
+    color: white;
+    background-color: rgb(80, 166, 80);
+}
+
+/*Punto de quiebre para pantallas pequeñas con nombre xs*/
+@media screen and (max-width: 255px){
+    .xs-1{width: 8.333%;}
+    .xs-2{
+        width: 16.666%;
+    }
+    .xs-3{
+        width: 25%;
+    }
+    .xs-4{
+        width: 33.332%;
+    }
+    .xs-5{
+        width: 41.665%;
+    }
+    .xs-6{
+        width: 50%;
+    }
+    .xs-7{
+        width: 58.331%;
+    }
+    .xs-8{
+        width: 66.664%;
+    }
+    .xs-9{
+        width: 75%;
+    }
+    .xs-10{
+        width: 83.33%;
+    }
+    .xs-11{
+        width: 91.663%;
+    }
+    .xs-12{
+        width: 100%;
+    }
+}
+
+/* Punto de quiebre para pantalla con nombre s */
+@media screen and (min-width: 256px) and (max-width: 767px){
+    .s-1{
+        width: 8.333%;
+    }
+    .s-2{
+        width: 16.666%;
+    }
+    .s-3{
+        width: 25%;
+    }
+    .s-4{
+        width: 33.332%;
+    }
+    .s-5{
+        width: 41.665%;
+    }
+    .s-6{
+        width: 50%;
+    }
+    .s-7{
+        width: 58.331%;
+    }
+    .s-8{
+        width: 66.664%;
+    }
+    .s-9{
+        width: 75%;
+    }
+    .s-10{
+        width: 83.33%;
+    }
+    .s-11{
+        width: 91.663%;
+    }
+    .s-12{
+        width: 100%;
+    }
+
+}
+
+/* Punto de quiebre para pantalla con nombre m */
+@media screen and (min-width: 768px) and (max-width: 1000px){
+    .m-1{
+        width: 8.333%;
+    }
+    .m-2{
+        width: 16.666%;
+    }
+    .m-3{
+        width: 25%;
+    }
+    .m-4{
+        width: 33.332%;
+    }
+    .m-5{
+        width: 41.665%;
+    }
+    .m-6{
+        width: 50%;
+    }
+    .m-7{
+        width: 58.331%;
+    }
+    .m-8{
+        width: 66.664%;
+    }
+    .m-9{
+        width: 75%;
+    }
+    .m-10{
+        width: 83.33%;
+    }
+    .m-11{
+        width: 91.663%;
+    }
+    .m-12{
+        width: 100%;
+    }
+
+}  
+
+
+/* Punto de quiebre para pantalla con nombre l */
+@media screen and (min-width: 1001px) and (max-width: 1465px){
+    .l-1{
+        width: 8.333%;
+    }
+    .l-2{
+        width: 16.666%;
+    }
+    .l-3{
+        width: 25%;
+    }
+    .l-4{
+        width: 33.332%;
+    }
+    .l-5{
+        width: 41.665%;
+    }
+    .l-6{
+        width: 50%;
+    }
+    .l-7{
+        width: 58.331%;
+    }
+    .l-8{
+        width: 66.664%;
+    }
+    .l-9{
+        width: 75%;
+    }
+    .l-10{
+        width: 83.33%;
+    }
+    .l-11{
+        width: 91.663%;
+    }
+    .l-12{
+        width: 100%;
+    }
+}
+
+
+/* Punto de quiebre para pantalla con nombre g */
+@media screen and (min-width: 1466px) {
+    .g-1{
+        width: 8.333%;
+    }
+    .g-2{
+        width: 16.666%;
+    }
+    .g-3{
+        width: 25%;
+    }
+    .g-4{
+        width: 33.332%;
+    }
+    .g-5{
+        width: 41.665%;
+    }
+    .g-6{
+        width: 50%;
+    }
+    .g-7{
+        width: 58.331%;
+    }
+    .g-8{
+        width: 66.664%;
+    }
+    .g-9{
+        width: 75%;
+    }
+    .g-10{
+        width: 83.33%;
+    }
+    .g-11{
+        width: 91.663%;
+    }
+    .g-12{
+        width: 100%;
+    }
+
+}
