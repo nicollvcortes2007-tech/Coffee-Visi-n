@@ -1,47 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Css/index.css">
-  <title>Recomendaciones</title>
+  <title>Recomendaciones | Coffee+Visión</title>
+  <!-- Hojas de estilo y tipografía -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/Css/Recomendaciones.css">
 </head>
 
 <body>
 
   <main class="contenedor">
 
-    <!-- Sidebar -->
+    <!-- Sidebar adaptada con tus enlaces específicos -->
     <aside class="sidebar">
       <article class="logo">
-        <img class="imagen_logo" src="/VERSION 2 DASHBOARD - ACTUALIZACION/Caficultor/Recomendaciones/imagen/Logo_Proyecto.png" alt="logo">
+        <img class="imagen_logo" src="/VERSION 2 DASHBOARD - ACTUALIZACION/Caficultor/Recomendaciones/imagen/Logo_Proyecto.png" alt="Coffee+Vision Logo">
       </article>
 
-      <h4>MENU</h4>
-      <ul>
-        <li class="activo">Recomendaciones</li>
+      <p class="sidebar-label">MENÚ</p>
+      <ul class="sidebar-menu">
+        <li>
+          <a href="dashboard-caficultor.html"><i class="fa-solid fa-house"></i> Mi finca</a>
+        </li>
+        <li>
+          <a href="gestiondecultivos.html"><i class="fa-solid fa-seedling"></i> Cultivos</a>
+        </li>
+        <li>
+          <a href="estadisticas.html"><i class="fa-solid fa-chart-simple"></i> Estadisticas</a>
+        </li>
+        <li>
+          <a href="guias_plantas.html"><i class="fa-solid fa-book-open"></i> Guias</a>
+        </li>
+        <li>
+          <a href="plagas.html"><i class="fa-solid fa-bug"></i> Plagas y enfermedades</a>
+        </li>
+        <li class="activo">
+          <a href="Recomendaciones.html"><i class="fa-solid fa-lightbulb"></i> Recomendaciones</a>
+        </li>
       </ul>
 
-      <ul>
-        <li>Buenas Prácticas</li>
-      </ul>
-
-    <article class="sidebar_general">
-    <h4>General</h4>
-      <ul>
-        <li>Ajustes</li>
-        <li>Ayuda</li>
-        <li>Salir</li>
-      </ul>
-    </article>
+    
     </aside>
 
-
-
-
-
-
+    <!-- Contenido Principal -->
     <section class="contenido">
       <h1>Recomendaciones</h1>
 
@@ -87,10 +92,6 @@
         </article>
       </section>
 
-
-
-
-
       <section class="fila">
         <section class="caja caja_doble">
           <section>
@@ -111,9 +112,6 @@
           </article>
         </section>
 
-
-
-
         <section class="caja">
           <h3>Filtros de recomendaciones técnicas</h3>
 
@@ -132,13 +130,8 @@
           <section class="filtro">
             <p>Clima</p>
           </section>
-
         </section>
-
       </section>
-
-
-
 
       <section class="fila">
         <article class="caja caja_historial">
@@ -150,7 +143,7 @@
               <h3 class="nombre_lote">Lote: El placer</h3>
               <p class="alerta_tipo">Alerta de Broca</p>
               <p class="afectacion">Afectación: <strong>Media</strong></p>
-              <img src="/VERSION 2 DASHBOARD - ACTUALIZACION/Caficultor/Recomendaciones/imagen/Broca.jpg" alt="Broca_en_fruto_de_café" class="imagen-registro">
+              <img src="/imagenes/Broca.jpg" alt="Broca_en_fruto_de_café" class="imagen_registro">
             </div>
 
             <div class="registro">
@@ -158,7 +151,7 @@
               <p><strong>Lote:</strong> La estancia</p>
               <p><strong>Diagnóstico:</strong> Sano</p>
               <p class="descripcion_monitoreo">Monitoreo diario</p>
-              <img src="/VERSION 2 DASHBOARD - ACTUALIZACION/Caficultor/Recomendaciones/imagen/cultivo.jpg" alt="Cultivo_de_café_sano" class="imagen_registro">
+              <img src="/imagenes/cultivo.jpg" alt="Cultivo_de_café_sano" class="imagen_registro">
             </div>
           </div>
         </article>
@@ -176,14 +169,16 @@
             <p>Mañana corresponde el registro de control de malezas en la Bitácora Digital.</p>
           </article>
         </article>
-
       </section>
+
+      <!-- Botón Flotante Asistente IA -->
       <article class="icono" role="button" aria-label="IA">
-        <img class="icono_IA" src="imagen/IA.png" alt="Icono_IA">
+        <a href="IA.html">
+          <img class="icono_IA" src="Imagenes/LogoIA.png" alt="Icono de IA">
+        </a>
       </article>
     </section>
   </main>
 
 </body>
-
 </html>
