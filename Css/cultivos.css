@@ -1,11 +1,14 @@
-:root{
-    --cafe: #4e2a15;
-    --verde: #769f1a;
-    --verde-claro: #f4f9ed;
-    --texto: #555555;
-    --blanco: #ffffff;
-    --borde: #f0f0f0;
+:root {
+    --bg-main: #FBF9F2;       /* Fondo beige claro */
+    --sidebar-bg: #ffffff;    /* Café oscuro */
+    --green-primary: #709a1c; /* Verde de los botones y activos */
+    --green-light: #f1f8e9;   /* Fondo verde muy claro para badges */
+    --text-dark: #4e2a15;
+    --text-muted: #000000;
+    --white: #ffffff;
+    --border-color: #e0e0e0;
 }
+
 
 * {
     margin: 0;
@@ -14,29 +17,50 @@
 }
 
 body {
-    background-image: url('../Imagenes/cafetal.jpg'); 
+    
     background-attachment: fixed;
     background-size: cover;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f7f9fa;
-    background-color: rgb(188, 166, 166) !important;
+    background-color: #faf8f7;
+    background-color: #ffffff !important;
     color: #333333;
     padding-bottom: 40px;
 }
 
+/* --- CONVERTIR HEADER EN BARRA LATERAL --- */
 .main-header {
     background-color: #ffffff;
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #eef2f4;
+    border-bottom: none; /* Quitamos el borde inferior original */
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 12px 40px;
-    border-bottom: 1px solid #eef2f4;
+    justify-content: flex-start;
+    padding: 30px 0;
+    z-index: 100;
 }
 
+/* Marca / Logo centrado en la parte superior */
 .brand {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 12px;
+    position: static; /* Quitamos la posición absoluta anterior */
+    transform: none;
+    padding: 0 20px 24px 20px;
+    width: 100%;
+}
+
+.main-header nav {
+    width: 100%;
+    margin-left: 0; /* Anulamos el margin-left: auto anterior */
 }
 
 .logo-container {
@@ -49,13 +73,13 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 16px;
+    margin-bottom: 2rem;
 }
 
 .brand-logo-img {
-    height: 80px;         
-    width: auto;          
+  width: 120px;
+  height: auto;
     display: block;
-    object-fit: contain;  
 }
 
 .brand-title {
@@ -75,7 +99,13 @@ body {
 .main-header nav ul {
     list-style: none;
     display: flex;
-    gap: 24px;
+    flex-direction: column; /* Alinea los enlaces uno debajo de otro */
+    gap: 4px;
+    width: 100%;
+}
+
+.main-header nav ul li {
+    width: 100%;
 }
 
 .main-header nav ul li a {
@@ -83,29 +113,38 @@ body {
     color: #555555;
     font-size: 14px;
     font-weight: 500;
-    padding: 6px 12px;
-    border-radius: 20px;
+    padding: 12px 24px;
+    display: block;
+    width: 100%;
+    border-radius: 0; /* Estilo rectangular continuo */
     transition: all 0.2s ease;
 }
 
 .main-header nav ul li a:hover {
+    background-color: #f7f9fa;
     color: #2e6930;
 }
 
+/* Estado activo verde (como en la captura) */
 .main-header nav ul li a.activo {
-    background-color: #e8f5e9;
-    color: #2e6930;
+    background-color: #689f38;
+    color: #ffffff;
     font-weight: 600;
 }
 
+/* --- MOVER EL CONTENIDO PRINCIPAL A LA DERECHA --- */
 .dashboard-container {
+    margin-left: 280px; /* Desplaza el contenido para no taparlo con la barra */
+    margin-right: auto;
+    margin-top: 24px;
     max-width: 1000px;
-    margin: 24px auto;
-    padding: 0 20px;
+    margin: 0 auto; /* Auto a los lados para centrar */
+    padding: 20px;
+    background-color: #FBF9F2;
 }
 
 .hero-banner {
-    background: linear-gradient(135deg, rgba(27, 67, 28, 0.9) 0%, rgba(41, 92, 43, 0.9) 100%), 
+    background: linear-gradient(135deg, rgba(49, 14, 14, 0.9) 0%, rgba(49, 15, 15, 0.9) 100%), 
                 url('../img/cafetal.jpg'); 
     background-size: cover;       
     background-position: center;  
@@ -206,6 +245,46 @@ body {
     border-radius: 8px;
     padding: 16px;
 }
+.sidebar {
+  width: 220px;
+  background-color: #ffffff;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.sidebar-nav {
+  flex: 1;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: #4a4a4a;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-nav a.active {
+  background-color: #689f38;
+  color: #ffffff;
+  font-weight: 600;
+}
 
 .card-header {
     display: flex;
@@ -259,7 +338,9 @@ body {
 }
 
 .panel-card-header h3 {
-    font-size: 15px;
+    background-color: #7cb342;
+    color: #ffffff;
+    font-size: 0.75rem;
     font-weight: 600;
     color: #111111;
     display: flex;
@@ -269,9 +350,9 @@ body {
 
 .badge {
     font-size: 11px;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 4px;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
     text-transform: uppercase;
 }
 
