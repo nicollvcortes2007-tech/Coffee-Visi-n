@@ -45,7 +45,8 @@ body.dashboard-body {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start; /* Subió los elementos para eliminar el espacio vacío */
+  gap: 1.5rem;                 /* Espaciado uniforme */
   position: sticky;
   top: 0;
   height: 100vh;
@@ -61,21 +62,26 @@ body.dashboard-body {
 .brand {
   display: flex;
   align-items: center;
+  justify-content: center;     /* Centra el logo en la barra */
   gap: 0.75rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .brand-icon {
   width: 28px;
   height: 28px;
   color: var(--primary-emerald);
+  flex-shrink: 0;
 }
 
-.brand-name {
-  font-weight: 800;
-  font-size: 1.25rem;
-  color: #022c22;
-  letter-spacing: -0.025em;
+/* Logo con mayor tamaño para llenar el espacio adecuadamente */
+.brand-logo {
+  width: 100%;
+  max-width: 250px;            /* Tamaño ampliado */
+  max-height: 130px;            /* Permite mayor altura proporcional */
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-menu {
@@ -112,6 +118,7 @@ body.dashboard-body {
   color: #ffffff;
   padding: 1rem;
   border-radius: var(--radius-md);
+  margin-top: auto;            /* Empuja opcionalmente la alerta al fondo de la pantalla */
 }
 
 .alert-tag {
@@ -157,8 +164,7 @@ body.dashboard-body {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  /* Imagen de cultivo de café */
-  background-image: url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80');
+  background-image: url('/Imagenes/cafetal.jpg'); /* Imagen de fondo */
   background-size: cover;
   background-position: center;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -255,7 +261,7 @@ body.dashboard-body {
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  scroll-margin-top: 2rem; /* Espaciado superior al hacer scroll por ID */
+  scroll-margin-top: 2rem;
 }
 
 .card-panel.no-padding { padding: 0; }
@@ -353,7 +359,7 @@ body.dashboard-body {
 .btn-danger-soft:hover { background-color: #fee2e2; color: #dc2626; }
 
 /* ==========================================
-   7. SECCIÓN DE FINCAS (IMÁGENES DE CAFÉ)
+   7. SECCIÓN DE FINCAS
    ========================================== */
 .finca-card {
   display: grid;
@@ -378,7 +384,6 @@ body.dashboard-body {
   object-fit: cover;
 }
 
-/* Reseteo de estilo de la etiqueta <address> */
 address.finca-details {
   font-style: normal;
   font-size: 0.875rem;
@@ -398,7 +403,7 @@ address.finca-details h3 {
 .text-amber { color: #b45309; font-weight: 700; }
 
 /* ==========================================
-   8. ESTADÍSTICAS Y BARRAS DE PROGRESO (dl, dt, dd)
+   8. ESTADÍSTICAS Y BARRAS DE PROGRESO
    ========================================== */
 .charts-grid {
   display: grid;
