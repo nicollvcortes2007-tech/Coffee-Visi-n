@@ -50,9 +50,7 @@ body {
 }
 
 .logo {
-    background-color: #ffffff;
-    padding: 16px;
-    border-radius: 100px; 
+    padding: 16px; 
     display: flex;
     justify-content: center;
     align-items: center;

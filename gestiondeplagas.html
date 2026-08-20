@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administración IA - Coffee+Vision</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/Css/gestiondeplagas.css">
     <link rel="stylesheet" href="Css/responsive.css">
 </head>
 <body class="app-layout">
@@ -154,11 +154,6 @@
             }
         }
 
-        function guardarDatos() {
-            const nombre = document.getElementById('nombre-tecnico').value;
-            const cat = document.getElementById('categoria').value;
-            const tabla = document.getElementById('lista-registros');
-            const fecha = new Date().toLocaleDateString();
 
             const nuevaFila = `<tr>
                 <td>${fecha}</td>
@@ -171,7 +166,7 @@
             alert("Datos técnicos enviados al servidor de IA con éxito.");
             document.getElementById('ia-form').reset();
             document.getElementById('img-preview').style.display = 'none';
-        }
+        
     </script>
 </body>
 </html>
