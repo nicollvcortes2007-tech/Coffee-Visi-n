@@ -1,8 +1,5 @@
-/* ==========================================
-   1. VARIABLES DE COLOR (CoffeeTech)
-   ========================================== */
 :root {
-    --cafe: #4e2a15;
+    --cafe: #4e2a15; 
     --verde: #769f1a;
     --verde-claro: #f4f9ed;
     --texto: #555555;
@@ -10,9 +7,7 @@
     --borde: #f0f0f0;
 }
 
-/* ==========================================
-   2. RESET Y ESTILOS GLOBALES
-   ========================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -23,11 +18,10 @@
 body {
     display: flex;
     min-height: 100vh;
-    background-color: var(--verde-claro);
+    background-color: #fbf9f2;
     color: var(--texto);
 }
 
-/* Accesibilidad para lectores de pantalla */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -46,17 +40,14 @@ hr {
     margin-bottom: 24px;
 }
 
-/* ==========================================
-   3. BARRA LATERAL (SIDEBAR)
-   ========================================== */
 .sidebar {
     width: 260px;
-    background-color: var(--cafe);
-    color: var(--blanco);
+    background-color: var(--blanco);
+    color: var(--texto);
     display: flex;
     flex-direction: column;
     padding: 24px 0;
-    border-right: 3px solid var(--verde);
+    border-right: 1px solid var(--borde);
 }
 
 .sidebar-header {
@@ -74,7 +65,7 @@ hr {
     width: 100%;
     max-width: 200px;
     margin: auto;
-    border: 2px solid var(--verde);
+    border: 2px solid #ffffff;
 }
 
 .sidebar-nav ul {
@@ -86,7 +77,7 @@ hr {
     align-items: center;
     gap: 12px;
     padding: 14px 24px;
-    color: var(--verde-claro);
+    color: #555555;
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
@@ -128,9 +119,6 @@ hr {
     font-weight: 600;
 }
 
-/* ==========================================
-   4. CONTENIDO PRINCIPAL Y CABECERA
-   ========================================== */
 .main-content {
     flex-grow: 1;
     padding: 24px 40px;
@@ -229,9 +217,7 @@ hr {
     margin-bottom: 24px;
 }
 
-/* ==========================================
-   5. DISEÑO DE FILAS Y TARJETAS (GRID)
-   ========================================== */
+
 .profile-grid {
     display: grid;
     grid-template-columns: 280px 1fr 280px;
@@ -247,9 +233,6 @@ hr {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* ==========================================
-   6. COLUMNA 1: PERFIL RESUMEN
-   ========================================== */
 .profile-summary {
     text-align: center;
 }
@@ -306,9 +289,6 @@ hr {
     text-align: left;
 }
 
-/* ==========================================
-   7. COLUMNA 2: PESTAÑAS Y FORMULARIO
-   ========================================== */
 .form-tabs ul {
     display: flex;
     list-style: none;
@@ -409,9 +389,6 @@ hr {
     background-color: #648716;
 }
 
-/* ==========================================
-   8. COLUMNA 3: PANEL FOTO DE PERFIL
-   ========================================== */
 .profile-photo-upload h3 {
     font-size: 14px;
     color: var(--cafe);
@@ -473,4 +450,82 @@ hr {
     font-size: 13px;
     cursor: pointer;
     margin-top: 4px;
+}
+
+
+.notifications-container {
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.notifications-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.notification-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    border-radius: 8px;
+    border: 1px solid #eef2e6;
+    background-color: #ffffff;
+}
+
+/* Alerta Crítica (Rojo) */
+.notification-item.critical.unread {
+    background-color: #fff5f5;
+    border-left: 4px solid #ef4444;
+}
+
+/* Alerta Clima (Verde) */
+.notification-item.weather.unread {
+    background-color: #f7faf3;
+    border-left: 4px solid var(--verde);
+}
+
+.notification-body h3 {
+    font-size: 15px;
+    color: #222222 !important;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.notification-body p {
+    font-size: 13px;
+    color: #555555;
+    margin-bottom: 6px;
+}
+
+.notification-body time {
+    font-size: 12px;
+    color: #999999;
+}
+
+/* Botón de Check ✔ */
+.btn-action-notif {
+    background: #ffffff;
+    border: 1px solid #d0d7de;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #555555;
+}
+/* Control de visibilidad de pestañas */
+.tab-pane {
+    display: none;
+}
+.tab-pane.active-pane {
+    display: grid;
 }
