@@ -3,157 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Administrador | Coffee+vision</title>
-    <link rel="stylesheet" href="Css/dashboard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Coffee + Visión - Mi Perfil</title>
+    <link rel="stylesheet" href="/css/Perfil_caficultor.css">
 </head>
 <body>
-    <aside class="sidebar">
-        <a href="index.html" class="brand">
-            <img src="Imagenes/logo2.png" alt="Coffee+vision Logo">
-        
-        </a>
 
-        <nav class="sidebar-nav" aria-label="Menu administrador">
-            <a href="#" class="active"><i class="fa-solid fa-chart-pie"></i> Resumen</a>
-            <a href="#"><i class="fa-solid fa-users"></i> Usuarios</a>
-            <a href="#"><i class="fa-solid fa-seedling"></i> Fincas</a>
-            <a href="#"><i class="fa-solid fa-bug"></i> Alertas</a>
-            <a href="#"><i class="fa-solid fa-chart-line"></i> Reportes</a>
-            <a href="#"><i class="fa-solid fa-gear"></i> Configuracion</a>
+    <aside class="sidebar">
+        <header class="sidebar-header">
+            <img src="Imagenes/logo2.png" alt="Logotipo Coffee + Visión" class="logo">
+        </header>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#"><span class="icon"></span> Dashboard</a></li>
+                <li><a href="#" class="active"><span class="icon"></span> Notificaciones <mark class="badge">12</mark></a></li>
+                <li><a href="#"><span class="icon"></span> Usuarios</a></li>
+                <li><a href="#"><span class="icon"></span> Cultivos</a></li>
+                <li><a href="#"><span class="icon"></span> Plagas y Enfermedades</a></li>
+                <li><a href="#"><span class="icon"></span> Chatbot IA</a></li>
+                <li><a href="#"><span class="icon"></span> Contenidos</a></li>
+                <li><a href="#"><span class="icon"></span> Reportes y Estadísticas</a></li>
+                <li><a href="#"><span class="icon"></span> Configuración</a></li>
+            </ul>
         </nav>
 
-        <a class="logout-link" href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesion</a>
+        <footer class="sidebar-footer">
+            <a href="#" class="logout-btn"><span class="icon"></span> Cerrar sesión</a>
+        </footer>
     </aside>
 
-    <main class="dashboard-shell">
-        <header class="topbar">
-            <section>
-                <p class="eyebrow">Panel administrador</p>
-                <h1>Control general de Coffee+vision</h1>
-            </section>
-            <section class="topbar-actions">
-                <button type="button" aria-label="Notificaciones"><i class="fa-regular fa-bell"></i></button>
-                <article class="profile-chip">
-                    <span>AD</span>
-                    <div>
+    <main class="main-content">
+        
+        <header class="top-header">
+            <hgroup>
+                <h1>Administrador</h1>
+                <p>Panel de Administración</p>
+            </hgroup>
+            
+            <section class="user-status">
+                <button class="notif-bell" aria-label="Notificaciones">
+                     <mark class="badge-top">12</mark>
+                </button>
+                <button class="user-menu-btn">
+                    <img src="Imagenes/persona.jpg" alt="Foto de perfil de Administrador">
+                    <span class="user-info-text">
                         <strong>Administrador</strong>
-                        <small>Gestion central</small>
-                    </div>
-                </article>
+                        <small>admin@coffeetech.com</small>
+                    </span>
+                    <span class="arrow-down">▼</span>
+                </button>
             </section>
         </header>
 
-        <section class="metric-grid" aria-label="Indicadores principales">
-            <article class="metric-card">
-                <span><i class="fa-solid fa-users"></i></span>
-                <p>Usuarios activos</p>
-                <strong>2</strong>
-                <small>+12 este mes</small>
-            </article>
-            <article class="metric-card">
-                <span><i class="fa-solid fa-map-location-dot"></i></span>
-                <p>Fincas registradas</p>
-                <strong>2</strong>
-                <small>8 pendientes por validar</small>
-            </article>
-            <article class="metric-card">
-                <span><i class="fa-solid fa-triangle-exclamation"></i></span>
-                <p>Alertas abiertas</p>
-                <strong>17</strong>
-                <small>4 de prioridad alta</small>
-            </article>
-            <article class="metric-card">
-                <span><i class="fa-solid fa-mug-hot"></i></span>
-                <p>Produccion reportada</p>
-                <strong>18.4 t</strong>
-                <small>Ultimos 30 dias</small>
-            </article>
-        </section>
+        <hr>
 
-        <section class="dashboard-grid">
-            <article class="panel wide-panel">
-                <header class="panel-header">
-                    <div>
-                        <p class="eyebrow">Seguimiento</p>
-                        <h2>Actividad reciente por finca</h2>
-                    </div>
-                    <button type="button" class="text-button">Ver todo</button>
-                </header>
+        <header class="section-header">
+            <h2>Mi perfil</h2>
+            <p>Gestiona tu información personal y configuración de la cuenta.</p>
+        </header>
 
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Finca</th>
-                            <th>Caficultor</th>
-                            <th>Municipio</th>
-                            <th>Estado</th>
-                            <th>Ultimo reporte</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>El Paraiso</td>
-                            <td>Mariana Gomez</td>
-                            <td>Popayan</td>
-                            <td><span class="status ok">Activa</span></td>
-                            <td>Hoy, 8:20 a. m.</td>
-                        </tr>
-                        <tr>
-                            <td>La Esperanza</td>
-                            <td>Carlos Munoz</td>
-                            <td>Cajibio</td>
-                            <td><span class="status warning">Revision</span></td>
-                            <td>Ayer, 4:10 p. m.</td>
-                        </tr>
-                        <tr>
-                            <td>Los Guaduales</td>
-                            <td>Andrea Ruiz</td>
-                            <td>Timbio</td>
-                            <td><span class="status danger">Alerta</span></td>
-                            <td>Hace 2 dias</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <section class="profile-grid">
+            
+            <article class="card profile-summary">
+                <figure class="summary-logo">
+                    <img src="Imagenes/logo2.png" alt="Logotipo Coffee + Visión">
+                </figure>
+                <h3>Administrador Sistema</h3>
+                <p class="role-tag">Administrador del Sistema</p>
+                
+                <address class="contact-info">
+                    <ul>
+                        <li><span class="icon"></span> admin@coffeetech.com</li>
+                        <li><span class="icon"></span> +57 300 123 4567</li>
+                        <li><span class="icon"></span> Popayán, Cauca, Colombia</li>
+                    </ul>
+                </address>
+                <footer class="member-since">
+                    <time datetime="2024-01-15"><span class="icon"></span> Miembro desde: 15/01/2024</time>
+                </footer>
             </article>
 
-            <article class="panel">
-                <header class="panel-header">
-                    <div>
-                        <p class="eyebrow">Prioridad</p>
-                        <h2>Alertas del sistema</h2>
-                    </div>
-                </header>
-                <ul class="alert-list">
-                    <li>
-                        <i class="fa-solid fa-bug"></i>
-                        <span><strong>Broca detectada</strong><small>1 fincas solicitan revision</small></span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-cloud-sun-rain"></i>
-                        <span><strong>Riesgo climatico</strong><small>Lluvia alta en zona norte</small></span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-user-clock"></i>
-                        <span><strong>Usuarios pendientes</strong><small>5 cuentas por aprobar</small></span>
-                    </li>
-                </ul>
+            <form class="card profile-form" action="#" method="POST">
+                <nav class="form-tabs">
+                    <ul>
+                        <li><a href="#" class="active-tab" data-tab="tab-informacion">Información personal</a></li>
+                        <li><a href="#" data-tab="tab-seguridad">Seguridad</a></li>
+                        <li><a href="#" data-tab="tab-notificaciones">Notificaciones</a></li>
+                        <li><a href="#" data-tab="tab-actividad">Actividad reciente</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Pestaña 1: Información Personal -->
+                <fieldset id="tab-informacion" class="form-grid tab-pane active-pane">
+                    <legend class="visually-hidden">Datos Personales</legend>
+                    
+                    <p>
+                        <label for="nombres">Nombres</label>
+                        <input type="text" id="nombres" name="nombres" placeholder="Administrador">
+                    </p>
+                    <p>
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Sistema">
+                    </p>
+                    <p>
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="admin@coffeetech.com">
+                    </p>
+                    <p class="select-wrapper">
+                        <label for="rol">Rol</label>
+                        <select id="rol" name="rol">
+                            <option value="admin" selected>Administrador</option>
+                            <option value="editor">Editor</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+57 300 123 4567">
+                    </p>
+                    <p>
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Calle 5 #12-45, Centro">
+                    </p>
+                    <p>
+                        <label for="municipio">Municipio</label>
+                        <input type="text" id="municipio" name="municipio" placeholder="Popayán">
+                    </p>
+                    <p class="select-wrapper">
+                        <label for="departamento">Departamento</label>
+                        <select id="departamento" name="departamento">
+                            <option value="cauca" selected>Cauca</option>
+                            <option value="valle">Valle del Cauca</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <!-- Pestaña 2: Seguridad -->
+                <fieldset id="tab-seguridad" class="form-grid tab-pane">
+                    <legend class="visually-hidden">Seguridad</legend>
+                    <p>
+                        <label for="pass-actual">Contraseña actual</label>
+                        <input type="password" id="pass-actual" name="pass-actual" placeholder="••••••••">
+                    </p>
+                    <p>
+                        <label for="pass-nueva">Nueva contraseña</label>
+                        <input type="password" id="pass-nueva" name="pass-nueva" placeholder="Nueva contraseña">
+                    </p>
+                    <p>
+                        <label for="pass-confirmar">Confirmar contraseña</label>
+                        <input type="password" id="pass-confirmar" name="pass-confirmar" placeholder="Repetir contraseña">
+                    </p>
+                </fieldset>
+
+                <!-- Pestaña 3: Notificaciones -->
+                <fieldset id="tab-notificaciones" class="form-grid tab-pane">
+                    <legend class="visually-hidden">Notificaciones</legend>
+                    <p>
+                        <label for="notif-email">Notificaciones por correo</label>
+                        <select id="notif-email" name="notif-email">
+                            <option value="activadas">Activadas</option>
+                            <option value="desactivadas">Desactivadas</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="notif-alertas">Alertas de plagas</label>
+                        <select id="notif-alertas" name="notif-alertas">
+                            <option value="inmediatas">Inmediatas</option>
+                            <option value="diarias">Resumen diario</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <!-- Pestaña 4: Actividad Reciente -->
+                <fieldset id="tab-actividad" class="form-grid tab-pane">
+                    <legend class="visually-hidden">Actividad Reciente</legend>
+                    <p style="grid-column: 1 / -1;">
+                        <strong>Últimos inicios de sesión:</strong><br>
+                        • Hoy a las 08:30 AM desde Popayán, Cauca<br>
+                        • Ayer a las 02:15 PM desde Popayán, Cauca
+                    </p>
+                </fieldset>
+
+                <footer class="form-actions">
+                    <button type="button" class="btn-cancel">Cancelar</button>
+                    <button type="submit" class="btn-save">
+                        <svg class="save-icon" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"/></svg>
+                        Guardar cambios
+                    </button>
+                </footer>
+            </form>
+
+            <article class="card profile-photo-upload">
+                <h3>Cambiar foto de perfil</h3>
+                <p class="upload-instructions">Formatos permitidos: JPG, PNG, WEBP. Máx. 5 MB.</p>
+                
+                <figure class="avatar-large">
+                    <img src="Imagenes/persona.jpg" alt="Foto de perfil del administrador">
+                </figure>
+                
+                <footer class="photo-actions">
+                    <label class="btn-upload">
+                        <input type="file" accept="image/*" class="visually-hidden">
+                        <span>↑ Seleccionar imagen</span>
+                    </label>
+                    <button type="button" class="btn-delete">Eliminar foto</button>
+                </footer>
             </article>
 
-            <article class="panel">
-                <header class="panel-header">
-                    <div>
-                        <p class="eyebrow">Gestion</p>
-                        <h2>Acciones rapidas</h2>
-                    </div>
-                </header>
-                <section class="quick-actions">
-                    <button type="button"><i class="fa-solid fa-user-plus"></i> Crear usuario</button>
-                    <button type="button"><i class="fa-solid fa-file-export"></i> Exportar reporte</button>
-                    <button type="button"><i class="fa-solid fa-circle-check"></i> Validar fincas</button>
-                </section>
-            </article>
         </section>
     </main>
+
+    <!-- Enlace al archivo JavaScript independiente -->
+    <script src="/botones.js"></script>
 </body>
 </html>
