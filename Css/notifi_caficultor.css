@@ -1,5 +1,5 @@
 :root {
-    --cafe: #4e2a15;
+    --cafe: #ffffff;      /* Café oscuro */
     --verde: #769f1a;
     --verde-claro: #f4f9ed;
     --texto: #555555;
@@ -17,8 +17,8 @@
 body {
     display: flex;
     min-height: 100vh;
-    background-color: var(--verde-claro); /* Cambiado de gris frío a verde crema claro */
-    color: var(--texto); /* Ajustado al color de texto base */
+    background-color: #fbf9f2; /* Cambiado de gris frío a verde crema claro */
+    color: var #4e2a15/* Ajustado al color de texto base */
 }
 
 .visually-hidden {
@@ -34,9 +34,10 @@ body {
 
 /* --- SIDEBAR (Barra Lateral) --- */
 .sidebar {
+    
     width: 260px;
     background-color: var(--cafe); /* Cambiado de azul oscuro (#0b151e) al marrón café */
-    color: #d1c7bd; /* Color de texto más claro y cálido sobre el marrón */
+    color: #555555; /* Color de texto más claro y cálido sobre el marrón */
     display: flex;
     flex-direction: column;
     padding: 24px 0;
@@ -70,7 +71,7 @@ body {
     align-items: center;
     gap: 12px;
     padding: 14px 24px;
-    color: #d1c7bd; /* Texto de enlaces en un tono crema suave */
+    color: #1f2933; /* Texto de enlaces en un tono crema suave */
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
@@ -92,7 +93,7 @@ body {
 /* Indicador de número de notificaciones en el menú */
 .badge {
     background-color: var(--verde); /* Sincronizado con el verde de la marca */
-    color: white;
+    color: rgb(245, 235, 235);
     border-radius: 20px;
     padding: 2px 8px;
     font-size: 11px;
@@ -127,12 +128,40 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 12px;
+    
 }
 
+/* Título de arriba (Caficultor) */
 .top-header h1 {
     font-size: 18px;
-    color: var(--cafe); /* Título superior en marrón café */
+    color: #4e2a15; /* Cambiado a café oscuro */
     font-weight: 700;
+}
+
+/* Título principal de la sección (Notificaciones) */
+.section-header h2 {
+    font-size: 22px;
+    color: #4e2a15; /* Cambiado a café oscuro */
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+
+/* Títulos de las tarjetas de notificaciones internas */
+.notification-body h3 {
+    font-size: 15px;
+    color: #4e2a15; /* Cambiado a café oscuro */
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+/* Forzar el color de todos los h2 de la página */
+h2, .section-header h2 {
+    color: #4e2a15 !important;
+}
+/* Cambia los títulos de las notificaciones a negro (o café oscuro) */
+.notification-body h3,
+.notifications-list h3 {
+    color: #1a1a1a !important; /* Negro/Oscuro visible */
 }
 
 .top-header p {
@@ -321,7 +350,7 @@ hr {
 /* Botón de check (Marcar como leída) */
 .btn-action-notif {
     background: none;
-    border: 1px solid #cbd5e1;
+    border: 1px solid #1b2a3d;
     color: var(--texto);
     width: 24px;
     height: 24px;
@@ -336,6 +365,11 @@ hr {
     flex-shrink: 0;
 }
 
+.btn-action-notif:hover {
+    background-color: var(--verde); /* Cambio al hacer hover al verde institucional */
+    color: white;
+    border-color: var(--verde);
+}
 .btn-action-notif:hover {
     background-color: var(--verde); /* Cambio al hacer hover al verde institucional */
     color: white;
